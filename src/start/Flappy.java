@@ -2,9 +2,12 @@ package start;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+import component.KeyboardManager;
 import state.GameStateManager;
 import state.MenuState;
 
@@ -20,6 +23,8 @@ public class Flappy extends ApplicationAdapter {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
+		InputProcessor ip = new KeyboardManager();
+		Gdx.input.setInputProcessor(ip);
 		gsm = GameStateManager.getInstance();
 		Gdx.gl.glClearColor(1, 0, 0, 1);
 		gsm.push(new MenuState(gsm));

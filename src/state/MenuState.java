@@ -4,18 +4,18 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import component.views.MenuComponentView;
-import component.worldComponent.MenuComponent;
+import component.views.MenuMangerView;
+import component.worldComponent.MenuManager;
 
 public class MenuState extends State {
 
-	private MenuComponent menu;
-	private MenuComponentView menuView;
+	private MenuManager menu;
+	private MenuMangerView menuView;
 
 	public MenuState(GameStateManager gsm) {
 		super(gsm);
-		this.menu = new MenuComponent();
-		this.menuView = new MenuComponentView(menu);
+		this.menu = new MenuManager();
+		this.menuView = new MenuMangerView(menu);
 	}
 
 	@Override

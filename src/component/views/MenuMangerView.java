@@ -6,11 +6,11 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import component.Types;
-import component.worldComponent.MenuComponent;
+import component.worldComponent.MenuManager;
 import start.Flappy;
 
 
-public class MenuComponentView {
+public class MenuMangerView {
 	
 	private Texture logo;
 	private Texture background;
@@ -18,9 +18,9 @@ public class MenuComponentView {
 	//esto tiene que ir a la clase assets en los "FONTS"
 	public BitmapFont FONT;
 	
-	private MenuComponent menu;
+	private MenuManager menu;
 	
-	public MenuComponentView(MenuComponent menu) {
+	public MenuMangerView(MenuManager menu) {
 		this.menu = menu;
 		
 		FONT = new BitmapFont(Gdx.files.internal("arcade.fnt"));
@@ -75,16 +75,19 @@ public class MenuComponentView {
 	
 	public void drawPlayerSelect(SpriteBatch sb, int player) {
 		sb.draw(background, 0, 0, Flappy.WIDTH, Flappy.HEIGHT);
-		
-		if(player == 1) {
-			FONT.draw(sb, "Choose a name for Player 1", Flappy.WIDTH*1/9, Flappy.HEIGHT*15/16);
-		}
-		else {
-			FONT.draw(sb, "Choose a name for Player 2", Flappy.WIDTH*1/9, Flappy.HEIGHT*15/16);
-		}
-		
-		FONT.draw(sb, menu.getName(), Flappy.WIDTH*1/8, Flappy.HEIGHT*15/18);
 
+		if (menu.writingNames()) {
+			if(player == 1) {
+				FONT.draw(sb, "Choose a name for Player 1", Flappy.WIDTH*1/9, Flappy.HEIGHT*15/16);
+			}
+			else {
+				FONT.draw(sb, "Choose a name for Player 2", Flappy.WIDTH*1/9, Flappy.HEIGHT*15/16);
+			}
+			
+			FONT.draw(sb, menu.getName(), Flappy.WIDTH*1/8, Flappy.HEIGHT*15/18);
+		} else {
+			
+		}
 	}
 
 }
