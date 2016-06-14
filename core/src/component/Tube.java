@@ -48,7 +48,7 @@ public class Tube implements Crashable {
 	}
 
 	/*
-	 * Se llama a este método cada vez que el tubo se "escapa" de la vision del
+	 * Se llama a este mï¿½todo cada vez que el tubo se "escapa" de la vision del
 	 * usuario y se reposiciona
 	 */
 	public void repositionByInterface() {

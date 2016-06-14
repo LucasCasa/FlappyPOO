@@ -26,7 +26,7 @@ public class Types {
 	
 	public static final String LOGO = "logo.png";
 	public static final String BACKGROUND = "bg2.png";
-	public static final String PLAYBTN = "playBtn.png";
+	public static final String PLAYBTN = "playbtn.png";
 	public static final String GROUND = "ground2.png";
 	public static final String TOP_TUBE = "toptube.png";
 	public static final String BOTTOM_TUBE = "bottomtube.png";

@@ -6,49 +6,57 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import ar.edu.itba.Flappy;
+import component.MenuComponent;
+import component.MenuComponentView;
 import component.Types;
+import component.WorldComponent;
+import component.WorldComponentView;
 
 public class MenuState extends State {
 
-	private Texture logo;
-	private Texture background;
-	private Texture playBtn;
+	private MenuComponent menu;
+	private MenuComponentView menuView;
 
 	public MenuState(GameStateManager gsm) {
 		super(gsm);
+		this.menu = new MenuComponent();
+		this.menuView = new MenuComponentView(menu);
 		//cam.setToOrtho(false, Flappy.WIDTH / ZOOM_CAMARA, Flappy.HEIGHT / ZOOM_CAMARA);
-		logo = new Texture(Types.LOGO);
-		background = new Texture(Types.BACKGROUND);
-		playBtn = new Texture(Types.PLAYBTN);
-
 	}
 
 	@Override
 	public void handleInput() {
-		if (Gdx.input.isKeyPressed(Input.Keys.NUM_1))
-		//if (Gdx.input.justTouched())
-			gsm.set(new PlayState(gsm));
+		if (Gdx.input.isKeyPressed(Input.Keys.NUM_1)/* && menu.currentSelect() != Options.SELECT_PLAYERS*/){
+				menu.Select(Options.SELECT_PLAYERS);
+		}
 		
+		if (Gdx.input.isKeyPressed(Input.Keys.NUM_2))
+			menu.Select(Options.HIGHSCORES);
+		
+		if (Gdx.input.isKeyPressed(Input.Keys.NUM_3))
+			menu.Select(Options.SELECT_DIFICULTY);
+		
+		if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {
+			if(menu.currentSelect() != Options.MAIN)
+				Gdx.app.exit();
+			else
+				menu.Select(Options.MAIN);
+		}
 	}
-
+	
 	@Override
 	public void update(float dt) {
 		handleInput();
+		menu.update();
 	}
 
 	@Override
 	public void render(SpriteBatch sb) {
-		
-		sb.begin();
-		sb.draw(background, 0, 0, Flappy.WIDTH, Flappy.HEIGHT);
-		sb.draw(logo, (Flappy.WIDTH / 2) - (logo.getWidth() / 2), (Flappy.HEIGHT / 2) - (logo.getWidth() / 2));
-		sb.draw(playBtn, (Flappy.WIDTH / 2) - (playBtn.getWidth() / 2), (Flappy.HEIGHT / 2) - (playBtn.getWidth() / 2));
-		sb.end();
+		menuView.render(sb);
 	}
 
 	public void dispose() {
-		background.dispose();
-		playBtn.dispose();
+		menuView.dispose();
 	}
 
 }
