@@ -86,7 +86,7 @@ public class MenuMangerView {
 			
 			FONT.draw(sb, menu.getName(), Flappy.WIDTH*1/8, Flappy.HEIGHT*15/18);
 		} else {
-			FONT.draw(sb, "ACA SE MUESTRAN LOS PAJARINES", Flappy.WIDTH*1/8, Flappy.HEIGHT*15/18);
+			FONT.draw(sb, "SE ELIJE ENTRE EL NUMERO 1 - 4", 0, Flappy.HEIGHT*15/18);
 		}
 	}
 
