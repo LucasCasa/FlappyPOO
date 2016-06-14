@@ -24,7 +24,7 @@ public class Flappy extends ApplicationAdapter {
 		batch = new SpriteBatch();
 		InputProcessor ip = new KeyboardManager();
 		Gdx.input.setInputProcessor(ip);
-		gsm = new GameStateManager();
+		gsm = GameStateManager.getInstance();
 		Gdx.gl.glClearColor(1, 0, 0, 1);
 		gsm.push(new MenuState(gsm));
 	}

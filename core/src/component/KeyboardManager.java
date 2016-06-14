@@ -2,6 +2,8 @@ package component;
 
 import com.badlogic.gdx.InputProcessor;
 
+import state.GameStateManager;
+
 public class KeyboardManager implements InputProcessor {
 	private static int keycodeBuff;
 	
@@ -11,6 +13,7 @@ public class KeyboardManager implements InputProcessor {
 
 	@Override
 	public boolean keyDown(int keycode) {
+		GameStateManager.getInstance().peek().keyDown(keycode);;
 		return false;
 	}
 

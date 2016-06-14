@@ -37,11 +37,16 @@ public class MenuState extends State {
 			menu.Select(Options.SELECT_DIFICULTY);
 		
 		if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {
-			if(menu.currentSelect() != Options.MAIN)
-				Gdx.app.exit();
-			else
+//			if(menu.currentSelect() == Options.MAIN)
+//				Gdx.app.exit();
+//			else
 				menu.Select(Options.MAIN);
 		}
+	}
+	
+	public void keyDown(int keycode) {
+		if (menu.currentSelect() == Options.SELECT_PLAYERS)
+			menu.keyDown(keycode);
 	}
 	
 	@Override

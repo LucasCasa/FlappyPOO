@@ -6,9 +6,18 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class GameStateManager {
 	
+	private static GameStateManager self;
+	
+	public static GameStateManager getInstance() {
+		if (self == null) {
+			self = new GameStateManager();
+		}
+		return self;
+	}
+	
 	private Stack<State> states;
 	
-	public GameStateManager() {
+	private GameStateManager() {
 		states = new Stack<State>();
 	}
 	
@@ -27,6 +36,10 @@ public class GameStateManager {
 	
 	public void update(float dt){
 		states.peek().update(dt);
+	}
+
+	public State peek(){
+		return states.peek();
 	}
 	
 	public void render(SpriteBatch sb){
