@@ -40,9 +40,9 @@ public class MenuManager {
 				if (!writing) {
 					setPlayerBird();
 				}
-				if (endSelect) {
-					GameStateManager.getInstance().set(new PlayState(GameStateManager.getInstance()));
-				}
+//				if (endSelect) {
+//					GameStateManager.getInstance().set(new PlayState(GameStateManager.getInstance()));
+//				}
 					
 				break;
 			}
@@ -143,13 +143,6 @@ public class MenuManager {
 			}
 				
 		}
-		
-//		if (currentPlayer == 1) {
-//			currentPlayer = 2;
-//			writing = true;
-//		}
-//		else
-//			endSelect = true;
 
 	}
 

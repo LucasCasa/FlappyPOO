@@ -45,7 +45,8 @@ public class MenuState extends State {
 	
 	@Override
 	public void update(float dt) {
-		handleInput();
+		if (menu.currentSelect() == Options.MAIN)
+			handleInput();
 		menu.update();
 	}
 
