@@ -1,6 +1,8 @@
 package component.views;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import component.Types;
@@ -26,12 +28,16 @@ public class WorldManagerView {
 	private BulletView bv1; //For player 1
 	private BulletView bv2; //For player 2
 	private LifeView lw;
+	public BitmapFont FONT;
 
 	WorldManager w;
 
 	public WorldManagerView(WorldManager world) {
 		lw = new LifeView();
-
+		
+		FONT = new BitmapFont(Gdx.files.internal("arcade.fnt"));
+		FONT.getData().setScale(0.8f, 0.8f);
+		
 		birdSkinSelector(world);
 
 		world.getCam().setToOrtho(false, Flappy.WIDTH / ZOOM_CAMARA, Flappy.HEIGHT / ZOOM_CAMARA);
@@ -70,8 +76,13 @@ public class WorldManagerView {
 		for (Bullet b : w.getBRight().getBullets()) {
 			bv2.draw(sb, b);
 		}
-
+		
 		gv.draw(sb, w.getG());
+		
+		FONT.draw(sb, /*w.getBLeft().getName()*/ "P1 Score: " + w.getBLeft().getScore() ,w.getCam().position.x - Flappy.WIDTH*2/5, Flappy.HEIGHT*1/9);
+
+		FONT.draw(sb, /*w.getBRight().getName() + */"P2 Score: " + w.getBRight().getScore() ,w.getCam().position.x + Flappy.WIDTH*1/9, Flappy.HEIGHT*1/9);
+
 	}
 
 	public void dispose() {

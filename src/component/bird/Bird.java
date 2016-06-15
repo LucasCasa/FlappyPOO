@@ -30,6 +30,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	private int lifes = 3;
 	private int score = 0;
 	private float deltaTime = 0;
+	private String name = "";
 	
 	private int grav = -15;
 	private int movement = 100;
@@ -173,6 +174,14 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	
 	public int getJump() {
 		return jump;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getName() {
+		return this.name;
 	}
 	
 	public abstract void apply(int type, Bird b);

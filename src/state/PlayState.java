@@ -5,6 +5,7 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import component.WorldManager;
+import component.bird.BirdType;
 import component.views.WorldManagerView;
 
 public class PlayState extends State {
@@ -12,14 +13,15 @@ public class PlayState extends State {
 	private WorldManager world;
 	private WorldManagerView worldView;
 
-	public PlayState(GameStateManager gsm) {
+	public PlayState(GameStateManager gsm, String p1Name, String p2Name, BirdType birdType, BirdType  birdType2) {
 		super(gsm);
 		System.out.println("************INICIO DE NUEVA PARTIDA************");
 
-		this.world = new WorldManager(cam);
+		this.world = new WorldManager(cam, p1Name, p2Name, birdType, birdType2);
 		this.worldView = new WorldManagerView(world);
 
 	}
+
 
 	@Override
 	protected void handleInput() {

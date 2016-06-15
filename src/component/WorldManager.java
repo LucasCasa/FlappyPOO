@@ -7,7 +7,10 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.utils.Array;
 
 import component.bird.Bird;
+import component.bird.BirdType;
+import component.bird.BlueBird;
 import component.bird.ClassicBird;
+import component.bird.GreenBird;
 import component.bird.RedBird;
 import component.bullet.Bullet;
 import component.worldComponent.Grounds;
@@ -26,9 +29,12 @@ public class WorldManager {
 
 	private OrthographicCamera cam;
 
-	public WorldManager(OrthographicCamera cam) {
-		bLeft = new RedBird(0, 100, 200);
-		bRight = new ClassicBird(1, 500, 200);
+	public WorldManager(OrthographicCamera cam, String p1Name, String p2Name, BirdType p1Bird, BirdType p2Bird) {
+		
+		createBirds(p1Name, p2Name, p1Bird, p2Bird);
+		
+		//bLeft = new RedBird(0, 100, 200);
+		//bRight = new ClassicBird(1, 500, 200);
 		this.cam = cam;
 
 		WorldSettings.getInstance().setDefaultPreferences();
@@ -93,6 +99,49 @@ public class WorldManager {
 
 		cam.update();
 
+	}
+	
+	public void createBirds(String p1Name, String p2Name, BirdType p1Bird, BirdType p2Bird) {
+		switch(p1Bird) {
+			case RED: {
+				bLeft = new RedBird(0, 100, 200);
+				break;
+			}
+			case GREEN: {
+				bLeft = new GreenBird(0, 100, 200);
+				break;
+			}
+			case CLASSIC: {
+				bLeft = new ClassicBird(0, 100, 200);
+				break;
+			}
+			case BLUE: {
+				bLeft = new BlueBird(0, 100, 200);
+				break;
+			}
+		}
+
+		switch(p2Bird) {
+			case RED: {
+				bRight = new RedBird(1, 500, 200);
+				break;
+			}
+			case GREEN: {
+				bRight = new GreenBird(1, 500, 200);
+				break;
+			}
+			case CLASSIC: {
+				bRight = new ClassicBird(1, 500, 200);
+				break;
+			}
+			case BLUE: {
+				bRight = new BlueBird(1, 500, 200);
+				break;
+			}
+		}
+
+		bLeft.setName(p1Name);
+		bRight.setName(p2Name);
 	}
 
 	public Bird getBLeft() {

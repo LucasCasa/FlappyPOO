@@ -22,9 +22,9 @@ public class EndGame extends State {
 
 	@Override
 	public void handleInput() {
-		if (Gdx.input.isKeyPressed(Input.Keys.NUM_1))
-		//if (Gdx.input.justTouched())
-			gsm.set(new PlayState(gsm));
+		//if (Gdx.input.isKeyPressed(Input.Keys.NUM_1))			
+			//gsm.set(new PlayState(gsm));
+		
 		
 	}
 

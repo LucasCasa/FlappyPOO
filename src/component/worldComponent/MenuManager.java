@@ -5,6 +5,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Input.Keys;
 
+import component.bird.BirdType;
 import state.GameStateManager;
 import state.Options;
 import state.PlayState;
@@ -15,7 +16,7 @@ public class MenuManager {
 	
 	private String p1Name, p2Name;
 	
-	private int p1Bird, p2Bird;
+	private BirdType p1Bird, p2Bird;
 	
 	private boolean writing, endSelect;
 	
@@ -39,9 +40,6 @@ public class MenuManager {
 			case SELECT_PLAYERS: {
 				if (!writing) {
 					setPlayerBird();
-				}
-				if (endSelect) {
-					GameStateManager.getInstance().set(new PlayState(GameStateManager.getInstance()));
 				}
 					
 				break;
@@ -68,6 +66,10 @@ public class MenuManager {
 	public void keyDown(int keycode) {
 		if(writing)
 			writeName(keycode);
+	}
+	
+	public boolean selectDone() {
+		return endSelect;
 	}
 	
 	public boolean writingNames() {
@@ -100,11 +102,11 @@ public class MenuManager {
 		if (Gdx.input.isKeyPressed(Input.Keys.NUM_1)) {
 			writing = true;
 			if (currentPlayer == 1) {
-				p1Bird = 1;
+				p1Bird = BirdType.GREEN;
 				currentPlayer = 2;
 			}
 			else  {
-				p2Bird = 1;
+				p2Bird = BirdType.GREEN;
 				endSelect = true;
 			}
 		}
@@ -112,10 +114,10 @@ public class MenuManager {
 		if (Gdx.input.isKeyPressed(Input.Keys.NUM_2)) {
 			writing = true;
 			if (currentPlayer == 1) {
-				p1Bird = 2;
+				p1Bird = BirdType.RED;
 				currentPlayer = 2;
 			} else  {
-				p2Bird = 2;
+				p2Bird = BirdType.RED;
 				endSelect = true;
 			}
 		}
@@ -123,10 +125,10 @@ public class MenuManager {
 		if (Gdx.input.isKeyPressed(Input.Keys.NUM_3)) {
 			writing = true;
 			if (currentPlayer == 1) {
-				p1Bird = 3;
+				p1Bird = BirdType.CLASSIC;
 				currentPlayer = 2;
 			} else  {
-				p2Bird = 3;
+				p2Bird = BirdType.CLASSIC;
 				endSelect = true;
 			}
 		}
@@ -134,10 +136,10 @@ public class MenuManager {
 		if (Gdx.input.isKeyPressed(Input.Keys.NUM_4)) {
 			writing = true;
 			if (currentPlayer == 1) {
-				p1Bird = 4;
+				p1Bird = BirdType.BLUE;
 				currentPlayer = 2;
 			} else {
-				p2Bird = 4;
+				p2Bird = BirdType.BLUE;
 				endSelect = true;
 			}
 				
@@ -157,13 +159,19 @@ public class MenuManager {
 		
 	}
 	
-	public String getP1() {
+	public String getP1Name() {
 		return p1Name;
 	}
 	
-	public String getP2() {
+	public String getP2Name() {
 		return p2Name;
 	}
 
+	public BirdType getP1Bird() {
+		return p1Bird;
+	}
 	
+	public BirdType getP2Bird() {
+		return p2Bird;
+	}	
 }
