@@ -12,6 +12,7 @@ import component.bird.ClassicBird;
 import component.bird.GreenBird;
 import component.bird.RedBird;
 import component.bullet.Bullet;
+import component.worldComponent.Bomb;
 import component.worldComponent.Life;
 import component.worldComponent.LifeView;
 import component.worldComponent.Tubes;
@@ -28,15 +29,16 @@ public class WorldManagerView {
 	private BulletView bv1; //For player 1
 	private BulletView bv2; //For player 2
 	private LifeView lw;
-	public BitmapFont FONT;
+	private BombView bw;
+	private TableView t1;
 
 	WorldManager w;
 
 	public WorldManagerView(WorldManager world) {
 		lw = new LifeView();
-		
-		FONT = new BitmapFont(Gdx.files.internal("arcade.fnt"));
-		FONT.getData().setScale(0.8f, 0.8f);
+		t1 = new TableView();
+		bw = new BombView();
+//		FONT.getData().setScale(0.8f, 0.8f);
 		
 		birdSkinSelector(world);
 
@@ -79,9 +81,13 @@ public class WorldManagerView {
 		
 		gv.draw(sb, w.getG());
 		
-		FONT.draw(sb, /*w.getBLeft().getName()*/ "P1 Score: " + w.getBLeft().getScore() ,w.getCam().position.x - Flappy.WIDTH*2/5, Flappy.HEIGHT*1/9);
-
-		FONT.draw(sb, /*w.getBRight().getName() + */"P2 Score: " + w.getBRight().getScore() ,w.getCam().position.x + Flappy.WIDTH*1/9, Flappy.HEIGHT*1/9);
+		for (Bomb b : w.getBombs()){
+			bw.draw(sb, b);
+		}
+		
+		t1.draw(sb, w.getCam().position.x, w.getBLeft().getScore(), w.getBLeft().getLife(),-250);
+		t1.draw(sb, w.getCam().position.x, w.getBRight().getScore(), w.getBRight().getLife(),150);
+		
 
 	}
 
@@ -91,6 +97,8 @@ public class WorldManagerView {
 		bv1.dispose();
 		bv2.dispose();
 		lw.dispose();
+		t1.dispose();
+		bw.dispose();
 		birdView.dispose();
 		bird2View.dispose();
 		tubeView.dispose();

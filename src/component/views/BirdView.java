@@ -1,5 +1,7 @@
 package component.views;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
@@ -11,6 +13,7 @@ public class BirdView {
 	public static final int VISUAL_HEIGHT = 24;
 
 	private Texture b;
+	private boolean hasSound = false;
 
 	/*
 	 * Este es el ancho y el alto visual respectivamente del bird. No se hizo un
@@ -35,9 +38,18 @@ public class BirdView {
 
 	public void draw(SpriteBatch sb, Bird b) {
 
-		if (b.getAuraState() == true) {
+
+		if (b.getAuraState()) {
 			Texture aura = new Texture("aura.png");
 			sb.draw(aura, b.getPosition().x - VISUAL_HEIGHT / 1.5f, b.getPosition().y - VISUAL_WIDTH / 2);
+			if (!hasSound) {
+				Sound s = Gdx.audio.newSound(Gdx.files.internal("crash.mp3"));
+				s.play(1f);
+				hasSound = true;
+			}
+
+		} else {
+			hasSound = false;
 		}
 		sb.draw(this.b, b.getPosition().x, b.getPosition().y);
 

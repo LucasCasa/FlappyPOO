@@ -2,6 +2,7 @@ package state;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import component.WorldManager;
@@ -12,6 +13,7 @@ public class PlayState extends State {
 
 	private WorldManager world;
 	private WorldManagerView worldView;
+	private Sound s;
 
 	public PlayState(GameStateManager gsm, String p1Name, String p2Name, BirdType birdType, BirdType  birdType2) {
 		super(gsm);
@@ -19,44 +21,29 @@ public class PlayState extends State {
 
 		this.world = new WorldManager(cam, p1Name, p2Name, birdType, birdType2);
 		this.worldView = new WorldManagerView(world);
+		s = Gdx.audio.newSound(Gdx.files.internal("jump2.wav"));
 
 	}
 
 
 	@Override
 	protected void handleInput() {
-		if (Gdx.input.isKeyPressed(Input.Keys.W))
+		if (Gdx.input.isKeyPressed(Input.Keys.W)){
 			world.getBLeft().jump();
+		}
 
-		if (Gdx.input.isKeyPressed(Input.Keys.UP))
+		if (Gdx.input.isKeyPressed(Input.Keys.UP)){
 			world.getBRight().jump();
+		}
 
-		if (Gdx.input.isKeyJustPressed(Input.Keys.D))
+		if (Gdx.input.isKeyJustPressed(Input.Keys.D)){
+			s.play(1f);
 			world.getBLeft().shoot();
-
-		if (Gdx.input.isKeyJustPressed(Input.Keys.LEFT))
+		}
+			
+		if (Gdx.input.isKeyJustPressed(Input.Keys.LEFT)){
+			s.play(1f);
 			world.getBRight().shoot();
-
-		// Deberia cambiarle el nombre a apply
-		if (Gdx.input.isKeyJustPressed(Input.Keys.E))
-			world.getBLeft().apply(Input.Keys.E, world.getBRight());
-
-		if (Gdx.input.isKeyJustPressed(Input.Keys.R))
-			world.getBLeft().apply(Input.Keys.R, world.getBRight());
-
-		if (Gdx.input.isKeyJustPressed(Input.Keys.T))
-			world.getBLeft().apply(Input.Keys.T, world.getBRight());
-
-		if (Gdx.input.isKeyJustPressed(Input.Keys.M)) {
-
-		}
-
-		if (Gdx.input.isKeyJustPressed(Input.Keys.N)) {
-
-		}
-
-		if (Gdx.input.isKeyJustPressed(Input.Keys.B)) {
-
 		}
 
 		if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {

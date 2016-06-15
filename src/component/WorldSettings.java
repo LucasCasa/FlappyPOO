@@ -9,23 +9,31 @@ package component;
 public class WorldSettings {
 
 	private int tubeSpacing = 140;
-	private int tubeCount = 6;
-	private int fluctuation = 1000;
-	private int gap = 100;
+	private int tubeCount = 15;
+	private int fluctuation = 900;
+	private int gap = 120;
+	
 	private int life = 15;
-	
-	public static final int MIN_RAN_X = 200; //para los tubos en X
-	public static final int MAX_RAN_X = 1000; 
-	
-	public static final int MIN_RAN_Y = 0; //para los tubos en Y
-	public static final int MAX_RAN_Y = 600; 
-	
+	private int bombs = 20;
+
+	private static final int MAX_SPACING = 200;
+	private static final int MIN_SPACING = 30;
+	private static final int MAX_FLUCTUACTION = 1000;
+	private static final int MIN_FLUCTUACTION = 10;
+	private static final int MAX_GAP = 200;
+	private static final int MIN_GAP = 50;
+
+	public static final int MIN_RAN_X = 200; // para los tubos en X
+	public static final int MAX_RAN_X = 1000;
+	public static final int MIN_RAN_Y = 0; // para los tubos en Y
+	public static final int MAX_RAN_Y = 600;
+
 	/*
-	 * Este numero me dice cada cuantos puntos, el pajarito va a sumar
-	 * un poder al mundo
+	 * Este numero me dice cada cuantos puntos, el pajarito va a sumar un poder
+	 * al mundo
 	 */
-	public static final int SCORE_POWERS =10; 	
-	
+	public static final int SCORE_POWERS = 10;
+
 	public static final int LOWEST_OPENING = 120; // este es fijo
 	private static WorldSettings wp;
 
@@ -40,20 +48,33 @@ public class WorldSettings {
 		this.tubeSpacing = 140;
 		this.tubeCount = 6;
 		this.fluctuation = 120;
-		this.gap = 100;
+		this.gap = 120;
 		this.life = 1500;
+		this.bombs = 20;
 	}
-	
+
 	public void setHardPreferences() {
 		this.tubeSpacing = 60;
 		this.tubeCount = 10;
 		this.fluctuation = 90;
 		this.gap = 100;
 		life = 0;
+		this.bombs = 130;
+	}
+
+	public void set(int ts, int fluc, int gap) {
+		tubeSpacing = ts % MAX_SPACING + MIN_SPACING;
+		fluc = fluctuation % MAX_FLUCTUACTION + MIN_FLUCTUACTION;
+		this.gap = gap % MAX_GAP + MIN_GAP;
+	}
+
+	public void reduceGap() {
+		if (gap > MIN_GAP)
+			gap -= 10;
 	}
 
 	public boolean isInDefault() {
-		return tubeSpacing == 140 && tubeCount == 6 && fluctuation == 120 && gap == 100 && life == 15;
+		return tubeSpacing == 140 && tubeCount == 6 && fluctuation == 120 && gap == 120 && life == 15;
 	}
 
 	public void setTubeSpacing(int n) {
@@ -63,7 +84,7 @@ public class WorldSettings {
 	public void setTubeCount(int n) {
 		tubeCount = n;
 	}
-	
+
 	public void setLife(int life) {
 		this.life = life;
 	}
@@ -75,7 +96,7 @@ public class WorldSettings {
 	public void setGap(int n) {
 		gap = n;
 	}
-	
+
 	public int getLife() {
 		return life;
 	}
@@ -94,6 +115,10 @@ public class WorldSettings {
 
 	public int getTubeSpacing() {
 		return tubeSpacing;
+	}
+	
+	public int getBombs() {
+		return bombs;
 	}
 
 }

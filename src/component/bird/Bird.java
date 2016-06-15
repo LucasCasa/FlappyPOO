@@ -196,8 +196,9 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 				life.setSecure(true);
 			}
 		}else{
-			if(crashes)
+			if(crashes){
 				lifeReducer();
+			}
 		}
 		return crashes;
 	}

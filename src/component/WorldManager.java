@@ -13,6 +13,7 @@ import component.bird.ClassicBird;
 import component.bird.GreenBird;
 import component.bird.RedBird;
 import component.bullet.Bullet;
+import component.worldComponent.Bomb;
 import component.worldComponent.Grounds;
 import component.worldComponent.Life;
 import component.worldComponent.Tubes;
@@ -26,6 +27,7 @@ public class WorldManager {
 	private Grounds g;
 	private Array<Tubes> tubes;
 	private List<Life> lifes;
+	private List<Bomb> bombs;
 
 	private OrthographicCamera cam;
 
@@ -40,11 +42,20 @@ public class WorldManager {
 		WorldSettings.getInstance().setDefaultPreferences();
 
 		lifes = new ArrayList<Life>();
-
+		bombs = new ArrayList<>();
+		
 		for (int i = 1; i <= WorldSettings.getInstance().getLife(); i++) {
 			int ranX = (int) Math.floor(Math.random() * (WorldSettings.MIN_RAN_X - (WorldSettings.MAX_RAN_X + 1)) + (WorldSettings.MAX_RAN_X + 1));
 			int ranY = (int) Math.floor(Math.random() * (WorldSettings.MIN_RAN_Y - (WorldSettings.MAX_RAN_Y + 1))+ (WorldSettings.MAX_RAN_Y + 1));
 			lifes.add(new Life(ranX * i, ranY));
+		}
+		
+		for (int i = 1; i < WorldSettings.getInstance().getBombs(); i++) {
+			int ranX = (int) Math.floor(Math.random() * (WorldSettings.MIN_RAN_X - (WorldSettings.MAX_RAN_X + 1))
+					+ (WorldSettings.MAX_RAN_X + 1));
+			int ranY = (int) Math.floor(Math.random() * (WorldSettings.MIN_RAN_Y - (WorldSettings.MAX_RAN_Y + 1))
+					+ (WorldSettings.MAX_RAN_Y + 1));
+			bombs.add(new Bomb(ranX * i, ranY));
 		}
 
 		tubes = new Array<Tubes>();
@@ -95,6 +106,13 @@ public class WorldManager {
 		for (Bullet b : bRight.getBullets()) {
 			b.update(dt);
 			bLeft.crash(b);
+		}
+		
+		for (Bomb b : bombs) {
+			if (bLeft.crash(b))
+				b.exploit();
+			if (bRight.crash(b))
+				b.exploit();
 		}
 
 		cam.update();
@@ -166,6 +184,10 @@ public class WorldManager {
 
 	public List<Life> getLifes() {
 		return lifes;
+	}
+
+	public List<Bomb> getBombs() {
+		return bombs;
 	}
 
 }
