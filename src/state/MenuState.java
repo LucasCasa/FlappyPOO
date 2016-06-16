@@ -20,9 +20,8 @@ public class MenuState extends State {
 
 	@Override
 	public void handleInput() {
-		if (Gdx.input.isKeyPressed(Input.Keys.NUM_1)/* && menu.currentSelect() != Options.SELECT_PLAYERS*/){
+		if (Gdx.input.isKeyPressed(Input.Keys.NUM_1))
 				menu.Select(Options.SELECT_PLAYERS);
-		}
 		
 		if (Gdx.input.isKeyPressed(Input.Keys.NUM_2))
 			menu.Select(Options.HIGHSCORES);
@@ -30,12 +29,8 @@ public class MenuState extends State {
 		if (Gdx.input.isKeyPressed(Input.Keys.NUM_3))
 			menu.Select(Options.SELECT_DIFICULTY);
 		
-		if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {
-//			if(menu.currentSelect() == Options.MAIN)
-//				Gdx.app.exit();
-//			else
-				menu.Select(Options.MAIN);
-		}
+		if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE))
+			Gdx.app.exit();
 	}
 	
 	public void keyDown(int keycode) {
@@ -45,13 +40,15 @@ public class MenuState extends State {
 	
 	@Override
 	public void update(float dt) {
-		if (menu.currentSelect() == Options.MAIN)
+		if (menu.currentSelect() == Options.MAIN) {
 			handleInput();
+		}
+		
 		menu.update();
+		
 		if(menu.selectDone()) {
 			gsm.set(new PlayState(gsm, menu.getP1Name(), menu.getP2Name(), menu.getP1Bird(), menu.getP2Bird()));
 		}
-		
 	}
 
 	@Override

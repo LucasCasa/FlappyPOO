@@ -1,10 +1,15 @@
 package component.worldComponent;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Input.Keys;
+import com.badlogic.gdx.utils.Array;
 
+import component.WorldSettings;
 import component.bird.BirdType;
 import state.GameStateManager;
 import state.Options;
@@ -22,6 +27,8 @@ public class MenuManager {
 	
 	private int currentPlayer;
 	
+	private List<Tubes> tubes;
+	
 	private String name;
 	
 	public MenuManager(){
@@ -29,6 +36,11 @@ public class MenuManager {
 		currentPlayer = 1;
 		name = "";
 		writing = true;
+		tubes = new ArrayList<Tubes>();
+		for (int i = 1; i <= WorldSettings.getInstance().getTubeCount(); i++) {
+			//tubes.add(new Tubes(i * (WorldSettings.getInstance().getTubeSpacing() + Tubes.WIDTH)));
+			tubes.add(new Tubes(i * 5));
+		}
 	}
 	
 	public void update() {
@@ -50,7 +62,7 @@ public class MenuManager {
 			}
 			
 			case SELECT_DIFICULTY: {
-				
+				gameSettings();
 			}						
 		}
 	}
@@ -96,6 +108,16 @@ public class MenuManager {
 	            this.name = name.substring(0, name.length()-1);
 	    }
 	    return;
+	}
+	
+	public void gameSettings() {
+//		for (int i = 1; i <= WorldSettings.getInstance().getTubeCount(); i++) {
+//			tubes.add(new Tubes(i * (WorldSettings.getInstance().getTubeSpacing() + Tubes.WIDTH)));
+//		}
+	}
+	
+	public List<Tubes> getSettingTubes() {
+		return tubes;
 	}
 	
 	public void setPlayerBird() {

@@ -1,5 +1,8 @@
 package component.views;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -7,6 +10,8 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import component.Types;
 import component.worldComponent.MenuManager;
+import component.worldComponent.Tube;
+import component.worldComponent.Tubes;
 import start.Flappy;
 
 
@@ -14,12 +19,13 @@ public class MenuMangerView {
 	
 	private Texture logo;
 	private Texture background;
-	private Texture playBtn;
+
+	private TubeView tubes;
 	
 	private Texture birdRed, birdGreen, birdClassic, birdBlue;
 	
 	private Texture bullet1, bullet2, bullet3, bullet4;
-	//esto tiene que ir a la clase assets en los "FONTS"
+
 	public BitmapFont FONT;
 	
 	private MenuManager menu;
@@ -31,21 +37,25 @@ public class MenuMangerView {
 		
 		logo = new Texture(Types.LOGO);
 		background = new Texture(Types.BACKGROUND);
-		playBtn = new Texture(Types.PLAYBTN);
 		
 		birdRed = new Texture(Types.RED_BIRD);
 		birdGreen = new Texture(Types.GREEN_BIRD);
 		birdClassic = new Texture(Types.CLASSIC_BIRD);
 		birdBlue = new Texture(Types.BLUE_BIRD);
 		
-		bullet1 = new Texture(Types.SILVER_BULLET_INV);
-		bullet2 = new Texture(Types.GOLDEN_BULLET_INV);
-		bullet3 = new Texture(Types.CLASSIC_BULLET_INV);
-		bullet4 = new Texture(Types.BLUE_BULLET_INV);
+		bullet1 = new Texture(Types.SILVER_BULLET);
+		bullet2 = new Texture(Types.GOLDEN_BULLET);
+		bullet3 = new Texture(Types.CLASSIC_BULLET);
+		bullet4 = new Texture(Types.BLUE_BULLET);
+	
+		tubes = new TubeView();
+		
 	}
 
 	public void render(SpriteBatch sb) {
-		sb.begin();
+		sb.begin();		
+		sb.draw(background, 0, 0, Flappy.WIDTH, Flappy.HEIGHT);
+
 		switch(menu.currentSelect()) {
 			case MAIN: {
 				drawMainMenu(sb);
@@ -57,13 +67,14 @@ public class MenuMangerView {
 				}	else {
 					drawPlayerSelect(sb, 2);
 				}
+				break;
 			}		
 			case HIGHSCORES: {
-				
+					
 				break;
 			}			
 			case SELECT_DIFICULTY: {
-				
+					drawSettings(sb);
 				break;
 			}
 								
@@ -74,7 +85,6 @@ public class MenuMangerView {
 
 	public void dispose() {
 		background.dispose();
-		playBtn.dispose();
 		FONT.dispose();
 		birdGreen.dispose();
 		birdRed.dispose();
@@ -86,8 +96,24 @@ public class MenuMangerView {
 		bullet4.dispose();
 	}
 	
+	public void drawSettings(SpriteBatch sb) {
+		FONT.draw(sb, "Settings", Flappy.WIDTH*1/4, Flappy.HEIGHT*9/10);
+
+		FONT.getData().setScale(0.7f);
+		FONT.draw(sb, "up/down - gap", Flappy.WIDTH*1/10, Flappy.HEIGHT*9/13);
+		FONT.draw(sb, "left/rigt - spacing", Flappy.WIDTH*3/6, Flappy.HEIGHT*9/13);
+		FONT.getData().setScale(1);
+		
+		for(Tubes tube: menu.getSettingTubes()) {
+			//System.out.println("asfsa   " + tube.getTubeBottomPos().x);
+			tubes.draw(sb, tube);
+		}
+		TubeView tv = new TubeView();
+		tv.draw(sb, new Tubes(20));
+
+	}
+	
 	public void drawMainMenu(SpriteBatch sb) {
-		sb.draw(background, 0, 0, Flappy.WIDTH, Flappy.HEIGHT);
 		sb.draw(logo, (Flappy.WIDTH / 2) - (logo.getWidth() / 2), (Flappy.HEIGHT) - (logo.getWidth() / 2));
 		FONT.draw(sb, "1 - Play FlappyPOO", Flappy.WIDTH*1/4, Flappy.HEIGHT*2/3);
 		FONT.draw(sb, "2 - View Highscores", Flappy.WIDTH*1/4, Flappy.HEIGHT*4/7);
@@ -95,8 +121,6 @@ public class MenuMangerView {
 	}
 	
 	public void drawPlayerSelect(SpriteBatch sb, int player) {
-		sb.draw(background, 0, 0, Flappy.WIDTH, Flappy.HEIGHT);
-
 		if (menu.writingNames()) {
 			if (player == 1) {
 				FONT.draw(sb, "Choose a name for Player 1", Flappy.WIDTH*1/9, Flappy.HEIGHT*15/16);
