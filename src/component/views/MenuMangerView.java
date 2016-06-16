@@ -91,7 +91,7 @@ public class MenuMangerView {
 		sb.draw(logo, (Flappy.WIDTH / 2) - (logo.getWidth() / 2), (Flappy.HEIGHT) - (logo.getWidth() / 2));
 		FONT.draw(sb, "1 - Play FlappyPOO", Flappy.WIDTH*1/4, Flappy.HEIGHT*2/3);
 		FONT.draw(sb, "2 - View Highscores", Flappy.WIDTH*1/4, Flappy.HEIGHT*4/7);
-		FONT.draw(sb, "3 - Set Dificulty", Flappy.WIDTH*1/4, Flappy.HEIGHT*10/21);
+		FONT.draw(sb, "3 - Set Difficulty", Flappy.WIDTH*1/4, Flappy.HEIGHT*10/21);
 	}
 	
 	public void drawPlayerSelect(SpriteBatch sb, int player) {

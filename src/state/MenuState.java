@@ -51,8 +51,6 @@ public class MenuState extends State {
 		menu.update();
 		if(menu.selectDone()) {
 			gsm.set(new PlayState(gsm, menu.getP1Name(), menu.getP2Name(), menu.getP1Bird(), menu.getP2Bird()));
-			System.out.println("reached");
-			System.out.println(gsm.peek().getClass());
 		}
 		
 	}

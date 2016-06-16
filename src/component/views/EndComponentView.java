@@ -46,9 +46,9 @@ public class EndComponentView {
 	public void drawEndMenu(SpriteBatch sb) {
 		sb.draw(background, 0, 0, Flappy.WIDTH, Flappy.HEIGHT);
 		sb.draw(gameOver, (Flappy.WIDTH / 2) - (gameOver.getWidth() / 2), (Flappy.HEIGHT) - (gameOver.getWidth() / 2));
-		FONT.draw(sb, "1 - Main Menu", Flappy.WIDTH*1/4, Flappy.HEIGHT*2/3);
-		FONT.draw(sb, "2 - Play Again", Flappy.WIDTH*1/4, Flappy.HEIGHT*4/7);
-		FONT.draw(sb, "3 - Exit Game", Flappy.WIDTH*1/4, Flappy.HEIGHT*10/21);
+		FONT.draw(sb, "A - Play Again", Flappy.WIDTH*1/4, Flappy.HEIGHT*2/3);
+		FONT.draw(sb, "B - Main Menu", Flappy.WIDTH*1/4, Flappy.HEIGHT*4/7);
+		FONT.draw(sb, "C - Exit Game", Flappy.WIDTH*1/4, Flappy.HEIGHT*10/21);
 	}
 
 }

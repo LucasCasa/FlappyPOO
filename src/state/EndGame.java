@@ -25,13 +25,13 @@ public class EndGame extends State {
 
 	@Override
 	public void handleInput() {
-		if (Gdx.input.isKeyPressed(Input.Keys.NUM_1))
-			end.Select(Options.TO_MAIN_MENU);
-	
-		if (Gdx.input.isKeyPressed(Input.Keys.NUM_2))
+		if (Gdx.input.isKeyPressed(Input.Keys.A))
 			end.Select(Options.PLAY_AGAIN);
 	
-		if (Gdx.input.isKeyPressed(Input.Keys.NUM_3))
+		if (Gdx.input.isKeyPressed(Input.Keys.B))
+			end.Select(Options.TO_MAIN_MENU);
+	
+		if (Gdx.input.isKeyPressed(Input.Keys.C))
 			end.Select(Options.EXIT);
 		
 	}

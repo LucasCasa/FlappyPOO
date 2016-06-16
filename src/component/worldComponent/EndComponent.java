@@ -35,13 +35,14 @@ public class EndComponent {
 			case MAIN: {
 				break;
 			}
-			case TO_MAIN_MENU: {
-				gsm.set(new MenuState(gsm));
-				break;
-			}
 									
 			case PLAY_AGAIN: {
 				gsm.set(new PlayState(gsm, p1, p2, b1, b2));
+				break;
+			}
+			
+			case TO_MAIN_MENU: {
+				gsm.set(new MenuState(gsm));
 				break;
 			}
 			
@@ -49,7 +50,6 @@ public class EndComponent {
 				Gdx.app.exit();
 			}						
 		}
-		cam.update();
 	}
 	
 	public OrthographicCamera getCam() {
