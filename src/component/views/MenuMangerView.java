@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import component.Types;
+import component.WorldSettings;
 import component.worldComponent.MenuManager;
 import component.worldComponent.Tube;
 import component.worldComponent.Tubes;
@@ -24,7 +25,7 @@ public class MenuMangerView {
 	
 	private Texture birdRed, birdGreen, birdClassic, birdBlue;
 	
-	private Texture bullet1, bullet2, bullet3, bullet4;
+	private Texture bullet1, bullet2, bullet3, bullet4, tube;
 
 	public BitmapFont FONT;
 	
@@ -47,7 +48,10 @@ public class MenuMangerView {
 		bullet2 = new Texture(Types.GOLDEN_BULLET);
 		bullet3 = new Texture(Types.CLASSIC_BULLET);
 		bullet4 = new Texture(Types.BLUE_BULLET);
-	
+		
+		
+		tube = new Texture(Types.BOTTOM_TUBE);
+		
 		tubes = new TubeView();
 		
 	}
@@ -98,19 +102,41 @@ public class MenuMangerView {
 	
 	public void drawSettings(SpriteBatch sb) {
 		FONT.draw(sb, "Settings", Flappy.WIDTH*1/4, Flappy.HEIGHT*9/10);
-
+		WorldSettings ws = WorldSettings.getInstance();
+		
 		FONT.getData().setScale(0.7f);
-		FONT.draw(sb, "up/down - gap", Flappy.WIDTH*1/10, Flappy.HEIGHT*9/13);
-		FONT.draw(sb, "left/rigt - spacing", Flappy.WIDTH*3/6, Flappy.HEIGHT*9/13);
+		switch (menu.getSettingPos()) {
+			case 1: {
+				FONT.draw(sb, ">", Flappy.WIDTH*1/13, Flappy.HEIGHT*9/12);
+				break;
+			}
+			case 2: {
+				FONT.draw(sb, ">", Flappy.WIDTH*1/13, Flappy.HEIGHT*10/15);				
+				break;
+			}
+			case 3: {
+				FONT.draw(sb, ">", Flappy.WIDTH*1/13, Flappy.HEIGHT*9/16);
+				break;
+			}
+			case 4: {
+				FONT.draw(sb, ">", Flappy.WIDTH*1/13, Flappy.HEIGHT*9/19);
+				break;
+			}
+			case 5: {
+				FONT.draw(sb, ">", Flappy.WIDTH*1/13, Flappy.HEIGHT*1/8);
+				break;
+			}
+
+		}
+		FONT.draw(sb, "TUBES GAP: " + ws.getGap(), Flappy.WIDTH*1/10, Flappy.HEIGHT*9/12);
+		FONT.draw(sb, "TUBES HOLE FLUCTIATION: " + ws.getFluctuation(), Flappy.WIDTH*1/10, Flappy.HEIGHT*10/15);
+		FONT.draw(sb, "MAX REACHABLE LIVES: " + ws.getLife(), Flappy.WIDTH*1/10, Flappy.HEIGHT*9/16);
+		FONT.draw(sb, "MAX REACHABLE BOMBS: "+ ws.getBombs(), Flappy.WIDTH*1/10, Flappy.HEIGHT*9/19);
 		FONT.getData().setScale(1);
 		
-		for(Tubes tube: menu.getSettingTubes()) {
-			//System.out.println("asfsa   " + tube.getTubeBottomPos().x);
-			tubes.draw(sb, tube);
-		}
-		TubeView tv = new TubeView();
-		tv.draw(sb, new Tubes(20));
-
+		FONT.draw(sb, "SET DEFAULT SETTINGS", Flappy.WIDTH*1/10, Flappy.HEIGHT*1/8);
+		
+		
 	}
 	
 	public void drawMainMenu(SpriteBatch sb) {

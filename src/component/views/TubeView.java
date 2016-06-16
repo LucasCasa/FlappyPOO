@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import component.Types;
 import component.worldComponent.Tubes;
+import start.Flappy;
 
 public class TubeView {
 	
@@ -31,6 +32,7 @@ public class TubeView {
 	public void draw(SpriteBatch sb, Tubes tube){
 		sb.draw(top, tube.getTubeTopPos().x, tube.getTubeTopPos().y);
 		sb.draw(bottom, tube.getTubeBottomPos().x, tube.getTubeBottomPos().y);
+		//sb.draw(bottom, tube.getTubeTopPos().x, Flappy.HEIGHT / 2);
 	}
 	
 

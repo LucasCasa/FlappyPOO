@@ -29,7 +29,7 @@ public class MenuState extends State {
 		if (Gdx.input.isKeyPressed(Input.Keys.NUM_3))
 			menu.Select(Options.SELECT_DIFICULTY);
 		
-		if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE))
+		if (Gdx.input.isKeyJustPressed(Input.Keys.ESCAPE))
 			Gdx.app.exit();
 	}
 	
@@ -43,6 +43,25 @@ public class MenuState extends State {
 		if (menu.currentSelect() == Options.MAIN) {
 			handleInput();
 		}
+		
+		if (menu.currentSelect() == Options.SELECT_DIFICULTY) {
+			if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE))
+				menu.Select(Options.MAIN);
+		}
+
+		if (menu.currentSelect() == Options.SELECT_PLAYERS) {
+			if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {
+				menu.resetPlayers();
+				menu.Select(Options.MAIN);
+			}
+		}
+
+		if (menu.currentSelect() == Options.HIGHSCORES) {
+			if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {
+				menu.Select(Options.MAIN);
+			}
+		}
+
 		
 		menu.update();
 		

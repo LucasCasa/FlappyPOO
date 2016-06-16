@@ -11,7 +11,9 @@ import com.badlogic.gdx.utils.Array;
 
 import component.WorldSettings;
 import component.bird.BirdType;
+import start.Flappy;
 import state.GameStateManager;
+import state.MenuState;
 import state.Options;
 import state.PlayState;
 
@@ -31,16 +33,19 @@ public class MenuManager {
 	
 	private String name;
 	
+	private int setting;
+	
 	public MenuManager(){
 		option = Options.MAIN;
 		currentPlayer = 1;
 		name = "";
 		writing = true;
 		tubes = new ArrayList<Tubes>();
-		for (int i = 1; i <= WorldSettings.getInstance().getTubeCount(); i++) {
-			//tubes.add(new Tubes(i * (WorldSettings.getInstance().getTubeSpacing() + Tubes.WIDTH)));
-			tubes.add(new Tubes(i * 5));
-		}
+		setting = 1;
+//		for (int i = 1; i <= WorldSettings.getInstance().getTubeCount(); i++) {
+//			//tubes.add(new Tubes(i * (WorldSettings.getInstance().getTubeSpacing() + Tubes.WIDTH)));
+//			tubes.add(new Tubes(i * (WorldSettings.getInstance().getTubeSpacing() + Tubes.WIDTH)));
+//		}
 	}
 	
 	public void update() {
@@ -111,9 +116,81 @@ public class MenuManager {
 	}
 	
 	public void gameSettings() {
-//		for (int i = 1; i <= WorldSettings.getInstance().getTubeCount(); i++) {
-//			tubes.add(new Tubes(i * (WorldSettings.getInstance().getTubeSpacing() + Tubes.WIDTH)));
-//		}
+		WorldSettings ws = WorldSettings.getInstance();
+		
+		if (Gdx.input.isKeyJustPressed(Input.Keys.UP)) {
+			if (setting == 1)
+				setting = 5;
+			else
+				setting -= 1;
+		}
+
+		if (Gdx.input.isKeyJustPressed(Input.Keys.DOWN)) {
+			if (setting == 5)
+				setting = 1;
+			else
+				setting += 1;		
+		}
+		
+		if (Gdx.input.isKeyPressed(Input.Keys.ENTER)) {
+			if(setting == 5)
+				ws.setDefaultPreferences();
+		}
+
+		if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
+			switch (setting) {
+				case 1: {
+					if(ws.getGap() > ws.getMinGap())
+					ws.setGap(ws.getGap() - 1);
+					break;
+				}
+				case 2: {
+					if(ws.getFluctuation() > ws.getMinFluctuation())
+					ws.setFluctuation(ws.getFluctuation() - 1);
+					break;
+				}
+				case 3: {
+					if(ws.getLife() > 0)
+						ws.setLife(ws.getLife() - 1);					
+					break;
+				}
+				case 4: {
+					if(ws.getBombs() > 0)
+						ws.setBombs(ws.getBombs() - 1);
+					break;
+				}
+			}
+		}
+
+		if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
+			switch (setting) {
+				case 1: {
+					if(ws.getGap() < ws.getMaxGap())
+					ws.setGap(ws.getGap() + 1);
+					break;
+				}
+				case 2: {
+					if(ws.getFluctuation() < ws.getMaxFluctuation())
+					ws.setFluctuation(ws.getFluctuation() + 1);
+					break;
+				}
+				case 3: {
+					//if(ws.getLife() < ws.getMaxLifes())
+					ws.setLife(ws.getLife() + 1);					
+					break;
+				}
+				case 4: {
+					ws.setBombs(ws.getBombs() + 1);
+					break;
+				}
+			}
+		}
+
+		
+	}
+	
+	public int getSettingPos() {
+		return setting;
 	}
 	
 	public List<Tubes> getSettingTubes() {
@@ -167,6 +244,14 @@ public class MenuManager {
 				
 		}
 
+	}
+	
+	public void resetPlayers() {
+		p1Name = "";
+		p2Name = "";
+		currentPlayer = 1;
+		endSelect = false;
+		writing = true;
 	}
 
 	public Options currentSelect() {
