@@ -17,6 +17,7 @@ import component.worldComponent.Bomb;
 import component.worldComponent.Grounds;
 import component.worldComponent.Life;
 import component.worldComponent.Tubes;
+import files.Output;
 
 public class WorldManager {
 
@@ -29,6 +30,7 @@ public class WorldManager {
 	private List<Life> lifes;
 	private List<Bomb> bombs;
 
+	private Boolean continues;
 	private OrthographicCamera cam;
 
 	public WorldManager(OrthographicCamera cam, String p1Name, String p2Name, BirdType p1Bird, BirdType p2Bird) {
@@ -36,7 +38,7 @@ public class WorldManager {
 		createBirds(p1Name, p2Name, p1Bird, p2Bird);
 		
 		this.cam = cam;
-
+		continues = true;
 		lifes = new ArrayList<>();
 		bombs = new ArrayList<>();
 		
@@ -110,6 +112,12 @@ public class WorldManager {
 			if (bRight.crash(b))
 				b.exploit();
 		}
+		
+		if(bLeft.getLife() == 0 || bRight.getLife() == 0){
+			Output.getInstance().write(bLeft, bRight);
+			continues = false;
+			//			gsm.set(new EndGame(gsm, bLeft.getName(), bRight.getName(), b1, b2 ));
+		}
 
 		cam.update();
 
@@ -176,6 +184,14 @@ public class WorldManager {
 
 	public OrthographicCamera getCam() {
 		return cam;
+	}
+	
+	public Boolean getContinues() {
+		return continues;
+	}
+	
+	public void setContinues(Boolean continues) {
+		this.continues = continues;
 	}
 
 	public List<Life> getLifes() {
