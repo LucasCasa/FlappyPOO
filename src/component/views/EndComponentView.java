@@ -11,7 +11,7 @@ import start.Flappy;
 
 public class EndComponentView {
 	
-	public static final float ZOOM_CAMARA = 1.2f;
+	public static final float ZOOM_CAMARA = 1f;
 	private Texture gameOver;
 	private Texture background;
 	//esto tiene que ir a la clase assets en los "FONTS"
@@ -22,14 +22,15 @@ public class EndComponentView {
 	public EndComponentView(EndComponent end) {
 		this.end = end;
 		
-		end.getCam().setToOrtho(false, Flappy.WIDTH / ZOOM_CAMARA, Flappy.HEIGHT / ZOOM_CAMARA);
-		end.getCam().update();
+		end.getCam().setToOrtho(false, Flappy.WIDTH / ZOOM_CAMARA , Flappy.HEIGHT / ZOOM_CAMARA);
 		FONT = new BitmapFont(Gdx.files.internal("arcade.fnt"));
 		gameOver = new Texture(Types.GAME_OVER);
 		background = new Texture(Types.BACKGROUND);
 	}
 	
 	public void render(SpriteBatch sb) {
+		end.getCam().update();
+		sb.setProjectionMatrix(end.getCam().combined);
 		sb.begin();
 		drawEndMenu(sb);
 		sb.end();
