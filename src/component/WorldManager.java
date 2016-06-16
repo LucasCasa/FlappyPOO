@@ -17,6 +17,9 @@ import component.worldComponent.Bomb;
 import component.worldComponent.Grounds;
 import component.worldComponent.Life;
 import component.worldComponent.Tubes;
+import files.Output;
+import state.EndGame;
+import state.GameStateManager;
 
 public class WorldManager {
 
@@ -28,12 +31,20 @@ public class WorldManager {
 	private Array<Tubes> tubes;
 	private List<Life> lifes;
 	private List<Bomb> bombs;
+	private GameStateManager gsm;
+	// no me parece la mejor manera de hacerlo pero no encontre otra
+	private BirdType b1;
+	private BirdType b2;
+	private Boolean continues;
 
 	private OrthographicCamera cam;
 
 	public WorldManager(OrthographicCamera cam, String p1Name, String p2Name, BirdType p1Bird, BirdType p2Bird) {
 		
-		createBirds(p1Name, p2Name, p1Bird, p2Bird);
+		continues=true;
+		b1= p1Bird;
+		b2= p2Bird;
+		createBirds(p1Name, p2Name, b1, b2);
 		
 		//bLeft = new RedBird(0, 100, 200);
 		//bRight = new ClassicBird(1, 500, 200);
@@ -75,7 +86,9 @@ public class WorldManager {
 		bRight.update(dt);
 
 		cam.position.x = bLeft.getPosition().x + X_CAM_OFFSET;
-
+		
+		
+		
 		for (int i = 0; i < tubes.size; i++) {
 			Tubes tube = tubes.get(i);
 
@@ -116,6 +129,12 @@ public class WorldManager {
 		}
 
 		cam.update();
+		
+		if(bLeft.getLife() == 0 || bRight.getLife() == 0){
+			Output.getInstance().write(bLeft, bRight);
+			setContinues(false);
+//			gsm.set(new EndGame(gsm, bLeft.getName(), bRight.getName(), b1, b2 ));
+		}
 
 	}
 	
@@ -160,6 +179,14 @@ public class WorldManager {
 
 		bLeft.setName(p1Name);
 		bRight.setName(p2Name);
+	}
+
+	public Boolean getContinues() {
+		return continues;
+	}
+
+	public void setContinues(Boolean continues) {
+		this.continues = continues;
 	}
 
 	public Bird getBLeft() {

@@ -14,11 +14,19 @@ public class PlayState extends State {
 	private WorldManager world;
 	private WorldManagerView worldView;
 	private Sound s;
+	private String p1;
+	private String p2;
+	private BirdType b1;
+	private BirdType b2;
 
 	public PlayState(GameStateManager gsm, String p1Name, String p2Name, BirdType birdType, BirdType  birdType2) {
 		super(gsm);
 		System.out.println("************INICIO DE NUEVA PARTIDA************");
-
+		
+		this.p1=p1Name;
+		this.p2=p2Name;
+		this.b1=birdType;
+		this.b2=birdType2;
 		this.world = new WorldManager(cam, p1Name, p2Name, birdType, birdType2);
 		this.worldView = new WorldManagerView(world);
 		s = Gdx.audio.newSound(Gdx.files.internal("jump2.wav"));
@@ -56,6 +64,9 @@ public class PlayState extends State {
 	public void update(float dt) {
 		handleInput();
 		world.update(dt);
+		if(!(world.getContinues())){
+			gsm.set(new EndGame(gsm, p1, p2, b1, b2));
+		}
 	}
 
 	@Override
