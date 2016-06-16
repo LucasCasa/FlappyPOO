@@ -18,7 +18,7 @@ public class EndGame extends State {
 	public EndGame(GameStateManager gsm, String p1Name, String p2Name, BirdType birdType, BirdType  birdType2) {
 		super(gsm);
 		//cam.setToOrtho(false, Flappy.WIDTH / ZOOM_CAMARA, Flappy.HEIGHT / ZOOM_CAMARA);
-		end= new EndComponent(gsm, p1Name, p2Name, birdType, birdType2);
+		end= new EndComponent(cam, gsm, p1Name, p2Name, birdType, birdType2);
 		endView= new EndComponentView(end);
 
 	}
@@ -26,8 +26,7 @@ public class EndGame extends State {
 	@Override
 	public void handleInput() {
 		if (Gdx.input.isKeyPressed(Input.Keys.NUM_1))
-			end.Select(Options.MAIN);
-	
+			end.Select(Options.TO_MAIN_MENU);
 	
 		if (Gdx.input.isKeyPressed(Input.Keys.NUM_2))
 			end.Select(Options.PLAY_AGAIN);
@@ -39,7 +38,8 @@ public class EndGame extends State {
 
 	@Override
 	public void update(float dt) {
-		handleInput();
+		if(end.currentSelect() == Options.MAIN)
+			handleInput();
 		end.update();
 	}
 

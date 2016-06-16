@@ -6,5 +6,6 @@ public enum Options {
 	HIGHSCORES,
 	SELECT_DIFICULTY,
 	PLAY_AGAIN,
-	EXIT
+	EXIT, 
+	TO_MAIN_MENU
 }

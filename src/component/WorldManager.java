@@ -128,14 +128,15 @@ public class WorldManager {
 				b.exploit();
 		}
 
-		cam.update();
-		
 		if(bLeft.getLife() == 0 || bRight.getLife() == 0){
 			Output.getInstance().write(bLeft, bRight);
 			setContinues(false);
 //			gsm.set(new EndGame(gsm, bLeft.getName(), bRight.getName(), b1, b2 ));
 		}
 
+		cam.update();
+		
+		
 	}
 	
 	public void createBirds(String p1Name, String p2Name, BirdType p1Bird, BirdType p2Bird) {

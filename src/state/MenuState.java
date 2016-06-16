@@ -45,11 +45,14 @@ public class MenuState extends State {
 	
 	@Override
 	public void update(float dt) {
-		if (menu.currentSelect() == Options.MAIN)
+		if (menu.currentSelect() == Options.MAIN){
 			handleInput();
+	}
 		menu.update();
 		if(menu.selectDone()) {
 			gsm.set(new PlayState(gsm, menu.getP1Name(), menu.getP2Name(), menu.getP1Bird(), menu.getP2Bird()));
+			System.out.println("reached");
+			System.out.println(gsm.peek().getClass());
 		}
 		
 	}
