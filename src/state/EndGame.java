@@ -1,48 +1,52 @@
 package state;
 
-import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import start.Flappy;
+import component.bird.BirdType;
+import component.views.EndComponentView;
+import component.worldComponent.EndComponent;
 
 public class EndGame extends State {
 
-	private Texture background;
-	private Texture playBtn;
+	private EndComponent end;
+	private EndComponentView endView;
 
-	public EndGame(GameStateManager gsm) {
+	public EndGame(GameStateManager gsm, String p1Name, String p2Name, BirdType birdType, BirdType  birdType2) {
 		super(gsm);
 		//cam.setToOrtho(false, Flappy.WIDTH / ZOOM_CAMARA, Flappy.HEIGHT / ZOOM_CAMARA);
-		background = new Texture("bg2.png");
-		playBtn = new Texture("playBtn.png");
+		end= new EndComponent(cam, gsm, p1Name, p2Name, birdType, birdType2);
+		endView= new EndComponentView(end);
 
 	}
 
 	@Override
 	public void handleInput() {
-		//if (Gdx.input.isKeyPressed(Input.Keys.NUM_1))			
-			//gsm.set(new PlayState(gsm));
-		
+		if (Gdx.input.isKeyPressed(Input.Keys.A))
+			end.Select(Options.PLAY_AGAIN);
+	
+		if (Gdx.input.isKeyPressed(Input.Keys.B))
+			end.Select(Options.TO_MAIN_MENU);
+	
+		if (Gdx.input.isKeyPressed(Input.Keys.C))
+			end.Select(Options.EXIT);
 		
 	}
 
 	@Override
 	public void update(float dt) {
-		handleInput();
+		if(end.currentSelect() == Options.MAIN)
+			handleInput();
+		end.update();
 	}
 
 	@Override
 	public void render(SpriteBatch sb) {
-		
-		sb.begin();
-		sb.draw(background, cam.position.x - (cam.viewportWidth / 2), 0);
-		sb.draw(playBtn, (Flappy.WIDTH / 2) - (playBtn.getWidth() / 2), (Flappy.HEIGHT / 2) - (playBtn.getWidth() / 2));
-		sb.end();
+		endView.render(sb);
 	}
 
 	public void dispose() {
-		background.dispose();
-		playBtn.dispose();
+		endView.dispose();
 	}
-
 }
