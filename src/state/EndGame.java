@@ -13,10 +13,10 @@ public class EndGame extends State {
 	private EndComponent end;
 	private EndComponentView endView;
 
-	public EndGame(GameStateManager gsm, String p1Name, String p2Name, BirdType birdType, BirdType  birdType2) {
+	public EndGame(GameStateManager gsm) {
 		super(gsm);
 		//cam.setToOrtho(false, Flappy.WIDTH / ZOOM_CAMARA, Flappy.HEIGHT / ZOOM_CAMARA);
-		end= new EndComponent(cam, gsm, p1Name, p2Name, birdType, birdType2);
+		end= new EndComponent(cam, gsm);
 		endView= new EndComponentView(end);
 
 	}

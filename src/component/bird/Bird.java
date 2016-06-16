@@ -89,10 +89,10 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	private void reduceLife() {
 		lifes--;
 		System.out.println("Se reduce la vida de " + getID() + " - VIDAS ACTUALES: " + getLife());
-		if (getLife() == 0) {
-			Output.getInstance().write(this);
-			Gdx.app.exit();
-		}
+//		if (getLife() == 0) {
+//			Output.getInstance().write(this);
+//			Gdx.app.exit();
+//		}
 	}
 
 	public void increaseLife() {

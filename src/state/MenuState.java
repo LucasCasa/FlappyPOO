@@ -17,6 +17,15 @@ public class MenuState extends State {
 		this.menu = new MenuManager();
 		this.menuView = new MenuMangerView(menu);
 	}
+	
+	public MenuState(GameStateManager gsm, Boolean replay){
+		super(gsm);
+		this.menu=new MenuManager();
+		this.menuView = new MenuMangerView(menu);
+		if(replay){
+			menu.Select(Options.SELECT_PLAYERS);
+		}
+	}
 
 	@Override
 	public void handleInput() {

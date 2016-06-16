@@ -34,7 +34,7 @@ public class WorldManager {
 	private OrthographicCamera cam;
 
 	public WorldManager(OrthographicCamera cam, String p1Name, String p2Name, BirdType p1Bird, BirdType p2Bird) {
-		
+		// habria que crear las variables para pasarselas al endgame
 		createBirds(p1Name, p2Name, p1Bird, p2Bird);
 		
 		this.cam = cam;

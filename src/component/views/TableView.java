@@ -29,7 +29,7 @@ public class TableView {
 		tCoinds.dispose();
 		tLifes.dispose();
 		text.dispose();
-		life.dispose();
+//		life.dispose();
 	}
 
 }

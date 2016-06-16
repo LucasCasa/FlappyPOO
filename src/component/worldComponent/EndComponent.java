@@ -13,21 +13,14 @@ public class EndComponent {
 	
 	private Options option;
 	private GameStateManager gsm;
-	private String p1;
-	private String p2;
-	private BirdType b1;
-	private BirdType b2;
 	private OrthographicCamera cam;
 	
-	public EndComponent(OrthographicCamera cam, GameStateManager gsm,  String p1Name, String p2Name, BirdType birdType, BirdType  birdType2){
+	public EndComponent(OrthographicCamera cam, GameStateManager gsm){
 		
 		this.cam=cam;
 		this.option = Options.MAIN;
 		this.gsm=gsm;
-		this.p1=p1Name;
-		this.p2=p2Name;
-		this.b1=birdType;
-		this.b2=birdType2;
+		
 	}
 	
 	public void update() {
@@ -37,7 +30,7 @@ public class EndComponent {
 			}
 									
 			case PLAY_AGAIN: {
-				gsm.set(new PlayState(gsm, p1, p2, b1, b2));
+				gsm.set(new MenuState(gsm, true)); // esta va directo a play
 				break;
 			}
 			
