@@ -1,7 +1,5 @@
 package component.views;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
@@ -11,8 +9,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import component.Types;
 import component.WorldSettings;
 import component.worldComponent.MenuManager;
-import component.worldComponent.Tube;
-import component.worldComponent.Tubes;
 import start.Flappy;
 
 
@@ -21,11 +17,11 @@ public class MenuMangerView {
 	private Texture logo;
 	private Texture background;
 
-	private TubeView tubes;
+	//private TubeView tubes;
 	
 	private Texture birdRed, birdGreen, birdClassic, birdBlue;
 	
-	private Texture bullet1, bullet2, bullet3, bullet4, tube;
+	private Texture bullet1, bullet2, bullet3, bullet4/*, tube*/;
 
 	public BitmapFont FONT;
 	
@@ -50,9 +46,9 @@ public class MenuMangerView {
 		bullet4 = new Texture(Types.BLUE_BULLET);
 		
 		
-		tube = new Texture(Types.BOTTOM_TUBE);
+		//tube = new Texture(Types.BOTTOM_TUBE);
 		
-		tubes = new TubeView();
+		//tubes = new TubeView();
 		
 	}
 

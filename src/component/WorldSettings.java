@@ -10,7 +10,7 @@ public class WorldSettings {
 
 	private int tubeSpacing = 140;
 	private int tubeCount = 15;
-	private int fluctuation = 900;
+	private int fluctuation = 100;
 	private int gap = 120;
 	
 	private int life = 15;
@@ -18,7 +18,7 @@ public class WorldSettings {
 
 	private static final int MAX_SPACING = 200;
 	private static final int MIN_SPACING = 30;
-	private static final int MAX_FLUCTUATION = 1000;
+	private static final int MAX_FLUCTUATION = 100;
 	private static final int MIN_FLUCTUATION = 10;
 	private static final int MAX_GAP = 200;
 	private static final int MIN_GAP = 50;

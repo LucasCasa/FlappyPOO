@@ -7,15 +7,10 @@ import java.util.List;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Input.Keys;
-import com.badlogic.gdx.utils.Array;
 
 import component.WorldSettings;
 import component.bird.BirdType;
-import start.Flappy;
-import state.GameStateManager;
-import state.MenuState;
 import state.Options;
-import state.PlayState;
 
 public class MenuManager {
 	
@@ -42,10 +37,6 @@ public class MenuManager {
 		writing = true;
 		tubes = new ArrayList<Tubes>();
 		setting = 1;
-//		for (int i = 1; i <= WorldSettings.getInstance().getTubeCount(); i++) {
-//			//tubes.add(new Tubes(i * (WorldSettings.getInstance().getTubeSpacing() + Tubes.WIDTH)));
-//			tubes.add(new Tubes(i * (WorldSettings.getInstance().getTubeSpacing() + Tubes.WIDTH)));
-//		}
 	}
 	
 	public void update() {
@@ -175,7 +166,6 @@ public class MenuManager {
 					break;
 				}
 				case 3: {
-					//if(ws.getLife() < ws.getMaxLifes())
 					ws.setLife(ws.getLife() + 1);					
 					break;
 				}

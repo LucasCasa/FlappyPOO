@@ -18,10 +18,14 @@ public class Grounds extends CompoundFObject{
 	}
 
 	public void update(float pos, float width) {
-		if(pos - width / 2 > simple1.position.x + WIDTH)
+		if(pos - width / 2 > simple1.position.x + WIDTH){
+			System.out.println("REPOSICION 1");
 			simple1.position.add(WIDTH * 2, 0);
-		if(pos - width / 2 > simple2.position.x + WIDTH)
+		}
+		if(pos - width / 2 > simple2.position.x + WIDTH){
+			System.out.println("Reposicion 2");
 			simple2.position.add(WIDTH * 2, 0);
+		}
 	}
 	
 	public Ground getTop(){

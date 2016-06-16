@@ -6,6 +6,7 @@ import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import component.WorldManager;
+import component.WorldSettings;
 import component.bird.BirdType;
 import component.views.WorldManagerView;
 
@@ -19,6 +20,7 @@ public class PlayState extends State {
 		super(gsm);
 		System.out.println("************INICIO DE NUEVA PARTIDA************");
 
+		System.out.println("CANTIDAD DE VIDAS DISPONIBLES: " + WorldSettings.getInstance().getLife());
 		this.world = new WorldManager(cam, p1Name, p2Name, birdType, birdType2);
 		this.worldView = new WorldManagerView(world);
 		s = Gdx.audio.newSound(Gdx.files.internal("jump2.wav"));

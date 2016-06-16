@@ -35,13 +35,9 @@ public class WorldManager {
 		
 		createBirds(p1Name, p2Name, p1Bird, p2Bird);
 		
-		//bLeft = new RedBird(0, 100, 200);
-		//bRight = new ClassicBird(1, 500, 200);
 		this.cam = cam;
 
-		WorldSettings.getInstance().setDefaultPreferences();
-
-		lifes = new ArrayList<Life>();
+		lifes = new ArrayList<>();
 		bombs = new ArrayList<>();
 		
 		for (int i = 1; i <= WorldSettings.getInstance().getLife(); i++) {

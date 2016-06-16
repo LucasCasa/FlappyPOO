@@ -1,8 +1,6 @@
 package component.views;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import component.Types;
@@ -14,7 +12,6 @@ import component.bird.RedBird;
 import component.bullet.Bullet;
 import component.worldComponent.Bomb;
 import component.worldComponent.Life;
-import component.worldComponent.LifeView;
 import component.worldComponent.Tubes;
 import start.Flappy;
 

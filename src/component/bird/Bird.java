@@ -197,6 +197,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 			}
 		}else{
 			if(crashes){
+				System.out.println("CHOCO");
 				lifeReducer();
 			}
 		}

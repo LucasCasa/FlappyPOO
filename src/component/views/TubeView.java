@@ -5,7 +5,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import component.Types;
 import component.worldComponent.Tubes;
-import start.Flappy;
 
 public class TubeView {
 	
