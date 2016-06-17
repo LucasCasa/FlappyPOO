@@ -19,8 +19,8 @@ public class Input {
 		if (instance == null) {
 			instance = new Input();
 		}
-		
-		if(set==null){
+
+		if (set == null) {
 			set = new HashSet<>();
 			readNormal();
 		}
@@ -28,43 +28,9 @@ public class Input {
 		return instance;
 	}
 
-	private Set<GamePlayersInfo> readFromFile() {
-
-		try {
-
-			set = new HashSet<>();
-			File file = new File("output.txt");
-
-			try {
-				Scanner read = new Scanner(file);
-
-				System.out.println("Reading...");
-				while (read.hasNextLine()) {
-					String date = read.nextLine();
-					String name = read.nextLine();
-					int score = Integer.parseInt(read.nextLine());
-					GamePlayersInfo g = new GamePlayersInfo(date, name, score);
-					set.add(g);
-				}
-
-				read.close();
-
-			} catch (Exception e) {
-				System.out.println("Oops... Creo que tuvimos un problema");
-			}
-
-		} catch (Exception e) {
-			System.out.println("Error opening or finding file");
-		}
-
-		return set;
-
-	}
-
 	public static void readNormal() {
 		try (BufferedReader br = new BufferedReader(new FileReader("output.txt"))) {
 
-			
 			String sCurrentLine;
 
 			while ((sCurrentLine = br.readLine()) != null) {

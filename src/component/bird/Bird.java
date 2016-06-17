@@ -158,13 +158,17 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	public int getJump() {
 		return jump;
 	}
-	
-	public boolean getTeam(){
+
+	public boolean getTeam() {
 		return team;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		if (name.equals("") || name.equals(" ")) {
+			this.name = "ANONIMO";
+		} else {
+			this.name = name;
+		}
 	}
 
 	public String getName() {
@@ -195,7 +199,5 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 		crashes2 = crash(obj.getSimple2());
 		return crashes1 || crashes2;
 	}
-	
-	
 
 }

@@ -26,7 +26,7 @@ public class GamePlayersInfo implements Comparable<GamePlayersInfo>{
 	}
 	
 	public String toScreen(){
-		return d + " " + name + " " + score + System.lineSeparator();
+		return d + " " + name + " " + score + "\n";
 	}
 	
 	@Override
