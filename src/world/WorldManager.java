@@ -7,11 +7,17 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.utils.Array;
 
 import component.bird.Bird;
+import component.bird.BirdLeft;
+import component.bird.BirdRight;
 import component.bird.BirdType;
 import component.bird.BlueBird;
+import component.bird.BlueBirdR;
 import component.bird.ClassicBird;
+import component.bird.ClassicBirdR;
 import component.bird.GreenBird;
+import component.bird.GreenBirdR;
 import component.bird.RedBird;
+import component.bird.RedBirdR;
 import component.bomb.Bomb;
 import component.bullet.Bullet;
 import component.ground.Grounds;
@@ -31,8 +37,8 @@ import scoreFiles.Output;
 
 public class WorldManager {
 
-	private Bird bLeft;
-	private Bird bRight;
+	private BirdLeft bLeft;
+	private BirdRight bRight;
 	private Grounds g;
 	
 	private Array<Tubes> tubes;
@@ -160,19 +166,19 @@ public class WorldManager {
 
 		switch (p2Bird) {
 		case RED: {
-			bRight = new RedBird(1, 500, 200);
+			bRight = new RedBirdR(1, 500, 200);
 			break;
 		}
 		case GREEN: {
-			bRight = new GreenBird(1, 500, 200);
+			bRight = new GreenBirdR(1, 500, 200);
 			break;
 		}
 		case CLASSIC: {
-			bRight = new ClassicBird(1, 500, 200);
+			bRight = new ClassicBirdR(1, 500, 200);
 			break;
 		}
 		case BLUE: {
-			bRight = new BlueBird(1, 500, 200);
+			bRight = new BlueBirdR(1, 500, 200);
 			break;
 		}
 		}

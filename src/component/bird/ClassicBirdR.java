@@ -3,20 +3,19 @@ package component.bird;
 import com.badlogic.gdx.math.Rectangle;
 
 import component.bullet.Bullet;
-import component.bullet.GoldenBulletL;
+import component.bullet.ClassicBulletR;
 
-public class GreenBird extends BirdLeft {
+public class ClassicBirdR extends BirdRight {
 
-	public GreenBird(int ID, int x, int y) {
+	public ClassicBirdR(int ID, int x, int y) {
 		super(ID, x, y);
 		bounds = new Rectangle(super.position.x, super.position.y, Bird.WIDTH, Bird.HEIGHT);
 	}
 
 	@Override
 	public void shoot() {
-		Bullet b = new GoldenBulletL(position.x, position.y);
-		bullets.add(b);				
+		Bullet b = new ClassicBulletR(position.x, position.y);
+		bullets.add(b);			
 	}
-
 
 }

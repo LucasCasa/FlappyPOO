@@ -29,7 +29,6 @@ public class Types {
 	public static final String CRASH = "crash.mp3";
 	public static final String SHOOT = "jump2.wav";
 	
-	
 	public static final String LOGO = "logo.png";
 	public static final String BACKGROUND = "bg2.png";
 	public static final String PLAYBTN = "playbtn.png";
@@ -38,6 +37,10 @@ public class Types {
 	public static final String BOTTOM_TUBE = "bottomtube.png";
 	public static final String GAME_OVER = "gameover.png";
 	
+	public static final int BLUE_BULLET_SPEED = 250;
+	public static final int CLASSIC_BULLET_SPEED = 400;
+	public static final int GOLDEN_BULLET_SPEED = 450;
+	public static final int SILVER_BULLET_SPEED = 550;
 	
 
 }

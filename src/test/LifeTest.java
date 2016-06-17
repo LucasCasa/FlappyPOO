@@ -7,7 +7,7 @@ import org.junit.Test;
 import component.bird.Bird;
 import component.bird.RedBird;
 import component.bomb.Bomb;
-import component.bullet.BlueBullet;
+import component.bullet.BlueBulletR;
 import component.bullet.Bullet;
 import component.ground.Grounds;
 import component.tube.Tubes;
@@ -28,14 +28,14 @@ public class LifeTest {
 	
 	@Test
 	public void reduceLifeBullet(){
-		Bullet b = new BlueBullet(100, 200, 1);
+		Bullet b = new BlueBulletR(100, 200);
 		a.crash(b); 
 		Assert.assertEquals(2, a.getLife());
 	}
 	
 	@Test
 	public void noReduceLifeBullet(){
-		Bullet b = new BlueBullet(200, 200, 1);
+		Bullet b = new BlueBulletR(200, 200);
 		a.crash(b);
 		Assert.assertEquals(3, a.getLife());
 	}

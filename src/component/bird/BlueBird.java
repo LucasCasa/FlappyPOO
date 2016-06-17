@@ -2,10 +2,10 @@ package component.bird;
 
 import com.badlogic.gdx.math.Rectangle;
 
-import component.bullet.BlueBullet;
+import component.bullet.BlueBulletL;
 import component.bullet.Bullet;
 
-public class BlueBird extends Bird{
+public class BlueBird extends BirdLeft{
 	
 	public BlueBird(int ID, int x, int y) {
 		super(ID, x, y);
@@ -14,10 +14,7 @@ public class BlueBird extends Bird{
 
 	@Override
 	public void shoot() {
-		int direction = 1;
-		if(!getTeam())
-			direction = direction * -1;
-		Bullet b = new BlueBullet(position.x, position.y, direction);
+		Bullet b = new BlueBulletL(position.x, position.y);
 		bullets.add(b);	
 	}
 

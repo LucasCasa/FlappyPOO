@@ -2,14 +2,15 @@ package component.bullet;
 
 import com.badlogic.gdx.math.Rectangle;
 
-public class GoldenBullet extends Bullet {
+import component.worldComponent.Types;
+
+public class SilverBulletR extends BulletRight {
 
 	private static final int W = 50;
-	private static final int H = 8;
-	private static final int SPEED = 450;
+	private static final int H = 9;
 	
-	public GoldenBullet(float x, float y, int direction ) {
-		super(x, y, SPEED * Math.signum(direction));
+	public SilverBulletR(float x, float y) {
+		super(x, y, Types.SILVER_BULLET_SPEED*-1);
 		bounds = new Rectangle(position.x, position.y, W, H);
 	}
 	
@@ -18,6 +19,5 @@ public class GoldenBullet extends Bullet {
 		super.update(dt);
 		super.bounds.setPosition(position.x, position.y);
 	}
-
 
 }
