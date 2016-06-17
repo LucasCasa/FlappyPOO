@@ -1,9 +1,7 @@
 package component.bird;
 
-import com.badlogic.gdx.Input;
 import com.badlogic.gdx.math.Rectangle;
 
-import component.PowerManager;
 import component.bullet.Bullet;
 import component.bullet.ClassicBullet;
 
@@ -16,22 +14,11 @@ public class ClassicBird extends Bird {
 
 	@Override
 	public void shoot() {
-		Bullet b = new ClassicBullet(position.x, position.y);
-		if (ID % 2 != 0)
-			b.reverse();
+		int direction = 1;
+		if(!getTeam())
+			direction = direction * -1;
+		Bullet b = new ClassicBullet(position.x, position.y,direction);
 		bullets.add(b);			
-	}
-
-	@Override
-	public void apply(int type, Bird b) {
-		//if(availablePowers.contains(type)
-			if(type == Input.Keys.E){
-				PowerManager.getInstance().poder3(b);
-			}else if(type == Input.Keys.R){
-				PowerManager.getInstance().poder2(b);
-			}else if(type == Input.Keys.T){
-				PowerManager.getInstance().poder1(b);
-			}
 	}
 
 }

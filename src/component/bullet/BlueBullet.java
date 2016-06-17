@@ -6,9 +6,10 @@ public class BlueBullet extends Bullet {
 
 	private static final int W = 38;
 	private static final int H = 10;
+	private static final int SPEED = 250;
 	
-	public BlueBullet(float x, float y) {
-		super(x, y, 250f);
+	public BlueBullet(float x, float y, int direction) {
+		super(x, y, SPEED * Math.signum(direction)); 
 		super.bounds = new Rectangle(super.position.x, super.position.y, W, H);
 	}
 	

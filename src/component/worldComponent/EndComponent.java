@@ -3,11 +3,9 @@ package component.worldComponent;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 
-import component.bird.BirdType;
 import state.GameStateManager;
 import state.MenuState;
 import state.Options;
-import state.PlayState;
 
 public class EndComponent {
 	
@@ -41,7 +39,9 @@ public class EndComponent {
 			
 			case EXIT: {
 				Gdx.app.exit();
-			}						
+			}
+		default:
+			break;						
 		}
 	}
 	

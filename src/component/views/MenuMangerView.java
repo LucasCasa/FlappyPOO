@@ -77,6 +77,8 @@ public class MenuMangerView {
 					drawSettings(sb);
 				break;
 			}
+		default:
+			break;
 								
 		}
 

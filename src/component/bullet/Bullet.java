@@ -30,10 +30,6 @@ public abstract class Bullet extends SimpleFObject{
 		return position;
 	}
 
-	public void reverse() {
-		this.speed = -1 * speed;
-	}
-
 	public void update(float dt) {
 		position.add(speed * dt, 0);
 	}

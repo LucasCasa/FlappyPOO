@@ -14,16 +14,12 @@ public class RedBird extends Bird {
 
 	@Override
 	public void shoot() {
-		Bullet b = new SilverBullet(position.x, position.y);
-		if (ID % 2 != 0)
-			b.reverse();
+		int direction = 1;
+		if(!getTeam())
+			direction = direction * -1;
+		Bullet b = new SilverBullet(position.x, position.y,direction);
 		bullets.add(b);		
 	}
 
-	@Override
-	public void apply(int type, Bird b) {
-		// TODO Auto-generated method stub
-		
-	}
 
 }

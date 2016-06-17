@@ -1,4 +1,4 @@
-package files;
+package scoreFiles;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -18,27 +18,14 @@ public class Output {
 		return instance;
 	}
 
-	public void write(Bird left, Bird right) {
-
-		try {
-			FileWriter fw = new FileWriter(FILE, true);
-			BufferedWriter bfw = new BufferedWriter(fw);
-			PrintWriter out = new PrintWriter(bfw);
-			out.write("LEFT: " + left.getScore() + " // RIGHT: " + right.getScore());
-			out.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-	}
-
 	public void write(Bird b) {
 
 		try {
 			FileWriter fw = new FileWriter(FILE, true);
 			BufferedWriter bfw = new BufferedWriter(fw);
 			PrintWriter out = new PrintWriter(bfw);
-			out.write("BIRD " + b.getID() + ":" + b.getScore());
+			GamePlayersInfo g = new GamePlayersInfo(b.getName(), b.getScore());
+			out.write(g.toString());
 			out.close();
 		} catch (IOException e) {
 			e.printStackTrace();

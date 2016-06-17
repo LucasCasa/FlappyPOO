@@ -6,9 +6,10 @@ public class ClassicBullet extends Bullet {
 
 	private static final int W = 32;
 	private static final int H = 21;
-	
-	public ClassicBullet(float x, float y) {
-		super(x, y, 400f);
+	private static final int SPEED = 400;
+
+	public ClassicBullet(float x, float y, int direction) {
+		super(x, y, SPEED * Math.signum(direction));
 		bounds = new Rectangle(position.x, position.y, W, H);
 	}
 	

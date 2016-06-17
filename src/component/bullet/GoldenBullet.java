@@ -6,9 +6,10 @@ public class GoldenBullet extends Bullet {
 
 	private static final int W = 50;
 	private static final int H = 8;
+	private static final int SPEED = 450;
 	
-	public GoldenBullet(float x, float y) {
-		super(x, y, 450f);
+	public GoldenBullet(float x, float y, int direction ) {
+		super(x, y, SPEED * Math.signum(direction));
 		bounds = new Rectangle(position.x, position.y, W, H);
 	}
 	

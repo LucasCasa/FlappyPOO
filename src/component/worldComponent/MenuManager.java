@@ -59,7 +59,9 @@ public class MenuManager {
 			
 			case SELECT_DIFICULTY: {
 				gameSettings();
-			}						
+			}
+		default:
+			break;						
 		}
 	}
 	

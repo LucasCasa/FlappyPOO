@@ -10,7 +10,6 @@ public class TableView {
 	private BitmapFont text;
 	private Texture tCoinds;
 	private Texture tLifes;
-	private BitmapFont life;
 
 	public TableView() {
 		text = new BitmapFont(Gdx.files.internal("arcade.fnt"));
@@ -29,7 +28,6 @@ public class TableView {
 		tCoinds.dispose();
 		tLifes.dispose();
 		text.dispose();
-//		life.dispose();
 	}
 
 }
