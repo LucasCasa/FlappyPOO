@@ -22,7 +22,6 @@ public class PlayState extends State {
 		super(gsm);
 		System.out.println("************INICIO DE NUEVA PARTIDA************");
 		cam.setToOrtho(false, Flappy.WIDTH / ZOOM_CAMARA, Flappy.HEIGHT / ZOOM_CAMARA);
-		System.out.println("CANTIDAD DE VIDAS DISPONIBLES: " + WorldSettings.getInstance().getLife());
 		this.world = new WorldManager(cam, p1Name, p2Name, birdType, birdType2);
 		this.worldView = new WorldManagerView(world);
 
