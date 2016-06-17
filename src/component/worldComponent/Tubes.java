@@ -39,6 +39,14 @@ public class Tubes extends CompoundFObject {
 		simple2.bounds = new Rectangle(simple2.position.x, simple2.position.y, Tube.WIDTH, Tube.HEIGHT);
 
 	}
+	
+	public Tubes(float x, int gap, int opening){
+		simple1 = new Tube(x, gap + opening);
+		simple2 = new Tube(x, simple1.position.y - gap - Tube.HEIGHT);
+
+		simple1.bounds = new Rectangle(simple1.position.x, simple1.position.y, Tube.WIDTH, Tube.HEIGHT);
+		simple2.bounds = new Rectangle(simple2.position.x, simple2.position.y, Tube.WIDTH, Tube.HEIGHT);
+	}
 
 	/**
 	 * Obtiene la posicion (x,y) de la parte superior del Tubes
