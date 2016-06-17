@@ -1,7 +1,6 @@
 package component.views;
 
 
-import java.util.Set;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
@@ -11,7 +10,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import component.Types;
 import component.WorldSettings;
 import component.worldComponent.MenuManager;
-import scoreFiles.GamePlayersInfo;
 import scoreFiles.Input;
 import start.Flappy;
 
@@ -83,9 +81,12 @@ public class MenuMangerView {
 	}
 
 	private void drawHighscore(SpriteBatch sb) {
+
 		text.draw(sb, Input.getInstance().getTopHighscore(0), Flappy.WIDTH*1/4, Flappy.HEIGHT*2/3);
 		text.draw(sb,Input.getInstance().getTopHighscore(1), Flappy.WIDTH*1/4, Flappy.HEIGHT*4/7);
 		text.draw(sb, Input.getInstance().getTopHighscore(2), Flappy.WIDTH*1/4, Flappy.HEIGHT*10/21);
+		text.draw(sb, Input.getInstance().getTopHighscore(3), Flappy.WIDTH*1/4, Flappy.HEIGHT*10/26);
+		text.draw(sb, Input.getInstance().getTopHighscore(4), Flappy.WIDTH*1/4, Flappy.HEIGHT*10/33);
 	}
 
 	public void dispose() {

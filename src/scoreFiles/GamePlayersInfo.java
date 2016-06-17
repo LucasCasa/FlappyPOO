@@ -21,11 +21,12 @@ public class GamePlayersInfo implements Comparable<GamePlayersInfo>{
 	
 	@Override
 	public String toString() {
-		return d + System.lineSeparator() + name + System.lineSeparator() + score;
+		//return d + System.lineSeparator() + name + System.lineSeparator() + score;
+		return toScreen();
 	}
 	
 	public String toScreen(){
-		return d + " " + name + " " + score;
+		return d + " " + name + " " + score + System.lineSeparator();
 	}
 	
 	@Override
