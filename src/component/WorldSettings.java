@@ -1,6 +1,6 @@
 package component;
 
-/*
+/**
  * Es una clase que define cuales son los parametros del mundo, tal
  * como la apertura de los tubos, etc...
  * Gracias a esta clase, podemos setear infinitos tipos de dificultades
@@ -8,12 +8,34 @@ package component;
  */
 public class WorldSettings {
 
+	/**
+	 * TUBE SPACING: representa el distanciamiento entre tubo y tubo
+	 */
 	private int tubeSpacing = 140;
+	
+	/**
+	 * TUBE COUNT: representa cuantos tubos se van a crear originalmente en el juego
+	 */
 	private int tubeCount = 15;
+	
+	/**
+	 * FLUCTUATION: Representa que tan fluido van a estar las aperturas entre tubos
+	 */
 	private int fluctuation = 100;
+	
+	/**
+	 * GAP: representa el alto de apertura del tubo
+	 */
 	private int gap = 120;
 	
+	/**
+	 * Cantidad de Corazones que puede agarrar en el juego
+	 */
 	private int life = 15;
+	
+	/**
+	 * Cantidad de bombas que puede agarrar en el juego
+	 */
 	private int bombs = 20;
 
 	private static final int MAX_SPACING = 200;
@@ -27,12 +49,6 @@ public class WorldSettings {
 	public static final int MAX_RAN_X = 1000;
 	public static final int MIN_RAN_Y = 0; // para los tubos en Y
 	public static final int MAX_RAN_Y = 600;
-
-	/*
-	 * Este numero me dice cada cuantos puntos, el pajarito va a sumar un poder
-	 * al mundo
-	 */
-	public static final int SCORE_POWERS = 10;
 
 	public static final int LOWEST_OPENING = 120; // este es fijo
 	private static WorldSettings wp;

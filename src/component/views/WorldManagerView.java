@@ -13,11 +13,9 @@ import component.bullet.Bullet;
 import component.worldComponent.Bomb;
 import component.worldComponent.Life;
 import component.worldComponent.Tubes;
-import start.Flappy;
 
 public class WorldManagerView {
 
-	public static final float ZOOM_CAMARA = 1.2f;
 	private BirdView birdView;
 	private BirdView bird2View;
 	private Texture bg;
@@ -38,7 +36,6 @@ public class WorldManagerView {
 		
 		birdSkinSelector(world);
 
-		world.getCam().setToOrtho(false, Flappy.WIDTH / ZOOM_CAMARA, Flappy.HEIGHT / ZOOM_CAMARA);
 		bg = new Texture(Types.BACKGROUND);
 		tubeView = new TubeView();
 
@@ -52,9 +49,9 @@ public class WorldManagerView {
 		return birdView;
 	}
 
-	public void render(SpriteBatch sb) {
+	public void render(SpriteBatch sb, float pos, float width) {
 
-		sb.draw(bg, w.getCam().position.x - (w.getCam().viewportWidth / 2), 0);
+		sb.draw(bg, pos - (width / 2), 0);
 
 		birdView.draw(sb, w.getBLeft());
 		bird2View.draw(sb, w.getBRight());
@@ -81,8 +78,8 @@ public class WorldManagerView {
 			bw.draw(sb, b);
 		}
 		
-		t1.draw(sb, w.getCam().position.x, w.getBLeft().getScore(), w.getBLeft().getLife(),-250);
-		t1.draw(sb, w.getCam().position.x, w.getBRight().getScore(), w.getBRight().getLife(),150);
+		t1.draw(sb, pos, w.getBLeft().getScore(), w.getBLeft().getLife(),-250);
+		t1.draw(sb, pos, w.getBRight().getScore(), w.getBRight().getLife(),150);
 		
 
 	}

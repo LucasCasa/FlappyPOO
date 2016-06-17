@@ -19,26 +19,36 @@ import component.worldComponent.Life;
 import component.worldComponent.Tubes;
 import scoreFiles.Output;
 
-public class WorldManager {
+/*
+ * WorldManager es la clase que se encargar de actualizar, chequear y modificar el 
+ * estado de los pajaros durante el juego.Como es "la lógica central" del juego,
+ * esta contiene los elementos escenciales, como los tubos, corazones, piso y jugadores.
+ * Este juego esta diseñado especialmente para dos jugadores. Si incrementan el numero de 
+ * jugadores, la jugabilidad del mismo sería casi imposible. 
+ * Claramente el juego se puede escalar a mas jugadores, pero habría que hacer un minimo cambio
+ */
 
-	private static final int X_CAM_OFFSET = 250;
+public class WorldManager {
 
 	private Bird bLeft;
 	private Bird bRight;
 	private Grounds g;
+	
 	private Array<Tubes> tubes;
 	private List<Life> lifes;
 	private List<Bomb> bombs;
 
-	private Boolean continues;
-	private OrthographicCamera cam;
-
+	private Boolean contPlay;
+	
+	/**
+	 * Crea al mundo y sus componentes. Crea de forma aleatoria las posiciones de los corazones.
+	 * Consulta a los settings del mundo cuantos corazones debe poner y cuantas bombas debe poner. 
+	 */
 	public WorldManager(OrthographicCamera cam, String p1Name, String p2Name, BirdType p1Bird, BirdType p2Bird) {
-		// habria que crear las variables para pasarselas al endgame
+
 		createBirds(p1Name, p2Name, p1Bird, p2Bird);
 
-		this.cam = cam;
-		continues = true;
+		contPlay = true;
 		lifes = new ArrayList<>();
 		bombs = new ArrayList<>();
 
@@ -59,20 +69,23 @@ public class WorldManager {
 		}
 
 	}
+	
+	/**
+	 * Actualiza al mundo. Los tubos se reposicionan si quedan fuera de la vista del usuario. 
+	 * De esta manera, el usuario ve infinitos tubos, pero que en realidad solo hay muy pocos
+	 * Actualiza y consulta si el pajaro se choco con algo.
+	 */
+	public void update(float dt, float pos, float width) {
 
-	public void update(float dt) {
-
-		g.update(cam.position.x, cam.viewportWidth);
+		g.update(pos, width);
 
 		bLeft.update(dt);
 		bRight.update(dt);
 
-		cam.position.x = bLeft.getPosition().x + X_CAM_OFFSET;
-
 		for (int i = 0; i < tubes.size; i++) {
 			Tubes tube = tubes.get(i);
 
-			if (tube.onScreen(cam.position.x, cam.viewportWidth))
+			if (tube.onScreen(pos, width))
 				tube.repositionByInterface();
 
 		}
@@ -81,14 +94,20 @@ public class WorldManager {
 		updateBirdOnGame(bRight, bLeft, dt);
 
 		if (bLeft.getLife() == 0 || bRight.getLife() == 0) {
-
 			Output.getInstance().write(getWinner(bLeft, bRight));
-			continues = false;
+			contPlay = false;
 		}
 
-		cam.update();
-
 	}
+	
+	/**
+	 * Actualiza al pajaro y todas sus acciones. Consulta si se choco con algun objeto que 
+	 * exista en el mundo
+	 * 
+	 * @param me Es el jugador en cuestion
+	 * @param enemy Es el jugador contrincante. A este le afectan mis balas
+	 * @param dt
+	 */
 
 	private void updateBirdOnGame(Bird me, Bird enemy, float dt) {
 
@@ -97,9 +116,8 @@ public class WorldManager {
 			me.crash(tube);
 		}
 
-		for (Life l : lifes) {
+		for (Life l : lifes) 
 			me.crash(l);
-		}
 
 		me.crash(g);
 		me.updateTimers();
@@ -109,10 +127,9 @@ public class WorldManager {
 			enemy.crash(b);
 		}
 
-		for (Bomb b : bombs) {
-			if (me.crash(b))
-				b.exploit();
-		}
+		for (Bomb b : bombs) 
+			me.crash(b);
+
 	}
 
 	public void createBirds(String p1Name, String p2Name, BirdType p1Bird, BirdType p2Bird) {
@@ -174,16 +191,13 @@ public class WorldManager {
 		return tubes;
 	}
 
-	public OrthographicCamera getCam() {
-		return cam;
-	}
 
 	public Boolean getContinues() {
-		return continues;
+		return contPlay;
 	}
 
 	public void setContinues(Boolean continues) {
-		this.continues = continues;
+		this.contPlay = continues;
 	}
 
 	public List<Life> getLifes() {
