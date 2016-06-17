@@ -9,6 +9,7 @@ public class Bomb extends SimpleFObject{
 	public static final int W = 23;
 	public static final int H = 32;
 	boolean hasExploited = false;
+	
 	public Bomb(float x, float y) {
 		super(x, y);
 		bounds = new Rectangle(x, y, W, H);

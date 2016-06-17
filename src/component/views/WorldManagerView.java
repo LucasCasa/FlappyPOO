@@ -35,7 +35,6 @@ public class WorldManagerView {
 		lw = new LifeView();
 		t1 = new TableView();
 		bw = new BombView();
-//		FONT.getData().setScale(0.8f, 0.8f);
 		
 		birdSkinSelector(world);
 

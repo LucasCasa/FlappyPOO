@@ -1,15 +1,34 @@
 package scoreFiles;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
 public class Input {
 
-	public static void read(Set<GamePlayersInfo> set) {
+	private static Input instance = null;
+	private static Set<GamePlayersInfo> set = null;
+	public static Input getInstance() {
+		if(instance==null){
+			instance = new Input();
+		}
+		
+		if(set==null)
+			getHighscoreFromFile();
+
+		return instance;
+	}
+	
+	
+	
+	private static Set<GamePlayersInfo> getHighscoreFromFile() {
 
 		try {
 
+			set = new HashSet<>();
 			File file = new File("output.txt");
 
 			try {
@@ -34,6 +53,20 @@ public class Input {
 			System.out.println("Error opening or finding file");
 		}
 
+		return set;
+
+	}
+
+	public String getTopHighscore(int index) {
+		
+		if(index>=set.size()){
+			return "NO AVAILABLE PLAY YET";
+		}
+		
+		List<GamePlayersInfo> nameList = new ArrayList<GamePlayersInfo>();	
+		nameList.addAll(set);
+
+		return nameList.get(index).toScreen();
 	}
 
 }

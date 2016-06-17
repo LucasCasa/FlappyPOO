@@ -3,7 +3,7 @@ package scoreFiles;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class GamePlayersInfo {
+public class GamePlayersInfo implements Comparable<GamePlayersInfo>{
 
 	private String name;
 	private int score;
@@ -22,6 +22,39 @@ public class GamePlayersInfo {
 	@Override
 	public String toString() {
 		return d + System.lineSeparator() + name + System.lineSeparator() + score;
+	}
+	
+	public String toScreen(){
+		return d + " " + name + " " + score;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj==null)
+			return false;
+		if(!(obj instanceof GamePlayersInfo))
+			return false;
+		else{
+			GamePlayersInfo g = (GamePlayersInfo) obj;
+			return g.d.equals(d);
+		}
+	}
+	
+	@Override
+	public int hashCode() {
+		return d.hashCode();
+	}
+
+	@Override
+	public int compareTo(GamePlayersInfo o) {
+		if(score>o.score){
+			return 1;
+		}else if(score<o.score){
+			return -1;
+		}else{
+			return 0;
+		}
+		
 	}
 
 }
