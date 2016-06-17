@@ -1,26 +1,12 @@
 package component.bomb;
 
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import component.worldComponent.SimpleFObjectView;
+import component.worldComponent.Types;
 
-public class BombView {
-	
-	private Texture t;
+public class BombView extends SimpleFObjectView {
 	
 	public BombView() {
-		t = new Texture("bomb.png");
+		super(Types.BOMB);
 	}
 	
-	public Texture getTexture() {
-		return t;
-	}
-	
-	public void dispose(){
-		t.dispose();
-	}
-	
-	public void draw(SpriteBatch sb, Bomb b) {
-		sb.draw(t, b.getPosition().x, b.getPosition().y);
-	}
-
 }

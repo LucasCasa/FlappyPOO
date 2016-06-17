@@ -15,7 +15,7 @@ import component.bullet.BulletView;
 import component.ground.GroundView;
 import component.life.Life;
 import component.life.LifeView;
-import component.tube.TubeView;
+import component.tube.TubesView;
 import component.tube.Tubes;
 import component.worldComponent.Types;
 import menu.TableView;
@@ -26,7 +26,7 @@ public class WorldManagerView {
 	private BirdView bird2View;
 	private Texture bg;
 	private GroundView gv;
-	private TubeView tubeView;
+	private TubesView tubeView;
 	private BulletView bv1; //For player 1
 	private BulletView bv2; //For player 2
 	private LifeView lw;
@@ -43,7 +43,7 @@ public class WorldManagerView {
 		birdSkinSelector(world);
 
 		bg = new Texture(Types.BACKGROUND);
-		tubeView = new TubeView();
+		tubeView = new TubesView();
 
 		bulletSkinSelector(world);
 

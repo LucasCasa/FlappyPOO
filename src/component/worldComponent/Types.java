@@ -23,6 +23,8 @@ public class Types {
 	public static final String GOLDEN_BULLET_INV = "bullet2_inv.png";
 	public static final String CLASSIC_BULLET_INV = "bullet3_inv.png";
 	public static final String BLUE_BULLET_INV = "bullet4_inv.png";
+	public static final String BOMB = "bomb.png";
+	public static final String HEART = "heart.png";
 	
 	public static final String LOGO = "logo.png";
 	public static final String BACKGROUND = "bg2.png";

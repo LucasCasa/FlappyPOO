@@ -11,10 +11,10 @@ public class Grounds extends CompoundFObject{
 	public static final int GROUND_Y_OFFSET = -50;
 	
 	/** The Constant WIDTH. */
-	public static final int WIDTH = 672;
+	public static final int W = 672;
 	
 	/** The Constant HEIGHT. */
-	public static final int HEIGHT = 112;
+	public static final int H = 112;
 
 	/**
 	 * Inicializa un nuevo piso. Es del mismo estilo que los tubos. 
@@ -27,9 +27,9 @@ public class Grounds extends CompoundFObject{
 	 */
 	public Grounds(float pos, float width) {
 		simple1 = new Ground(pos - width / 2 - 100, GROUND_Y_OFFSET);
-		simple2 = new Ground((pos - width / 2) + WIDTH - 100, GROUND_Y_OFFSET);
-		simple1.setBounds(new Rectangle(simple1.getPosition().x, simple1.getPosition().y, WIDTH, HEIGHT));
-		simple2.setBounds(new Rectangle(simple2.getPosition().x, simple2.getPosition().y, WIDTH, HEIGHT));
+		simple2 = new Ground((pos - width / 2) + W - 100, GROUND_Y_OFFSET);
+		simple1.setBounds(new Rectangle(simple1.getPosition().x, simple1.getPosition().y, W, H));
+		simple2.setBounds(new Rectangle(simple2.getPosition().x, simple2.getPosition().y, W, H));
 
 	}
 
@@ -40,13 +40,16 @@ public class Grounds extends CompoundFObject{
 	 * @param width Width del Viewport de la camara
 	 */
 	public void update(float pos, float width) {
-		if(pos - width / 2 > simple1.getPosition().x + WIDTH){
+		if(pos - width / 2 > simple1.getPosition().x + W){
 			System.out.println("REPOSICION 1");
-			simple1.getPosition().add(WIDTH * 2, 0);
+			simple1.getPosition().add(W * 2, 0);
+			simple1.setBounds(new Rectangle(simple1.getPosition().x, simple1.getPosition().y, W, H));
 		}
-		if(pos - width / 2 > simple2.getPosition().x + WIDTH){
+		if(pos - width / 2 > simple2.getPosition().x + W){
 			System.out.println("Reposicion 2");
-			simple2.getPosition().add(WIDTH * 2, 0);
+			simple2.getPosition().add(W * 2, 0);
+			simple2.setBounds(new Rectangle(simple2.getPosition().x, simple2.getPosition().y, W, H));
+
 		}
 	}
 	
@@ -67,7 +70,7 @@ public class Grounds extends CompoundFObject{
 	 * @return true si choca
 	 */
 	public boolean crash(Bird b) {
-		boolean crashes = b.getPosition().y <= HEIGHT + GROUND_Y_OFFSET;
+		boolean crashes = b.getPosition().y <= H + GROUND_Y_OFFSET;
 		if (crashes) {
 			b.lifeReducer();
 		}

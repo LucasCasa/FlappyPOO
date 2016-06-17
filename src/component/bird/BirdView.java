@@ -5,12 +5,13 @@ import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-public class BirdView {
+import component.worldComponent.SimpleFObjectView;
+
+public class BirdView extends SimpleFObjectView{
 	
 	public static final int VISUAL_WIDTH = 34;
 	public static final int VISUAL_HEIGHT = 24;
 
-	private Texture b;
 	private boolean hasSound = false;
 
 	/*
@@ -19,19 +20,7 @@ public class BirdView {
 	 * width y el height si deben serlo porque siempre vale eso.
 	 */
 	public BirdView(String birdPath) {
-		b = new Texture(birdPath);
-	}
-
-	public Texture getTextureBird() {
-		return b;
-	}
-
-	public void setTextureBird(Texture bird) {
-		this.b = bird;
-	}
-
-	public void dispose() {
-		b.dispose();
+		super(birdPath);
 	}
 
 	public void draw(SpriteBatch sb, Bird b) {
@@ -48,7 +37,7 @@ public class BirdView {
 		} else {
 			hasSound = false;
 		}
-		sb.draw(this.b, b.getPosition().x, b.getPosition().y);
+		sb.draw(super.getTexture(), b.getPosition().x, b.getPosition().y);
 
 	}
 
