@@ -34,6 +34,7 @@ public class Bomb extends SimpleFObject{
 	 * La bomba explota. Si no fue explotada anteriormente, reduce el tamaño de los
 	 * gaps del mundo
 	 */
+	
 	public void exploit(){
 		if(!hasExploited){
 			WorldSettings.getInstance().reduceGap();

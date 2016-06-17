@@ -3,11 +3,21 @@ package scoreFiles;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+
+/**
+ * GamePlayersInfo: Clase para guardar y levantar la información de partidas 
+ * anteriores. Usada únicamente por Input y Output.
+ * Implementa Comparable porque estos luegos se ordenaran en un Set por los scores
+ *
+ */
+
 public class GamePlayersInfo implements Comparable<GamePlayersInfo>{
 
 	private String name;
 	private int score;
-	private String d;
+	
+	/** date representa la fecha de la partida jugada */
+	private String date;
 
 	public GamePlayersInfo(String n, int s) {
 		this((new SimpleDateFormat("dd/MM/yyyy")).format(new Date()), n, s);
@@ -16,7 +26,7 @@ public class GamePlayersInfo implements Comparable<GamePlayersInfo>{
 	public GamePlayersInfo(String d, String n, int s) {
 		this.name = n;
 		this.score = s;
-		this.d = d;
+		this.date = d;
 	}
 	
 	@Override
@@ -26,7 +36,7 @@ public class GamePlayersInfo implements Comparable<GamePlayersInfo>{
 	}
 	
 	public String toScreen(){
-		return d + " " + name + " " + score + "\n";
+		return date + " " + name + " " + score + "\n";
 	}
 	
 	@Override
@@ -37,13 +47,13 @@ public class GamePlayersInfo implements Comparable<GamePlayersInfo>{
 			return false;
 		else{
 			GamePlayersInfo g = (GamePlayersInfo) obj;
-			return g.d.equals(d);
+			return g.date.equals(date);
 		}
 	}
 	
 	@Override
 	public int hashCode() {
-		return d.hashCode();
+		return date.hashCode();
 	}
 
 	@Override

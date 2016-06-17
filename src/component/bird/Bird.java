@@ -22,17 +22,17 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	private static final int WEIGTH = -15;
 	private static final int MOVEMENT = 100;
 	protected int ID = 0;
-	
+
 	protected Vector2 velocity;
 	protected List<Bullet> bullets;
-	
+
 	private int lifes = 3;
 	private int score = 0;
 	private float scoreTimeAux = 0;
 	private String name = "";
 	private boolean team = false;
 	private int jump = 250;
-	
+
 	Timer aura = new Timer(3000);
 	Timer life = new Timer(1000);
 
@@ -45,11 +45,11 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 		this.ID = ID;
 	}
 
-
 	/**
-	 * Metodo que se llama para actualizar la posicion y otras cosas relativas al pájaro, como la velocidad.
-	 * La velocidad del salto y consecuentemente de la caida del mismo, esta dada por una función matemática 
-	 * con Vectores (scale) y el dt.
+	 * Metodo que se llama para actualizar la posicion y otras cosas relativas
+	 * al pájaro, como la velocidad. La velocidad del salto y consecuentemente
+	 * de la caida del mismo, esta dada por una función matemática con Vectores
+	 * (scale) y el dt.
 	 */
 	public void update(float dt) {
 		if (position.y > 0) {
@@ -69,9 +69,10 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	}
 
 	/**
-	 * Metodo que se utiliza en el momento cuando el jugador elige que tipo de pajaro quiere en el menu
-	 * Al final, en el momento del guardado de la partida, preguntamos cual es su nombre para guardarlo dentro
-	 * de una tabla con highscores
+	 * Metodo que se utiliza en el momento cuando el jugador elige que tipo de
+	 * pajaro quiere en el menu Al final, en el momento del guardado de la
+	 * partida, preguntamos cual es su nombre para guardarlo dentro de una tabla
+	 * con highscores
 	 */
 	public void setName(String name) {
 		if (name.equals("") || name.equals(" ")) {
@@ -82,40 +83,39 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	}
 
 	/**
-	 * Metodo para chocarse con un objeto simple dentro del mundo
-	 * Todo lo que choco reduce vida y resetea el score,
-	 * a excepción de los corazones que ganan
+	 * Metodo para chocarse con un objeto simple dentro del mundo Todo lo que
+	 * choco reduce vida y resetea el score, a excepción de los corazones que
+	 * ganan
 	 */
 	@Override
 	public boolean crash(SimpleFObject obj) {
 		boolean crashes = super.crash(obj);
-		
+
 		if (obj instanceof Life) {
 			if (crashes && !life.getSecure()) {
 				System.out.println("***INCREMENTA LA VIDA DE " + this.ID + "***");
 				increaseLife();
 				life.setSecure(true);
 			}
-			
+
 		} else {
-			
-			if (crashes) 
+
+			if (crashes) {
 				lifeReducer();
-			
-			if(obj instanceof Bomb){
-				Bomb b = (Bomb) obj;
-				b.exploit();
+				if (obj instanceof Bomb) {
+					Bomb b = (Bomb) obj;
+					b.exploit();
+				}
 			}
-			
+
 		}
 		return crashes;
 	}
 
 	/**
-	 * Metodo para chocarse con algun objeto que sea del tipo
-	 * CompoundFObject. Un ejemplo de esto puede ser el piso 
-	 * o mismo los tubos, que estan compuestos por una parte superior
-	 * y por otra inferior.
+	 * Metodo para chocarse con algun objeto que sea del tipo CompoundFObject.
+	 * Un ejemplo de esto puede ser el piso o mismo los tubos, que estan
+	 * compuestos por una parte superior y por otra inferior.
 	 */
 	public boolean crash(CompoundFObject obj) {
 		boolean crashes1, crashes2;
@@ -125,9 +125,9 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	}
 
 	/**
-	 * Reduce la vida en el caso que no tenga el aura activado.
-	 * Si el aura (proteccion al pájaro) esta desactivado, reduce la vida en uno 
-	 * y activa el aura hasta un cierto tiempo definido.
+	 * Reduce la vida en el caso que no tenga el aura activado. Si el aura
+	 * (proteccion al pájaro) esta desactivado, reduce la vida en uno y activa
+	 * el aura hasta un cierto tiempo definido.
 	 */
 	public void lifeReducer() {
 		if (!aura.getSecure()) {
@@ -146,9 +146,10 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	}
 
 	/**
-	 * Agrega un punto al pájaro. Los puntos se calculan en base al tiempo que el pájaro estuvo
-	 * en el aire sin chocarse con ningun objeto, a excepción de los corazones que ganan vidas.
-	 * En el caso de chocarse con algo, el score se reduce a 0 y vuelve a comenzar.
+	 * Agrega un punto al pájaro. Los puntos se calculan en base al tiempo que
+	 * el pájaro estuvo en el aire sin chocarse con ningun objeto, a excepción
+	 * de los corazones que ganan vidas. En el caso de chocarse con algo, el
+	 * score se reduce a 0 y vuelve a comenzar.
 	 */
 	public void addScore(float dt) {
 		scoreTimeAux += dt;
@@ -160,7 +161,8 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	}
 
 	/**
-	 * El pajaro salta con la velocidad default o con la velocidad que uno setea cuando hace un setJump
+	 * El pajaro salta con la velocidad default o con la velocidad que uno setea
+	 * cuando hace un setJump
 	 */
 	public void jump() {
 		velocity.y = jump;
@@ -171,7 +173,8 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	}
 
 	/**
-	 * Es el salto que pega el pajaro. Pasandole un jump muy alto, el pajaro salta mucho mas alto
+	 * Es el salto que pega el pajaro. Pasandole un jump muy alto, el pajaro
+	 * salta mucho mas alto
 	 * 
 	 */
 	public void setJump(int jump) {
@@ -179,9 +182,9 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	}
 
 	/**
-	 * Representa el Bounds. Significa cuanto espacio ocupara en el mundo dicho pájaro.
-	 * Bounds se utiliza en los casos que un pájaro colisione con otra cosa que tenga un Bound
-	 * en el mundo
+	 * Representa el Bounds. Significa cuanto espacio ocupara en el mundo dicho
+	 * pájaro. Bounds se utiliza en los casos que un pájaro colisione con otra
+	 * cosa que tenga un Bound en el mundo
 	 *
 	 * @return Rectangle
 	 */
@@ -223,7 +226,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	public int getLife() {
 		return lifes;
 	}
-	
+
 	/**
 	 * Gets the id.
 	 *
@@ -294,8 +297,8 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	public String getName() {
 		return this.name;
 	}
-	
-	public void setLifeSecure(Boolean b){
+
+	public void setLifeSecure(Boolean b) {
 		life.setSecure(b);
 	}
 

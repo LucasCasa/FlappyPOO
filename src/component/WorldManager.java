@@ -16,6 +16,7 @@ import component.bullet.Bullet;
 import component.worldComponent.Bomb;
 import component.worldComponent.Grounds;
 import component.worldComponent.Life;
+import component.worldComponent.Tube;
 import component.worldComponent.Tubes;
 import scoreFiles.Output;
 
@@ -65,7 +66,7 @@ public class WorldManager {
 		g = new Grounds(cam.position.x, cam.viewportWidth);
 
 		for (int i = 1; i <= WorldSettings.getInstance().getTubeCount(); i++) {
-			tubes.add(new Tubes(i * (WorldSettings.getInstance().getTubeSpacing() + Tubes.WIDTH)));
+			tubes.add(new Tubes(i * (WorldSettings.getInstance().getTubeSpacing() + Tube.WIDTH)));
 		}
 
 	}
@@ -89,6 +90,9 @@ public class WorldManager {
 				tube.repositionByInterface();
 
 		}
+		
+		System.out.println("**********************");
+		System.out.println("GAP: " + WorldSettings.getInstance().getGap());
 
 		updateBirdOnGame(bLeft, bRight, dt);
 		updateBirdOnGame(bRight, bLeft, dt);
@@ -127,8 +131,10 @@ public class WorldManager {
 			enemy.crash(b);
 		}
 
-		for (Bomb b : bombs) 
+		for (Bomb b : bombs){
 			me.crash(b);
+		}
+
 
 	}
 
