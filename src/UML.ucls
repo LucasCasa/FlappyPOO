@@ -1,0 +1,1010 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.10" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="component.bullet.BlueBullet" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/bullet/BlueBullet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1943" y="4051"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="component.ground.Grounds" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/ground/Grounds.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="145" x="2655" y="2867"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="component.worldComponent.FlappyObject" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/worldComponent/FlappyObject.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1591" y="1706"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="menu.KeyboardManager" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/menu/KeyboardManager.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="261" width="184" x="360" y="-109"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="state.MenuState" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/state/MenuState.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="221" x="792" y="1622"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="component.bird.RedBird" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/bird/RedBird.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="111" x="2311" y="3672"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="7" language="java" name="component.worldComponent.Shootable" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/worldComponent/Shootable.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="128" x="2462" y="3672"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="8" language="java" name="menu.MenuManager" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/menu/MenuManager.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="549" width="174" x="658" y="2278"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="state.State" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/state/State.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="173" x="960" y="1357"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="component.bullet.Bullet" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/bullet/Bullet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="129" x="2142" y="3672"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="component.bird.Bird" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/bird/Bird.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="765" width="191" x="2424" y="2867"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="component.bird.BlueBird" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/bird/BlueBird.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="113" x="2630" y="3672"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="13" language="java" name="component.worldComponent.Drawable" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/worldComponent/Drawable.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="210" x="909" y="3672"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="14" language="java" name="component.bird.BirdView" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/bird/BirdView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="161" x="1787" y="3672"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="component.tube.Tubes" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/tube/Tubes.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="261" width="167" x="853" y="2867"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="component.bird.ClassicBird" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/bird/ClassicBird.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="127" x="2783" y="3672"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="component.worldComponent.SimpleFObjectView" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/worldComponent/SimpleFObjectView.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="210" x="1159" y="2867"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="component.bullet.BulletView" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/bullet/BulletView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="114" x="1988" y="3672"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="world.WorldSettings" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/world/WorldSettings.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="783" width="166" x="469" y="3672"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="component.life.LifeView" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/life/LifeView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="160" x="1587" y="3672"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="component.bullet.ClassicBullet" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/bullet/ClassicBullet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2130" y="4051"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="component.tube.BottomTubeView" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/tube/BottomTubeView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="120" x="1159" y="3672"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="state.PlayState" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/state/PlayState.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="325" x="1962" y="1622"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="24" language="java" name="state.Options" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/state/Options.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="162" x="492" y="2867"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="25" language="java" name="component.tube.TopTubeView" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/tube/TopTubeView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="101" x="1319" y="3672"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="scoreFiles.GamePlayersInfo" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/scoreFiles/GamePlayersInfo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="279" width="189" x="1740" y="552"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="menu.EndView" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/menu/EndView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="447" y="559"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="state.EndGame" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/state/EndGame.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="175" x="960" y="-109"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="menu.EndManager" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/menu/EndManager.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="292" x="492" y="871"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="desktop.Flappy" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/desktop/Flappy.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="115" x="824" y="871"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="component.bullet.GoldenBullet" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/bullet/GoldenBullet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2323" y="4051"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="component.life.Life" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/life/Life.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="261" width="127" x="2257" y="2867"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="component.worldComponent.CompoundFObject" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/worldComponent/CompoundFObject.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="157" x="1550" y="1851"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="34" language="java" name="component.worldComponent.Timer" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/worldComponent/Timer.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="145" x="2950" y="3672"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="menu.TableView" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/menu/TableView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="205" x="893" y="2278"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="36" language="java" name="scoreFiles.Input" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/scoreFiles/Input.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="157" x="1740" y="-109"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="37" language="java" name="component.bullet.SilverBullet" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/bullet/SilverBullet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2513" y="4051"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="38" language="java" name="component.bird.GreenBird" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/bird/GreenBird.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="122" x="3135" y="3672"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="world.WorldManager" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/world/WorldManager.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="369" width="356" x="2257" y="2278"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="component.bomb.BombView" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/bomb/BombView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="87" x="1460" y="3672"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="41" language="java" name="desktop.DesktopLauncher" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/desktop/DesktopLauncher.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="125" x="584" y="-109"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="42" language="java" name="menu.MenuMangerView" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/menu/MenuMangerView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="387" width="213" x="558" y="1851"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="43" language="java" name="component.bomb.Bomb" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/bomb/Bomb.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="131" x="2086" y="2867"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="44" language="java" name="component.ground.Ground" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/ground/Ground.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="115" x="1430" y="2867"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="45" language="java" name="component.bird.BirdType" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/bird/BirdType.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="119" x="694" y="2867"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="46" language="java" name="component.worldComponent.Types" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/worldComponent/Types.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="111" y="210"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="47" language="java" name="component.tube.Tube" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/tube/Tube.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="103" x="1585" y="2867"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="48" language="java" name="state.GameStateManager" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/state/GameStateManager.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="188" x="741" y="1100"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="49" language="java" name="component.worldComponent.FlappyCrashable" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/worldComponent/FlappyCrashable.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="171" x="1728" y="2867"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="50" language="java" name="component.worldComponent.SimpleFObject" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/worldComponent/SimpleFObject.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1754" y="2379"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="51" language="java" name="scoreFiles.Output" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/scoreFiles/Output.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="125" x="1370" y="-109"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="52" language="java" name="component.ground.GroundView" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/ground/GroundView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="184" x="685" y="3672"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="53" language="java" name="component.tube.TubesView" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/component/tube/TubesView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="172" x="1159" y="2278"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="54" language="java" name="world.WorldManagerView" project="FlappyBirdsPOO_LATEST" 
+    file="/FlappyBirdsPOO_LATEST/src/world/WorldManagerView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="212" x="1962" y="1851"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="55">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="50"/>  
+  </generalization>  
+  <generalization id="56">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <association id="57">    
+    <bendpoint x="803" y="552"/>    
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="58" name="end"/>      
+      <multiplicity id="59" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="60">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <generalization id="61">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <generalization id="62">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <association id="63">    
+    <end type="SOURCE" refId="54" navigable="false">      
+      <attribute id="64" name="tubeView"/>      
+      <multiplicity id="65" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="53" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="66">    
+    <end type="SOURCE" refId="48" navigable="false">      
+      <attribute id="67" name="states"/>      
+      <multiplicity id="68" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="69">    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <association id="70">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="71" name="gsm"/>      
+      <multiplicity id="72" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="48" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="73">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="74" name="bombs"/>      
+      <multiplicity id="75" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="43" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="76">    
+    <bendpoint x="501" y="1100"/>    
+    <bendpoint x="501" y="1357"/>    
+    <bendpoint x="501" y="1622"/>    
+    <bendpoint x="501" y="1851"/>    
+    <bendpoint x="501" y="2278"/>    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="77" name="option"/>      
+      <multiplicity id="78" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="79">    
+    <bendpoint x="2055" y="2278"/>    
+    <bendpoint x="2055" y="2867"/>    
+    <end type="SOURCE" refId="54" navigable="false">      
+      <attribute id="80" name="bv2"/>      
+      <multiplicity id="81" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="82">    
+    <end type="SOURCE" refId="47"/>    
+    <end type="TARGET" refId="50"/>  
+  </generalization>  
+  <association id="83">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="84" name="bLeft"/>      
+      <multiplicity id="85" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="86">    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <generalization id="87">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <association id="88">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="89" name="p1Bird"/>      
+      <multiplicity id="90" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="45" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="91">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="92" name="worldView"/>      
+      <multiplicity id="93" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="54" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="94">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="50"/>  
+  </generalization>  
+  <association id="95">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="96" name="instance"/>      
+      <multiplicity id="97" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="36" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="98">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="99" name="bRight"/>      
+      <multiplicity id="100" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="101">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <generalization id="102">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <association id="103">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="104" name="wp"/>      
+      <multiplicity id="105" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="106">    
+    <end type="SOURCE" refId="37"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <generalization id="107">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <association id="108">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="109" name="bullets"/>      
+      <multiplicity id="110" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="111">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="50"/>  
+  </generalization>  
+  <generalization id="112">    
+    <bendpoint x="1950" y="2867"/>    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="50"/>  
+  </generalization>  
+  <association id="113">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="114" name="end"/>      
+      <multiplicity id="115" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="116">    
+    <end type="SOURCE" refId="44"/>    
+    <end type="TARGET" refId="50"/>  
+  </generalization>  
+  <association id="117">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="118" name="life"/>      
+      <multiplicity id="119" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="120">    
+    <bendpoint x="1128" y="2278"/>    
+    <bendpoint x="1128" y="2867"/>    
+    <end type="SOURCE" refId="54" navigable="false">      
+      <attribute id="121" name="gv"/>      
+      <multiplicity id="122" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="52" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="123">    
+    <bendpoint x="1971" y="2278"/>    
+    <bendpoint x="1971" y="2867"/>    
+    <end type="SOURCE" refId="54" navigable="false">      
+      <attribute id="124" name="birdView"/>      
+      <multiplicity id="125" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="126">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="127" name="g"/>      
+      <multiplicity id="128" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="129">    
+    <end type="SOURCE" refId="53" navigable="false">      
+      <attribute id="130" name="top"/>      
+      <multiplicity id="131" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="132">    
+    <bendpoint x="1399" y="2278"/>    
+    <bendpoint x="1399" y="2867"/>    
+    <end type="SOURCE" refId="54" navigable="false">      
+      <attribute id="133" name="bw"/>      
+      <multiplicity id="134" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="40" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="135">    
+    <bendpoint x="801" y="1851"/>    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="136" name="menu"/>      
+      <multiplicity id="137" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="138">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <association id="139">    
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="140" name="endView"/>      
+      <multiplicity id="141" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="142">    
+    <end type="SOURCE" refId="48" navigable="false">      
+      <attribute id="143" name="self"/>      
+      <multiplicity id="144" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="48" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="145">    
+    <bendpoint x="2013" y="2278"/>    
+    <bendpoint x="2013" y="2867"/>    
+    <end type="SOURCE" refId="54" navigable="false">      
+      <attribute id="146" name="bv1"/>      
+      <multiplicity id="147" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="148">    
+    <bendpoint x="2034" y="2278"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="33"/>  
+  </generalization>  
+  <association id="149">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="150" name="option"/>      
+      <multiplicity id="151" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="152">    
+    <end type="SOURCE" refId="52"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <association id="153">    
+    <end type="SOURCE" refId="53" navigable="false">      
+      <attribute id="154" name="bottom"/>      
+      <multiplicity id="155" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="156">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="157" name="lifes"/>      
+      <multiplicity id="158" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="159">    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="160" name="instance"/>      
+      <multiplicity id="161" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="51" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="162">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <association id="163">    
+    <bendpoint x="1929" y="2278"/>    
+    <bendpoint x="1929" y="2867"/>    
+    <end type="SOURCE" refId="54" navigable="false">      
+      <attribute id="164" name="lw"/>      
+      <multiplicity id="165" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="166">    
+    <bendpoint x="2204" y="1851"/>    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="167" name="world"/>      
+      <multiplicity id="168" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="39" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="169">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="170" name="set"/>      
+      <multiplicity id="171" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="172">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="173" name="aura"/>      
+      <multiplicity id="174" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="175">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="176" name="gsm"/>      
+      <multiplicity id="177" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="48" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="178">    
+    <bendpoint x="1992" y="2278"/>    
+    <bendpoint x="1992" y="2867"/>    
+    <end type="SOURCE" refId="54" navigable="false">      
+      <attribute id="179" name="bird2View"/>      
+      <multiplicity id="180" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="181">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="182" name="menuView"/>      
+      <multiplicity id="183" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="184">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <association id="185">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="186" name="wp"/>      
+      <multiplicity id="187" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="188">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <generalization id="189">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <association id="190">    
+    <end type="SOURCE" refId="33" navigable="false">      
+      <attribute id="191" name="simple2"/>      
+      <multiplicity id="192" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="50" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="193">    
+    <bendpoint x="969" y="552"/>    
+    <bendpoint x="969" y="871"/>    
+    <bendpoint x="969" y="1100"/>    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <generalization id="194">    
+    <bendpoint x="862" y="2278"/>    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="33"/>  
+  </generalization>  
+  <generalization id="195">    
+    <bendpoint x="1737" y="1851"/>    
+    <end type="SOURCE" refId="50"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <association id="196">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="197" name="gsm"/>      
+      <multiplicity id="198" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="48" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="199">    
+    <end type="SOURCE" refId="54" navigable="false">      
+      <attribute id="200" name="t1"/>      
+      <multiplicity id="201" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="202">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <association id="203">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="204" name="tubes"/>      
+      <multiplicity id="205" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="206">    
+    <end type="SOURCE" refId="42" navigable="false">      
+      <attribute id="207" name="menu"/>      
+      <multiplicity id="208" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="209">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <generalization id="210">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <realization id="211">    
+    <end type="SOURCE" refId="50"/>    
+    <end type="TARGET" refId="49"/>  
+  </realization>  
+  <association id="212">    
+    <end type="SOURCE" refId="33" navigable="false">      
+      <attribute id="213" name="simple1"/>      
+      <multiplicity id="214" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="50" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="215">    
+    <end type="SOURCE" refId="54" navigable="false">      
+      <attribute id="216" name="w"/>      
+      <multiplicity id="217" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="39" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="218">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="219" name="p2Bird"/>      
+      <multiplicity id="220" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="45" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
