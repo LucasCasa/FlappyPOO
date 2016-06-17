@@ -23,29 +23,29 @@ public class Input {
 		}
 
 		if (set == null) {
-			set = new TreeSet<GamePlayersInfo>(new GamePlayersComp());
+			set = new TreeSet<GamePlayersInfo>();
 			readNormal();
 		}
 
 		return instance;
 	}
 	
-	// comparator utilizado para el treeset
-	public static class GamePlayersComp implements Comparator<GamePlayersInfo>{
-
-		@Override
-		public int compare(GamePlayersInfo i1, GamePlayersInfo i2) {
-			if(i1.getScore()>i2.getScore()){
-				return -1;
-			}else if(i1.getScore()<i2.getScore()){
-				return 1;
-			}else{
-				return i1.getName().compareTo(i2.getName());
-			}
-			
-		}
-	}
-		
+//	// comparator utilizado para el treeset
+//	public static class GamePlayersComp implements Comparator<GamePlayersInfo>{
+//
+//		@Override
+//		public int compare(GamePlayersInfo i1, GamePlayersInfo i2) {
+//			if(i1.getScore()>i2.getScore()){
+//				return -1;
+//			}else if(i1.getScore()<i2.getScore()){
+//				return 1;
+//			}else{
+//				return i1.getName().compareTo(i2.getName());
+//			}
+//			
+//		}
+//	}
+//		
 	
 	
 
