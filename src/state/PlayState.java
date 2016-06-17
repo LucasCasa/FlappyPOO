@@ -2,7 +2,6 @@ package state;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
-import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import component.bird.BirdType;
@@ -18,17 +17,14 @@ public class PlayState extends State {
 
 	private WorldManager world;
 	private WorldManagerView worldView;
-	private Sound s;
 
 	public PlayState(GameStateManager gsm, String p1Name, String p2Name, BirdType birdType, BirdType birdType2) {
 		super(gsm);
 		System.out.println("************INICIO DE NUEVA PARTIDA************");
-		System.out.println("GAAAAP: " + WorldSettings.getInstance().getGap());
 		cam.setToOrtho(false, Flappy.WIDTH / ZOOM_CAMARA, Flappy.HEIGHT / ZOOM_CAMARA);
 		System.out.println("CANTIDAD DE VIDAS DISPONIBLES: " + WorldSettings.getInstance().getLife());
 		this.world = new WorldManager(cam, p1Name, p2Name, birdType, birdType2);
 		this.worldView = new WorldManagerView(world);
-		s = Gdx.audio.newSound(Gdx.files.internal("jump2.wav"));
 
 	}
 
@@ -43,12 +39,12 @@ public class PlayState extends State {
 		}
 
 		if (Gdx.input.isKeyJustPressed(Input.Keys.D)) {
-			s.play(1f);
+			worldView.playShootSound();
 			world.getBLeft().shoot();
 		}
 
 		if (Gdx.input.isKeyJustPressed(Input.Keys.LEFT)) {
-			s.play(1f);
+			worldView.playShootSound();
 			world.getBRight().shoot();
 		}
 

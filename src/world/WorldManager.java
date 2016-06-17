@@ -52,6 +52,7 @@ public class WorldManager {
 		contPlay = true;
 		lifes = new ArrayList<>();
 		bombs = new ArrayList<>();
+		
 
 		for (int i = 1; i <= WorldSettings.getInstance().getLife(); i++) {
 			lifes.add(new Life(randomX() * i, randomY()));
@@ -91,9 +92,6 @@ public class WorldManager {
 
 		}
 		
-		System.out.println("**********************");
-		System.out.println("GAP: " + WorldSettings.getInstance().getGap());
-
 		updateBirdOnGame(bLeft, bRight, dt);
 		updateBirdOnGame(bRight, bLeft, dt);
 
@@ -120,8 +118,10 @@ public class WorldManager {
 			me.crash(tube);
 		}
 
-		for (Life l : lifes) 
+		for (Life l : lifes){
 			me.crash(l);
+		}
+			
 
 		me.crash(g);
 		me.updateTimers();

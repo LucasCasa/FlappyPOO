@@ -1,5 +1,7 @@
 package world;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
@@ -27,8 +29,8 @@ public class WorldManagerView {
 	private Texture bg;
 	private GroundView gv;
 	private TubesView tubeView;
-	private BulletView bv1; //For player 1
-	private BulletView bv2; //For player 2
+	private BulletView bv1; // For player 1
+	private BulletView bv2; // For player 2
 	private LifeView lw;
 	private BombView bw;
 	private TableView t1;
@@ -39,7 +41,7 @@ public class WorldManagerView {
 		lw = new LifeView();
 		t1 = new TableView();
 		bw = new BombView();
-		
+
 		birdSkinSelector(world);
 
 		bg = new Texture(Types.BACKGROUND);
@@ -65,8 +67,8 @@ public class WorldManagerView {
 		for (Tubes tube : w.getTubes()) {
 			tubeView.draw(sb, tube);
 		}
-		
-		for (Life l : w.getLifes()){
+
+		for (Life l : w.getLifes()) {
 			lw.draw(sb, l);
 		}
 
@@ -77,16 +79,15 @@ public class WorldManagerView {
 		for (Bullet b : w.getBRight().getBullets()) {
 			bv2.draw(sb, b);
 		}
-		
+
 		gv.draw(sb, w.getG());
-		
-		for (Bomb b : w.getBombs()){
+
+		for (Bomb b : w.getBombs()) {
 			bw.draw(sb, b);
 		}
-		
-		t1.draw(sb, pos, w.getBLeft().getScore(), w.getBLeft().getLife(),-250);
-		t1.draw(sb, pos, w.getBRight().getScore(), w.getBRight().getLife(),150);
-		
+
+		t1.draw(sb, pos, w.getBLeft().getScore(), w.getBLeft().getLife(), -250);
+		t1.draw(sb, pos, w.getBRight().getScore(), w.getBRight().getLife(), 150);
 
 	}
 
@@ -159,6 +160,12 @@ public class WorldManagerView {
 				bird2View = new BirdView(Types.BLUE_BIRD_INV);
 			}
 		}
+	}
+
+	public void playShootSound() {
+		//Sound s = Gdx.audio.newSound(Gdx.files.internal("crash.mp3"));
+		Sound s = Gdx.audio.newSound(Gdx.files.internal(Types.SHOOT));
+		s.play(1f);
 	}
 
 }

@@ -93,6 +93,8 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 
 		if (obj instanceof Life) {
 			if (crashes && !life.getSecure()) {
+				Life l = (Life)obj;
+				l.touched();
 				System.out.println("***INCREMENTA LA VIDA DE " + this.ID + "***");
 				increaseLife();
 				life.setSecure(true);

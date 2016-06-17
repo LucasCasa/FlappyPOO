@@ -20,6 +20,8 @@ public class Life extends SimpleFObject{
 	
 	private static final int Y_VARIATION = 3;
 	
+	private int touched = 0;
+	
 	/** The Constant WIDTH. */
 	public static final int WIDTH = 48;
 	
@@ -61,9 +63,21 @@ public class Life extends SimpleFObject{
 		
 		if(crashes && !b.getLifeSecure()){
 			b.increaseLife();
+			System.out.println("******************");
+			System.out.println("TOUCHED LIFEEEEEEEE");
+			System.out.println("******************");
+			touched++;
 			b.setLifeSecure(true);
 		}
 		return crashes;	
+	}
+	
+	public void touched(){
+		touched++;
+	}
+	
+	public int getTouched() {
+		return touched;
 	}
 	
 
