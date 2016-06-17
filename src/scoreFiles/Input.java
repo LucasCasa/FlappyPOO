@@ -5,10 +5,12 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Input {
 
@@ -21,12 +23,31 @@ public class Input {
 		}
 
 		if (set == null) {
-			set = new HashSet<>();
+			set = new TreeSet<GamePlayersInfo>(new GamePlayersComp());
 			readNormal();
 		}
 
 		return instance;
 	}
+	
+	// comparator utilizado para el treeset
+	public static class GamePlayersComp implements Comparator<GamePlayersInfo>{
+
+		@Override
+		public int compare(GamePlayersInfo i1, GamePlayersInfo i2) {
+			if(i1.getScore()>i2.getScore()){
+				return -1;
+			}else if(i1.getScore()<i2.getScore()){
+				return 1;
+			}else{
+				return i1.getName().compareTo(i2.getName());
+			}
+			
+		}
+	}
+		
+	
+	
 
 	public static void readNormal() {
 		try (BufferedReader br = new BufferedReader(new FileReader("output.txt"))) {

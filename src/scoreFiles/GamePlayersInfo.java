@@ -1,9 +1,10 @@
 package scoreFiles;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class GamePlayersInfo implements Comparable<GamePlayersInfo>{
+public class GamePlayersInfo{
 
 	private String name;
 	private int score;
@@ -46,16 +47,24 @@ public class GamePlayersInfo implements Comparable<GamePlayersInfo>{
 		return d.hashCode();
 	}
 
-	@Override
-	public int compareTo(GamePlayersInfo o) {
-		if(score>o.score){
-			return 1;
-		}else if(score<o.score){
-			return -1;
-		}else{
-			return 0;
-		}
-		
+//	@Override
+//	public int compareTo(GamePlayersInfo o) {
+//		if(score>o.score){
+//			return 1;
+//		}else if(score<o.score){
+//			return -1;
+//		}else{
+//			return 0;
+//		}
+//		
+//	}
+
+	public int getScore() {
+		return this.score;
+	}
+
+	public String getName() {
+		return this.name;
 	}
 
 }
