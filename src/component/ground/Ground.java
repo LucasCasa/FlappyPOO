@@ -1,4 +1,6 @@
-package component.worldComponent;
+package component.ground;
+
+import component.worldComponent.SimpleFObject;
 
 public class Ground extends SimpleFObject{
 

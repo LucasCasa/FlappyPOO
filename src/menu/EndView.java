@@ -1,15 +1,14 @@
-package component.views;
+package menu;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import component.Types;
-import component.worldComponent.EndComponent;
-import start.Flappy;
+import component.worldComponent.Types;
+import desktop.Flappy;
 
-public class EndComponentView {
+public class EndView {
 	
 	public static final float ZOOM_CAMARA = 1f;
 	private Texture gameOver;
@@ -17,9 +16,9 @@ public class EndComponentView {
 	//esto tiene que ir a la clase assets en los "FONTS"
 	public BitmapFont FONT;
 	
-	private EndComponent end;
+	private EndManager end;
 	
-	public EndComponentView(EndComponent end) {
+	public EndView(EndManager end) {
 		this.end = end;
 		
 		end.getCam().setToOrtho(false, Flappy.WIDTH / ZOOM_CAMARA , Flappy.HEIGHT / ZOOM_CAMARA);

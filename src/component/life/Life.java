@@ -1,10 +1,11 @@
-package component.worldComponent;
+package component.life;
 
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
 import component.bird.Bird;
-import start.Flappy;
+import component.worldComponent.SimpleFObject;
+import desktop.Flappy;
 
 /**
  * No es la clase que se encarga de administrar las vidas de los jugadores.

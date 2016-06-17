@@ -6,11 +6,11 @@ import org.junit.Test;
 
 import component.bird.Bird;
 import component.bird.RedBird;
+import component.bomb.Bomb;
 import component.bullet.BlueBullet;
 import component.bullet.Bullet;
-import component.worldComponent.Bomb;
-import component.worldComponent.Grounds;
-import component.worldComponent.Tubes;
+import component.ground.Grounds;
+import component.tube.Tubes;
 
 public class AuraAndScoreTest {
 

@@ -1,4 +1,4 @@
-package component;
+package menu;
 
 import com.badlogic.gdx.InputProcessor;
 

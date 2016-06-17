@@ -1,4 +1,4 @@
-package start;
+package desktop;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
@@ -6,7 +6,7 @@ import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import component.KeyboardManager;
+import menu.KeyboardManager;
 import state.GameStateManager;
 import state.MenuState;
 

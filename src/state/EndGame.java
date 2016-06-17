@@ -4,18 +4,18 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import component.views.EndComponentView;
-import component.worldComponent.EndComponent;
+import menu.EndManager;
+import menu.EndView;
 
 public class EndGame extends State {
 
-	private EndComponent end;
-	private EndComponentView endView;
+	private EndManager end;
+	private EndView endView;
 
 	public EndGame(GameStateManager gsm) {
 		super(gsm);
-		end = new EndComponent(cam, gsm);
-		endView = new EndComponentView(end);
+		end = new EndManager(cam, gsm);
+		endView = new EndView(end);
 
 	}
 

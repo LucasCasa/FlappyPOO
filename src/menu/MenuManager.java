@@ -1,4 +1,4 @@
-package component.worldComponent;
+package menu;
 
 
 import java.util.ArrayList;
@@ -8,9 +8,10 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Input.Keys;
 
-import component.WorldSettings;
 import component.bird.BirdType;
+import component.tube.Tubes;
 import state.Options;
+import world.WorldSettings;
 
 public class MenuManager {
 	

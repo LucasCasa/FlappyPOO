@@ -4,8 +4,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import component.views.MenuMangerView;
-import component.worldComponent.MenuManager;
+import menu.MenuManager;
+import menu.MenuMangerView;
 
 public class MenuState extends State {
 

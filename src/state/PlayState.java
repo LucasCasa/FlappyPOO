@@ -5,11 +5,11 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import component.WorldManager;
-import component.WorldSettings;
 import component.bird.BirdType;
-import component.views.WorldManagerView;
-import start.Flappy;
+import desktop.Flappy;
+import world.WorldManager;
+import world.WorldManagerView;
+import world.WorldSettings;
 
 public class PlayState extends State {
 

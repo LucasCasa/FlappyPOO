@@ -1,4 +1,6 @@
-package component.worldComponent;
+package component.tube;
+
+import component.worldComponent.SimpleFObject;
 
 public class Tube extends SimpleFObject{
 

@@ -2,7 +2,8 @@ package component.worldComponent;
 
 public class CompoundFObject extends FlappyObject  {
 	
-	SimpleFObject simple1, simple2;
+	protected SimpleFObject simple1;
+	protected SimpleFObject simple2;
 	
 	public CompoundFObject() {
 	}
@@ -14,6 +15,10 @@ public class CompoundFObject extends FlappyObject  {
 	public SimpleFObject getSimple2() {
 		return simple2;
 	}
+	
+	
+	
+	
 	
 
 }

@@ -40,5 +40,13 @@ public abstract class SimpleFObject extends FlappyObject implements FlappyCrasha
 		position.set(x, y);
 	}
 	
+	public Rectangle getBounds() {
+		return bounds;
+	}
+	
+	public void setBounds(Rectangle bounds) {
+		this.bounds = bounds;
+	}
+	
 
 }

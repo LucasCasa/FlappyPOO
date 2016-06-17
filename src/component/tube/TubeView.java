@@ -1,10 +1,9 @@
-package component.views;
+package component.tube;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import component.Types;
-import component.worldComponent.Tubes;
+import component.worldComponent.Types;
 
 public class TubeView {
 	

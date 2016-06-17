@@ -1,4 +1,4 @@
-package component.worldComponent;
+package menu;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -7,13 +7,13 @@ import state.GameStateManager;
 import state.MenuState;
 import state.Options;
 
-public class EndComponent {
+public class EndManager {
 	
 	private Options option;
 	private GameStateManager gsm;
 	private OrthographicCamera cam;
 	
-	public EndComponent(OrthographicCamera cam, GameStateManager gsm){
+	public EndManager(OrthographicCamera cam, GameStateManager gsm){
 		
 		this.cam=cam;
 		this.option = Options.MAIN;

@@ -1,4 +1,4 @@
-package component.views;
+package menu;
 
 
 
@@ -7,11 +7,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import component.Types;
-import component.WorldSettings;
-import component.worldComponent.MenuManager;
+import component.worldComponent.Types;
+import desktop.Flappy;
 import scoreFiles.Input;
-import start.Flappy;
+import world.WorldSettings;
 
 
 public class MenuMangerView {

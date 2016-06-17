@@ -1,18 +1,24 @@
-package component.views;
+package world;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import component.Types;
-import component.WorldManager;
 import component.bird.Bird;
+import component.bird.BirdView;
 import component.bird.ClassicBird;
 import component.bird.GreenBird;
 import component.bird.RedBird;
+import component.bomb.Bomb;
+import component.bomb.BombView;
 import component.bullet.Bullet;
-import component.worldComponent.Bomb;
-import component.worldComponent.Life;
-import component.worldComponent.Tubes;
+import component.bullet.BulletView;
+import component.ground.GroundView;
+import component.life.Life;
+import component.life.LifeView;
+import component.tube.TubeView;
+import component.tube.Tubes;
+import component.worldComponent.Types;
+import menu.TableView;
 
 public class WorldManagerView {
 

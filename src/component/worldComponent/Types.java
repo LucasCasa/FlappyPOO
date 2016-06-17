@@ -1,4 +1,4 @@
-package component;
+package component.worldComponent;
 
 public class Types {
 

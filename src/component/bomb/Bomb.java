@@ -1,8 +1,9 @@
-package component.worldComponent;
+package component.bomb;
 
 import com.badlogic.gdx.math.Rectangle;
 
-import component.WorldSettings;
+import component.worldComponent.SimpleFObject;
+import world.WorldSettings;
 
 // TODO: Auto-generated Javadoc
 /**

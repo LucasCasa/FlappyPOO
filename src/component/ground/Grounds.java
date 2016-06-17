@@ -1,8 +1,9 @@
-package component.worldComponent;
+package component.ground;
 
 import com.badlogic.gdx.math.Rectangle;
 
 import component.bird.Bird;
+import component.worldComponent.CompoundFObject;
 
 public class Grounds extends CompoundFObject{
 
@@ -27,8 +28,9 @@ public class Grounds extends CompoundFObject{
 	public Grounds(float pos, float width) {
 		simple1 = new Ground(pos - width / 2 - 100, GROUND_Y_OFFSET);
 		simple2 = new Ground((pos - width / 2) + WIDTH - 100, GROUND_Y_OFFSET);
-		simple1.bounds = new Rectangle(simple1.position.x, simple1.position.y, WIDTH, HEIGHT);
-		simple2.bounds = new Rectangle(simple2.position.x, simple2.position.y, WIDTH, HEIGHT);
+		simple1.setBounds(new Rectangle(simple1.getPosition().x, simple1.getPosition().y, WIDTH, HEIGHT));
+		simple2.setBounds(new Rectangle(simple2.getPosition().x, simple2.getPosition().y, WIDTH, HEIGHT));
+
 	}
 
 	/**
@@ -38,13 +40,13 @@ public class Grounds extends CompoundFObject{
 	 * @param width Width del Viewport de la camara
 	 */
 	public void update(float pos, float width) {
-		if(pos - width / 2 > simple1.position.x + WIDTH){
+		if(pos - width / 2 > simple1.getPosition().x + WIDTH){
 			System.out.println("REPOSICION 1");
-			simple1.position.add(WIDTH * 2, 0);
+			simple1.getPosition().add(WIDTH * 2, 0);
 		}
-		if(pos - width / 2 > simple2.position.x + WIDTH){
+		if(pos - width / 2 > simple2.getPosition().x + WIDTH){
 			System.out.println("Reposicion 2");
-			simple2.position.add(WIDTH * 2, 0);
+			simple2.getPosition().add(WIDTH * 2, 0);
 		}
 	}
 	

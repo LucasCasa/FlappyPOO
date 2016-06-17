@@ -6,12 +6,12 @@ import java.util.List;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
+import component.bomb.Bomb;
 import component.bullet.Bullet;
+import component.life.Life;
 import component.worldComponent.SimpleFObject;
 import component.worldComponent.Timer;
-import component.worldComponent.Bomb;
 import component.worldComponent.CompoundFObject;
-import component.worldComponent.Life;
 import component.worldComponent.Shootable;
 
 public abstract class Bird extends SimpleFObject implements Shootable {

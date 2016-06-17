@@ -1,9 +1,7 @@
-package component.views;
+package component.bullet;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-
-import component.bullet.Bullet;
 
 public class BulletView {
 	

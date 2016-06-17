@@ -1,4 +1,4 @@
-package component;
+package world;
 
 /**
  * Es una clase que define cuales son los parametros del mundo, tal

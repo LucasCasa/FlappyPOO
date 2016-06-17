@@ -1,4 +1,4 @@
-package component;
+package world;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,12 +12,12 @@ import component.bird.BlueBird;
 import component.bird.ClassicBird;
 import component.bird.GreenBird;
 import component.bird.RedBird;
+import component.bomb.Bomb;
 import component.bullet.Bullet;
-import component.worldComponent.Bomb;
-import component.worldComponent.Grounds;
-import component.worldComponent.Life;
-import component.worldComponent.Tube;
-import component.worldComponent.Tubes;
+import component.ground.Grounds;
+import component.life.Life;
+import component.tube.Tube;
+import component.tube.Tubes;
 import scoreFiles.Output;
 
 /*
