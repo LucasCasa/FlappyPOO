@@ -3,9 +3,10 @@ package component.worldComponent;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
+import component.bird.Bird;
 import start.Flappy;
 
-/*
+/**
  * No es la clase que se encarga de administrar las vidas de los jugadores.
  * Life es el objeto que aparece en el juego con forma de CORAZON. 
  * Lo unico que hace es incrementar la vida en 1
@@ -13,11 +14,23 @@ import start.Flappy;
 
 public class Life extends SimpleFObject{
 
-	private static final int FREQUENCY = 50000;
+	/** Frecuencia de aparicion de corazones. */
+	private static final int FREQUENCY = 500;
+	
 	private static final int Y_VARIATION = 3;
+	
+	/** The Constant WIDTH. */
 	public static final int WIDTH = 48;
+	
+	/** The Constant HEIGHT. */
 	public static final int HEIGHT = 48;
 
+	/**
+	 * Instantiates a new life.
+	 *
+	 * @param x the x
+	 * @param y the y
+	 */
 	public Life(float x, float y) {
 		super(x,y);
 		bounds = new Rectangle(x, y, WIDTH, HEIGHT);
@@ -27,6 +40,7 @@ public class Life extends SimpleFObject{
 		return position;
 	}
 
+	
 	public void update() {
 		float posx = (float) (Math.random() * FREQUENCY + Flappy.WIDTH);
 		float posy = (float) (Math.random() * Y_VARIATION);
@@ -34,7 +48,13 @@ public class Life extends SimpleFObject{
 		bounds.setPosition( bounds.x + posx, bounds.y + posy);
 	}
 
-	/*
+	
+	/**
+	 * Crash.
+	 *
+	 * @param b the b
+	 * @return true, if successful
+	 */
 	public boolean crash(Bird b) {
 		boolean crashes = b.getBounds().overlaps(bounds);
 		
@@ -44,6 +64,6 @@ public class Life extends SimpleFObject{
 		}
 		return crashes;	
 	}
-	*/
+	
 
 }

@@ -223,7 +223,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	public int getLife() {
 		return lifes;
 	}
-
+	
 	/**
 	 * Gets the id.
 	 *
@@ -293,6 +293,10 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	 */
 	public String getName() {
 		return this.name;
+	}
+	
+	public void setLifeSecure(Boolean b){
+		life.setSecure(b);
 	}
 
 }

@@ -38,7 +38,6 @@ public class BirdView {
 
 	public void draw(SpriteBatch sb, Bird b) {
 
-
 		if (b.getAuraState()) {
 			Texture aura = new Texture("aura.png");
 			sb.draw(aura, b.getPosition().x - VISUAL_HEIGHT / 1.5f, b.getPosition().y - VISUAL_WIDTH / 2);

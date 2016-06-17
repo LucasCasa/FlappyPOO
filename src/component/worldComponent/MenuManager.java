@@ -86,6 +86,12 @@ public class MenuManager {
 		return writing;
 	}
 	
+	/**
+	 * Escribe en pantalla lo que recibe por teclado. 
+	 * Si presiona ENTER, deja de escribir.
+	 * 
+	 * @param KeyCode
+	 */
 	private void writeName(int KeyCode){
 	    String key = Input.Keys.toString(KeyCode);
 	    //aca deberia usarse "MAXNAMELENGTH" como una constante

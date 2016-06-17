@@ -35,8 +35,8 @@ public class GroundView {
 	}
 
 	public void draw(SpriteBatch sb, Grounds g) {
-		sb.draw(ground, g.getTop().getPosition().x, g.getTop().getPosition().y);
-		sb.draw(ground, g.getBottom().getPosition().x, g.getBottom().getPosition().y);
+		sb.draw(ground, g.getGround1().getPosition().x, g.getGround1().getPosition().y);
+		sb.draw(ground, g.getGround2().getPosition().x, g.getGround2().getPosition().y);
 	}
 
 }
