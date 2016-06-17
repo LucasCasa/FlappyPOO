@@ -8,7 +8,6 @@ import component.bird.BirdType;
 import desktop.Flappy;
 import world.WorldManager;
 import world.WorldManagerView;
-import world.WorldSettings;
 
 public class PlayState extends State {
 
