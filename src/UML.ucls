@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.1.10" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="component.bullet.BlueBulletR" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/bullet/BlueBulletR.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="1" language="java" name="component.bullet.BlueBulletR" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/bullet/BlueBulletR.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1943" y="4051"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -10,8 +10,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="component.ground.Grounds" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/ground/Grounds.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="2" language="java" name="component.ground.Grounds" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/ground/Grounds.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="207" width="145" x="2655" y="2867"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -19,8 +19,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="component.worldComponent.FlappyObject" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/worldComponent/FlappyObject.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="3" language="java" name="component.worldComponent.FlappyObject" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/worldComponent/FlappyObject.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1591" y="1706"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -28,8 +28,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="menu.KeyboardManager" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/menu/KeyboardManager.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="4" language="java" name="menu.KeyboardManager" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/menu/KeyboardManager.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="261" width="184" x="360" y="-109"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -37,8 +37,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="state.MenuState" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/state/MenuState.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="5" language="java" name="state.MenuState" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/state/MenuState.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="189" width="221" x="792" y="1622"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -46,8 +46,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="component.bird.RedBird" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/bird/RedBird.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="6" language="java" name="component.bird.RedBird" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/bird/RedBird.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="99" width="111" x="2311" y="3672"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -55,8 +55,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="7" language="java" name="component.worldComponent.Shootable" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/worldComponent/Shootable.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="7" language="java" name="component.worldComponent.Shootable" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/worldComponent/Shootable.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="81" width="128" x="2462" y="3672"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -64,8 +64,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="8" language="java" name="menu.MenuManager" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/menu/MenuManager.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="8" language="java" name="menu.MenuManager" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/menu/MenuManager.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="549" width="174" x="658" y="2278"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -73,8 +73,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="state.State" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/state/State.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="9" language="java" name="state.State" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/state/State.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="225" width="173" x="960" y="1357"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -82,8 +82,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="component.bullet.Bullet" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/bullet/Bullet.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="10" language="java" name="component.bullet.Bullet" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/bullet/Bullet.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="189" width="129" x="2142" y="3672"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -91,8 +91,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="component.bird.Bird" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/bird/Bird.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="11" language="java" name="component.bird.Bird" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/bird/Bird.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="765" width="191" x="2424" y="2867"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -100,8 +100,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="component.bird.BlueBird" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/bird/BlueBird.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="12" language="java" name="component.bird.BlueBird" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/bird/BlueBird.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="99" width="113" x="2630" y="3672"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -109,8 +109,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="13" language="java" name="component.worldComponent.Drawable" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/worldComponent/Drawable.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="13" language="java" name="component.worldComponent.Drawable" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/worldComponent/Drawable.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="99" width="210" x="909" y="3672"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -118,8 +118,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="14" language="java" name="component.bird.BirdView" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/bird/BirdView.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="14" language="java" name="component.bird.BirdView" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/bird/BirdView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="153" width="161" x="1787" y="3672"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -127,8 +127,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="15" language="java" name="component.tube.Tubes" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/tube/Tubes.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="15" language="java" name="component.tube.Tubes" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/tube/Tubes.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="261" width="167" x="853" y="2867"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -136,8 +136,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="16" language="java" name="component.bird.ClassicBird" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/bird/ClassicBird.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="16" language="java" name="component.bird.ClassicBird" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/bird/ClassicBird.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="99" width="127" x="2783" y="3672"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -145,8 +145,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="17" language="java" name="component.worldComponent.SimpleFObjectView" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/worldComponent/SimpleFObjectView.java" binary="false" 
+  <class id="17" language="java" name="component.worldComponent.SimpleFObjectView" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/worldComponent/SimpleFObjectView.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="171" width="210" x="1159" y="2867"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -155,8 +155,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="18" language="java" name="component.bullet.BulletView" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/bullet/BulletView.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="18" language="java" name="component.bullet.BulletView" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/bullet/BulletView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="117" width="114" x="1988" y="3672"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -164,8 +164,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="19" language="java" name="world.WorldSettings" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/world/WorldSettings.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="19" language="java" name="world.WorldSettings" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/world/WorldSettings.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="783" width="166" x="469" y="3672"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -173,8 +173,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="20" language="java" name="component.life.LifeView" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/life/LifeView.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="20" language="java" name="component.life.LifeView" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/life/LifeView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="99" width="160" x="1587" y="3672"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -182,17 +182,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="21" language="java" name="component.bullet.ClassicBullet" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/bullet/ClassicBullet.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2130" y="4051"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="22" language="java" name="component.tube.BottomTubeView" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/tube/BottomTubeView.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="21" language="java" name="component.tube.BottomTubeView" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/tube/BottomTubeView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="81" width="120" x="1159" y="3672"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -200,8 +191,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="23" language="java" name="state.PlayState" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/state/PlayState.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="22" language="java" name="state.PlayState" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/state/PlayState.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="189" width="325" x="1962" y="1622"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -209,8 +200,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="24" language="java" name="state.Options" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/state/Options.java" binary="false" corner="BOTTOM_RIGHT">    
+  <enumeration id="23" language="java" name="state.Options" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/state/Options.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="207" width="162" x="492" y="2867"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -218,8 +209,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="25" language="java" name="component.tube.TopTubeView" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/tube/TopTubeView.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="24" language="java" name="component.tube.TopTubeView" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/tube/TopTubeView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="81" width="101" x="1319" y="3672"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -227,8 +218,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="26" language="java" name="scoreFiles.GamePlayersInfo" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/scoreFiles/GamePlayersInfo.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="25" language="java" name="scoreFiles.GamePlayersInfo" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/scoreFiles/GamePlayersInfo.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="279" width="189" x="1740" y="552"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -236,8 +227,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="27" language="java" name="menu.EndView" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/menu/EndView.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="26" language="java" name="menu.EndView" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/menu/EndView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="447" y="559"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -245,8 +236,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="28" language="java" name="state.EndGame" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/state/EndGame.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="27" language="java" name="state.EndGame" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/state/EndGame.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="153" width="175" x="960" y="-109"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -254,8 +245,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="29" language="java" name="menu.EndManager" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/menu/EndManager.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="28" language="java" name="menu.EndManager" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/menu/EndManager.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="171" width="292" x="492" y="871"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -263,8 +254,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="30" language="java" name="desktop.Flappy" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/desktop/Flappy.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="29" language="java" name="desktop.Flappy" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/desktop/Flappy.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="189" width="115" x="824" y="871"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -272,17 +263,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="31" language="java" name="component.bullet.GoldenBullet" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/bullet/GoldenBullet.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2323" y="4051"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="32" language="java" name="component.life.Life" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/life/Life.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="30" language="java" name="component.life.Life" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/life/Life.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="261" width="127" x="2257" y="2867"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -290,8 +272,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="33" language="java" name="component.worldComponent.CompoundFObject" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/worldComponent/CompoundFObject.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="31" language="java" name="component.worldComponent.CompoundFObject" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/worldComponent/CompoundFObject.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="117" width="157" x="1550" y="1851"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -299,8 +281,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="34" language="java" name="component.worldComponent.Timer" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/worldComponent/Timer.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="32" language="java" name="component.worldComponent.Timer" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/worldComponent/Timer.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="189" width="145" x="2950" y="3672"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -308,8 +290,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="35" language="java" name="menu.TableView" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/menu/TableView.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="33" language="java" name="menu.TableView" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/menu/TableView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="171" width="205" x="893" y="2278"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -317,8 +299,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="36" language="java" name="scoreFiles.Input" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/scoreFiles/Input.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="34" language="java" name="scoreFiles.Input" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/scoreFiles/Input.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="135" width="157" x="1740" y="-109"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -326,17 +308,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="37" language="java" name="component.bullet.SilverBullet" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/bullet/SilverBullet.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2513" y="4051"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="38" language="java" name="component.bird.GreenBird" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/bird/GreenBird.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="35" language="java" name="component.bird.GreenBird" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/bird/GreenBird.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="99" width="122" x="3135" y="3672"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -344,8 +317,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="39" language="java" name="world.WorldManager" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/world/WorldManager.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="36" language="java" name="world.WorldManager" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/world/WorldManager.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="369" width="356" x="2257" y="2278"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -353,8 +326,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="40" language="java" name="component.bomb.BombView" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/bomb/BombView.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="37" language="java" name="component.bomb.BombView" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/bomb/BombView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="81" width="87" x="1460" y="3672"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -362,8 +335,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="41" language="java" name="desktop.DesktopLauncher" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/desktop/DesktopLauncher.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="38" language="java" name="desktop.DesktopLauncher" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/desktop/DesktopLauncher.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="99" width="125" x="584" y="-109"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -371,8 +344,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="42" language="java" name="menu.MenuMangerView" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/menu/MenuMangerView.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="39" language="java" name="menu.MenuMangerView" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/menu/MenuMangerView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="387" width="213" x="558" y="1851"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -380,8 +353,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="43" language="java" name="component.bomb.Bomb" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/bomb/Bomb.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="40" language="java" name="component.bomb.Bomb" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/bomb/Bomb.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="153" width="131" x="2086" y="2867"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -389,8 +362,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="44" language="java" name="component.ground.Ground" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/ground/Ground.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="41" language="java" name="component.ground.Ground" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/ground/Ground.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="81" width="115" x="1430" y="2867"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -398,8 +371,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="45" language="java" name="component.bird.BirdType" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/bird/BirdType.java" binary="false" corner="BOTTOM_RIGHT">    
+  <enumeration id="42" language="java" name="component.bird.BirdType" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/bird/BirdType.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="153" width="119" x="694" y="2867"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -407,8 +380,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="46" language="java" name="component.worldComponent.Types" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/worldComponent/Types.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="43" language="java" name="component.worldComponent.Types" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/worldComponent/Types.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="111" y="210"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -416,8 +389,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="47" language="java" name="component.tube.Tube" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/tube/Tube.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="44" language="java" name="component.tube.Tube" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/tube/Tube.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="117" width="103" x="1585" y="2867"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -425,8 +398,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="48" language="java" name="state.GameStateManager" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/state/GameStateManager.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="45" language="java" name="state.GameStateManager" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/state/GameStateManager.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="207" width="188" x="741" y="1100"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -434,8 +407,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="49" language="java" name="component.worldComponent.FlappyCrashable" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/worldComponent/FlappyCrashable.java" binary="false" corner="BOTTOM_RIGHT">    
+  <interface id="46" language="java" name="component.worldComponent.FlappyCrashable" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/worldComponent/FlappyCrashable.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="81" width="171" x="1728" y="2867"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -443,8 +416,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="50" language="java" name="component.worldComponent.SimpleFObject" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/worldComponent/SimpleFObject.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="47" language="java" name="component.worldComponent.SimpleFObject" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/worldComponent/SimpleFObject.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1754" y="2379"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -452,8 +425,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="51" language="java" name="scoreFiles.Output" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/scoreFiles/Output.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="48" language="java" name="scoreFiles.Output" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/scoreFiles/Output.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="135" width="125" x="1370" y="-109"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -461,8 +434,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="52" language="java" name="component.ground.GroundView" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/ground/GroundView.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="49" language="java" name="component.ground.GroundView" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/ground/GroundView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="99" width="184" x="685" y="3672"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -470,8 +443,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="53" language="java" name="component.tube.TubesView" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/component/tube/TubesView.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="50" language="java" name="component.tube.TubesView" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/component/tube/TubesView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="153" width="172" x="1159" y="2278"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -479,8 +452,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="54" language="java" name="world.WorldManagerView" project="FlappyBirdsPOO_LATEST" 
-    file="/FlappyBirdsPOO_LATEST/src/world/WorldManagerView.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="51" language="java" name="world.WorldManagerView" project="FlappyBirdsPOO_FINAL" 
+    file="/FlappyBirdsPOO_FINAL/src/world/WorldManagerView.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="243" width="212" x="1962" y="1851"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -488,501 +461,485 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <generalization id="55">    
-    <end type="SOURCE" refId="43"/>    
-    <end type="TARGET" refId="50"/>  
+  <generalization id="52">    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="47"/>  
   </generalization>  
-  <generalization id="56">    
+  <generalization id="53">    
     <end type="SOURCE" refId="20"/>    
     <end type="TARGET" refId="17"/>  
   </generalization>  
-  <association id="57">    
+  <association id="54">    
     <bendpoint x="803" y="552"/>    
-    <end type="SOURCE" refId="28" navigable="false">      
-      <attribute id="58" name="end"/>      
-      <multiplicity id="59" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="55" name="end"/>      
+      <multiplicity id="56" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="29" navigable="true"/>    
+    <end type="TARGET" refId="28" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="60">    
+  <generalization id="57">    
     <end type="SOURCE" refId="18"/>    
     <end type="TARGET" refId="17"/>  
   </generalization>  
-  <generalization id="61">    
+  <generalization id="58">    
     <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="9"/>  
   </generalization>  
-  <generalization id="62">    
-    <end type="SOURCE" refId="25"/>    
+  <generalization id="59">    
+    <end type="SOURCE" refId="24"/>    
     <end type="TARGET" refId="17"/>  
   </generalization>  
-  <association id="63">    
-    <end type="SOURCE" refId="54" navigable="false">      
-      <attribute id="64" name="tubeView"/>      
-      <multiplicity id="65" minimum="0" maximum="1"/>    
+  <association id="60">    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="61" name="tubeView"/>      
+      <multiplicity id="62" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="53" navigable="true"/>    
+    <end type="TARGET" refId="50" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="66">    
-    <end type="SOURCE" refId="48" navigable="false">      
-      <attribute id="67" name="states"/>      
-      <multiplicity id="68" minimum="0" maximum="2147483647"/>    
+  <association id="63">    
+    <end type="SOURCE" refId="45" navigable="false">      
+      <attribute id="64" name="states"/>      
+      <multiplicity id="65" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="69">    
-    <end type="SOURCE" refId="31"/>    
-    <end type="TARGET" refId="10"/>  
-  </generalization>  
-  <association id="70">    
+  <association id="66">    
     <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="71" name="gsm"/>      
-      <multiplicity id="72" minimum="0" maximum="1"/>    
+      <attribute id="67" name="gsm"/>      
+      <multiplicity id="68" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="48" navigable="true"/>    
+    <end type="TARGET" refId="45" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="73">    
-    <end type="SOURCE" refId="39" navigable="false">      
-      <attribute id="74" name="bombs"/>      
-      <multiplicity id="75" minimum="0" maximum="2147483647"/>    
+  <association id="69">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="70" name="bombs"/>      
+      <multiplicity id="71" minimum="0" maximum="2147483647"/>    
     </end>    
-    <end type="TARGET" refId="43" navigable="true"/>    
+    <end type="TARGET" refId="40" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="76">    
+  <association id="72">    
     <bendpoint x="501" y="1100"/>    
     <bendpoint x="501" y="1357"/>    
     <bendpoint x="501" y="1622"/>    
     <bendpoint x="501" y="1851"/>    
     <bendpoint x="501" y="2278"/>    
-    <end type="SOURCE" refId="29" navigable="false">      
-      <attribute id="77" name="option"/>      
-      <multiplicity id="78" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="73" name="option"/>      
+      <multiplicity id="74" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="24" navigable="true"/>    
+    <end type="TARGET" refId="23" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="79">    
+  <association id="75">    
     <bendpoint x="2055" y="2278"/>    
     <bendpoint x="2055" y="2867"/>    
-    <end type="SOURCE" refId="54" navigable="false">      
-      <attribute id="80" name="bv2"/>      
-      <multiplicity id="81" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="76" name="bv2"/>      
+      <multiplicity id="77" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="78">    
+    <end type="SOURCE" refId="44"/>    
+    <end type="TARGET" refId="47"/>  
+  </generalization>  
+  <association id="79">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="80" name="bLeft"/>      
+      <multiplicity id="81" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <generalization id="82">    
-    <end type="SOURCE" refId="47"/>    
-    <end type="TARGET" refId="50"/>  
-  </generalization>  
-  <association id="83">    
-    <end type="SOURCE" refId="39" navigable="false">      
-      <attribute id="84" name="bLeft"/>      
-      <multiplicity id="85" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="86">    
-    <end type="SOURCE" refId="40"/>    
-    <end type="TARGET" refId="17"/>  
-  </generalization>  
-  <generalization id="87">    
-    <end type="SOURCE" refId="22"/>    
-    <end type="TARGET" refId="17"/>  
-  </generalization>  
-  <association id="88">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="89" name="p1Bird"/>      
-      <multiplicity id="90" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="45" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="91">    
-    <end type="SOURCE" refId="23" navigable="false">      
-      <attribute id="92" name="worldView"/>      
-      <multiplicity id="93" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="54" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="94">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="50"/>  
-  </generalization>  
-  <association id="95">    
-    <end type="SOURCE" refId="36" navigable="false">      
-      <attribute id="96" name="instance"/>      
-      <multiplicity id="97" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="36" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="98">    
-    <end type="SOURCE" refId="39" navigable="false">      
-      <attribute id="99" name="bRight"/>      
-      <multiplicity id="100" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="101">    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="17"/>  
-  </generalization>  
-  <generalization id="102">    
-    <end type="SOURCE" refId="21"/>    
-    <end type="TARGET" refId="10"/>  
-  </generalization>  
-  <association id="103">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="104" name="wp"/>      
-      <multiplicity id="105" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="19" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="106">    
     <end type="SOURCE" refId="37"/>    
-    <end type="TARGET" refId="10"/>  
-  </generalization>  
-  <association id="107">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="108" name="bullets"/>      
-      <multiplicity id="109" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="110">    
-    <end type="SOURCE" refId="32"/>    
-    <end type="TARGET" refId="50"/>  
-  </generalization>  
-  <generalization id="111">    
-    <bendpoint x="1950" y="2867"/>    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="50"/>  
-  </generalization>  
-  <association id="112">    
-    <end type="SOURCE" refId="27" navigable="false">      
-      <attribute id="113" name="end"/>      
-      <multiplicity id="114" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="29" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="115">    
-    <end type="SOURCE" refId="44"/>    
-    <end type="TARGET" refId="50"/>  
-  </generalization>  
-  <association id="116">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="117" name="life"/>      
-      <multiplicity id="118" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="34" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="119">    
-    <bendpoint x="1128" y="2278"/>    
-    <bendpoint x="1128" y="2867"/>    
-    <end type="SOURCE" refId="54" navigable="false">      
-      <attribute id="120" name="gv"/>      
-      <multiplicity id="121" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="52" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="122">    
-    <bendpoint x="1971" y="2278"/>    
-    <bendpoint x="1971" y="2867"/>    
-    <end type="SOURCE" refId="54" navigable="false">      
-      <attribute id="123" name="birdView"/>      
-      <multiplicity id="124" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="125">    
-    <end type="SOURCE" refId="39" navigable="false">      
-      <attribute id="126" name="g"/>      
-      <multiplicity id="127" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="128">    
-    <end type="SOURCE" refId="53" navigable="false">      
-      <attribute id="129" name="top"/>      
-      <multiplicity id="130" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="131">    
-    <bendpoint x="1399" y="2278"/>    
-    <bendpoint x="1399" y="2867"/>    
-    <end type="SOURCE" refId="54" navigable="false">      
-      <attribute id="132" name="bw"/>      
-      <multiplicity id="133" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="40" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="134">    
-    <bendpoint x="801" y="1851"/>    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="135" name="menu"/>      
-      <multiplicity id="136" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="137">    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="13"/>  
-  </realization>  
-  <association id="138">    
-    <end type="SOURCE" refId="28" navigable="false">      
-      <attribute id="139" name="endView"/>      
-      <multiplicity id="140" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="27" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="141">    
-    <end type="SOURCE" refId="48" navigable="false">      
-      <attribute id="142" name="self"/>      
-      <multiplicity id="143" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="48" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="144">    
-    <bendpoint x="2013" y="2278"/>    
-    <bendpoint x="2013" y="2867"/>    
-    <end type="SOURCE" refId="54" navigable="false">      
-      <attribute id="145" name="bv1"/>      
-      <multiplicity id="146" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="18" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="147">    
-    <bendpoint x="2034" y="2278"/>    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="33"/>  
-  </generalization>  
-  <association id="148">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="149" name="option"/>      
-      <multiplicity id="150" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="24" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="151">    
-    <end type="SOURCE" refId="52"/>    
     <end type="TARGET" refId="17"/>  
   </generalization>  
-  <association id="152">    
-    <end type="SOURCE" refId="53" navigable="false">      
-      <attribute id="153" name="bottom"/>      
-      <multiplicity id="154" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="155">    
-    <end type="SOURCE" refId="39" navigable="false">      
-      <attribute id="156" name="lifes"/>      
-      <multiplicity id="157" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="32" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="158">    
-    <end type="SOURCE" refId="51" navigable="false">      
-      <attribute id="159" name="instance"/>      
-      <multiplicity id="160" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="51" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="161">    
-    <bendpoint x="1929" y="2278"/>    
-    <bendpoint x="1929" y="2867"/>    
-    <end type="SOURCE" refId="54" navigable="false">      
-      <attribute id="162" name="lw"/>      
-      <multiplicity id="163" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="20" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="164">    
-    <bendpoint x="2204" y="1851"/>    
-    <end type="SOURCE" refId="23" navigable="false">      
-      <attribute id="165" name="world"/>      
-      <multiplicity id="166" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="39" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="167">    
-    <end type="SOURCE" refId="36" navigable="false">      
-      <attribute id="168" name="set"/>      
-      <multiplicity id="169" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="26" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="170">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="171" name="aura"/>      
-      <multiplicity id="172" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="34" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="173">    
-    <end type="SOURCE" refId="29" navigable="false">      
-      <attribute id="174" name="gsm"/>      
-      <multiplicity id="175" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="48" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="176">    
-    <bendpoint x="1992" y="2278"/>    
-    <bendpoint x="1992" y="2867"/>    
-    <end type="SOURCE" refId="54" navigable="false">      
-      <attribute id="177" name="bird2View"/>      
-      <multiplicity id="178" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="179">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="180" name="menuView"/>      
-      <multiplicity id="181" minimum="0" maximum="1"/>    
+  <generalization id="83">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <association id="84">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="85" name="p1Bird"/>      
+      <multiplicity id="86" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="42" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="182">    
-    <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="183" name="wp"/>      
-      <multiplicity id="184" minimum="0" maximum="1"/>    
+  <association id="87">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="88" name="worldView"/>      
+      <multiplicity id="89" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="51" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="90">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="47"/>  
+  </generalization>  
+  <association id="91">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="92" name="instance"/>      
+      <multiplicity id="93" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="94">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="95" name="bRight"/>      
+      <multiplicity id="96" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="97">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <association id="98">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="99" name="wp"/>      
+      <multiplicity id="100" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="19" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="185">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="10"/>  
-  </generalization>  
-  <association id="186">    
-    <end type="SOURCE" refId="33" navigable="false">      
-      <attribute id="187" name="simple2"/>      
-      <multiplicity id="188" minimum="0" maximum="1"/>    
+  <association id="101">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="102" name="bullets"/>      
+      <multiplicity id="103" minimum="0" maximum="2147483647"/>    
     </end>    
-    <end type="TARGET" refId="50" navigable="true"/>    
+    <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="189">    
-    <bendpoint x="969" y="552"/>    
-    <bendpoint x="969" y="871"/>    
-    <bendpoint x="969" y="1100"/>    
-    <end type="SOURCE" refId="28"/>    
-    <end type="TARGET" refId="9"/>  
+  <generalization id="104">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="47"/>  
   </generalization>  
-  <generalization id="190">    
-    <bendpoint x="862" y="2278"/>    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="33"/>  
+  <generalization id="105">    
+    <bendpoint x="1950" y="2867"/>    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="47"/>  
   </generalization>  
-  <generalization id="191">    
-    <bendpoint x="1737" y="1851"/>    
-    <end type="SOURCE" refId="50"/>    
-    <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <association id="192">    
-    <end type="SOURCE" refId="30" navigable="false">      
-      <attribute id="193" name="gsm"/>      
-      <multiplicity id="194" minimum="0" maximum="1"/>    
+  <association id="106">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="107" name="end"/>      
+      <multiplicity id="108" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="48" navigable="true"/>    
+    <end type="TARGET" refId="28" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="195">    
-    <end type="SOURCE" refId="54" navigable="false">      
-      <attribute id="196" name="t1"/>      
-      <multiplicity id="197" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="35" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="198">    
-    <end type="SOURCE" refId="23"/>    
-    <end type="TARGET" refId="9"/>  
+  <generalization id="109">    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="47"/>  
   </generalization>  
-  <association id="199">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="200" name="tubes"/>      
-      <multiplicity id="201" minimum="0" maximum="2147483647"/>    
+  <association id="110">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="111" name="life"/>      
+      <multiplicity id="112" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
+    <end type="TARGET" refId="32" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="202">    
-    <end type="SOURCE" refId="42" navigable="false">      
-      <attribute id="203" name="menu"/>      
-      <multiplicity id="204" minimum="0" maximum="1"/>    
+  <association id="113">    
+    <bendpoint x="1128" y="2278"/>    
+    <bendpoint x="1128" y="2867"/>    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="114" name="gv"/>      
+      <multiplicity id="115" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="49" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="116">    
+    <bendpoint x="1971" y="2278"/>    
+    <bendpoint x="1971" y="2867"/>    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="117" name="birdView"/>      
+      <multiplicity id="118" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="119">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="120" name="g"/>      
+      <multiplicity id="121" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="122">    
+    <end type="SOURCE" refId="50" navigable="false">      
+      <attribute id="123" name="top"/>      
+      <multiplicity id="124" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="125">    
+    <bendpoint x="1399" y="2278"/>    
+    <bendpoint x="1399" y="2867"/>    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="126" name="bw"/>      
+      <multiplicity id="127" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="37" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="128">    
+    <bendpoint x="801" y="1851"/>    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="129" name="menu"/>      
+      <multiplicity id="130" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="205">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="7"/>  
+  <realization id="131">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="13"/>  
   </realization>  
-  <generalization id="206">    
-    <end type="SOURCE" refId="33"/>    
-    <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <realization id="207">    
-    <end type="SOURCE" refId="50"/>    
-    <end type="TARGET" refId="49"/>  
-  </realization>  
-  <association id="208">    
-    <end type="SOURCE" refId="33" navigable="false">      
-      <attribute id="209" name="simple1"/>      
-      <multiplicity id="210" minimum="0" maximum="1"/>    
+  <association id="132">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="133" name="endView"/>      
+      <multiplicity id="134" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="50" navigable="true"/>    
+    <end type="TARGET" refId="26" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="211">    
-    <end type="SOURCE" refId="54" navigable="false">      
-      <attribute id="212" name="w"/>      
-      <multiplicity id="213" minimum="0" maximum="1"/>    
+  <association id="135">    
+    <end type="SOURCE" refId="45" navigable="false">      
+      <attribute id="136" name="self"/>      
+      <multiplicity id="137" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="45" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="138">    
+    <bendpoint x="2013" y="2278"/>    
+    <bendpoint x="2013" y="2867"/>    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="139" name="bv1"/>      
+      <multiplicity id="140" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="141">    
+    <bendpoint x="2034" y="2278"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="31"/>  
+  </generalization>  
+  <association id="142">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="143" name="option"/>      
+      <multiplicity id="144" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="145">    
+    <end type="SOURCE" refId="49"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <association id="146">    
+    <end type="SOURCE" refId="50" navigable="false">      
+      <attribute id="147" name="bottom"/>      
+      <multiplicity id="148" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="149">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="150" name="lifes"/>      
+      <multiplicity id="151" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="152">    
+    <end type="SOURCE" refId="48" navigable="false">      
+      <attribute id="153" name="instance"/>      
+      <multiplicity id="154" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="48" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="155">    
+    <bendpoint x="1929" y="2278"/>    
+    <bendpoint x="1929" y="2867"/>    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="156" name="lw"/>      
+      <multiplicity id="157" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="158">    
+    <bendpoint x="2204" y="1851"/>    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="159" name="world"/>      
+      <multiplicity id="160" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="36" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="161">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="162" name="set"/>      
+      <multiplicity id="163" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="164">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="165" name="aura"/>      
+      <multiplicity id="166" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="167">    
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="168" name="gsm"/>      
+      <multiplicity id="169" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="45" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="170">    
+    <bendpoint x="1992" y="2278"/>    
+    <bendpoint x="1992" y="2867"/>    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="171" name="bird2View"/>      
+      <multiplicity id="172" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="173">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="174" name="menuView"/>      
+      <multiplicity id="175" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="39" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="214">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="215" name="p2Bird"/>      
-      <multiplicity id="216" minimum="0" maximum="1"/>    
+  <association id="176">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="177" name="wp"/>      
+      <multiplicity id="178" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="179">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="180" name="simple2"/>      
+      <multiplicity id="181" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="47" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="182">    
+    <bendpoint x="969" y="552"/>    
+    <bendpoint x="969" y="871"/>    
+    <bendpoint x="969" y="1100"/>    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <generalization id="183">    
+    <bendpoint x="862" y="2278"/>    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="31"/>  
+  </generalization>  
+  <generalization id="184">    
+    <bendpoint x="1737" y="1851"/>    
+    <end type="SOURCE" refId="47"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <association id="185">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="186" name="gsm"/>      
+      <multiplicity id="187" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="45" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="188">    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="189" name="t1"/>      
+      <multiplicity id="190" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="191">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <association id="192">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="193" name="tubes"/>      
+      <multiplicity id="194" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="195">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="196" name="menu"/>      
+      <multiplicity id="197" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="198">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <generalization id="199">    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <realization id="200">    
+    <end type="SOURCE" refId="47"/>    
+    <end type="TARGET" refId="46"/>  
+  </realization>  
+  <association id="201">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="202" name="simple1"/>      
+      <multiplicity id="203" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="47" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="204">    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="205" name="w"/>      
+      <multiplicity id="206" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="36" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="207">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="208" name="p2Bird"/>      
+      <multiplicity id="209" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

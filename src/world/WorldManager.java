@@ -7,8 +7,6 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.utils.Array;
 
 import component.bird.Bird;
-import component.bird.BirdLeft;
-import component.bird.BirdRight;
 import component.bird.BirdType;
 import component.bird.BlueBird;
 import component.bird.BlueBirdR;
@@ -37,8 +35,8 @@ import scoreFiles.Output;
 
 public class WorldManager {
 
-	private BirdLeft bLeft;
-	private BirdRight bRight;
+	private Bird bLeft;
+	private Bird bRight;
 	private Grounds g;
 	
 	private Array<Tubes> tubes;

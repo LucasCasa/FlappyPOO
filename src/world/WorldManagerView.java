@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import component.bird.Bird;
+import component.bird.BirdRight;
 import component.bird.BirdView;
 import component.bird.ClassicBird;
 import component.bird.GreenBird;
@@ -139,7 +140,7 @@ public class WorldManagerView {
 	}
 
 	private void birdSkin(Bird b) {
-		if (b.getID() % 2 == 0) {
+		if (b instanceof BirdRight) {
 			if (b instanceof RedBird) {
 				birdView = new BirdView(Types.RED_BIRD);
 			} else if (b instanceof GreenBird) {
@@ -160,10 +161,11 @@ public class WorldManagerView {
 				bird2View = new BirdView(Types.BLUE_BIRD_INV);
 			}
 		}
+
 	}
 
 	public void playShootSound() {
-		//Sound s = Gdx.audio.newSound(Gdx.files.internal("crash.mp3"));
+		// Sound s = Gdx.audio.newSound(Gdx.files.internal("crash.mp3"));
 		Sound s = Gdx.audio.newSound(Gdx.files.internal(Types.SHOOT));
 		s.play(1f);
 	}
