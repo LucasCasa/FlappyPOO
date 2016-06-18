@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import component.Types;
 import component.worldComponent.EndComponent;
-import start.Flappy;
+import desktop.Flappy;
 
 public class EndComponentView {
 	

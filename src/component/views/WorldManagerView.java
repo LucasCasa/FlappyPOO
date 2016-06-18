@@ -13,7 +13,7 @@ import component.bullet.Bullet;
 import component.worldComponent.Bomb;
 import component.worldComponent.Life;
 import component.worldComponent.Tubes;
-import start.Flappy;
+import desktop.Flappy;
 
 public class WorldManagerView {
 

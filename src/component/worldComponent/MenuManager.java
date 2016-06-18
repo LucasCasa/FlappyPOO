@@ -84,7 +84,7 @@ public class MenuManager {
 		return writing;
 	}
 	
-	private void writeName(int KeyCode){
+	public void writeName(int KeyCode){
 	    String key = Input.Keys.toString(KeyCode);
 	    //aca deberia usarse "MAXNAMELENGTH" como una constante
 	    if(key.length() == 1 && name.length() < 25)

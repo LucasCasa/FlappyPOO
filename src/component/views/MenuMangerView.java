@@ -9,7 +9,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import component.Types;
 import component.WorldSettings;
 import component.worldComponent.MenuManager;
-import start.Flappy;
+import desktop.Flappy;
 
 
 public class MenuMangerView {

@@ -3,7 +3,7 @@ package component.worldComponent;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
-import start.Flappy;
+import desktop.Flappy;
 
 /*
  * No es la clase que se encarga de administrar las vidas de los jugadores.
