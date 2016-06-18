@@ -6,6 +6,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import component.bird.Bird;
+import component.bird.BirdLeft;
+import component.bird.BirdRight;
 import component.bird.BirdView;
 import component.bird.BlueBirdR;
 import component.bird.ClassicBird;
@@ -120,54 +122,61 @@ public class WorldManagerView {
 
 	private void bulletSkin(Bird b) {
 
-		if (b instanceof RedBird) {
-			bv1 = new BulletView(Types.SILVER_BULLET);
-		} else if (b instanceof GreenBird) {
-			bv1 = new BulletView(Types.GOLDEN_BULLET);
-		} else if (b instanceof ClassicBird) {
-			bv1 = new BulletView(Types.CLASSIC_BULLET);
-		} else {
-			bv1 = new BulletView(Types.BLUE_BULLET);
+		if (b instanceof BirdLeft) {
+			if (b instanceof RedBird) {
+				bv1 = new BulletView(Types.SILVER_BULLET);
+			} else if (b instanceof GreenBird) {
+				bv1 = new BulletView(Types.GOLDEN_BULLET);
+			} else if (b instanceof ClassicBird) {
+				bv1 = new BulletView(Types.CLASSIC_BULLET);
+			} else {
+				bv1 = new BulletView(Types.BLUE_BULLET);
+			}
 		}
 
-		if (b instanceof RedBirdR) {
-			bv2 = new BulletView(Types.SILVER_BULLET_INV);
-		} else if (b instanceof GreenBirdR) {
-			bv2 = new BulletView(Types.GOLDEN_BULLET_INV);
-		} else if (b instanceof ClassicBirdR) {
-			bv2 = new BulletView(Types.CLASSIC_BULLET_INV);
-		} else if (b instanceof BlueBirdR) {
-			bv2 = new BulletView(Types.BLUE_BULLET_INV);
+		if (b instanceof BirdRight) {
+			if (b instanceof RedBirdR) {
+				bv2 = new BulletView(Types.SILVER_BULLET_INV);
+			} else if (b instanceof GreenBirdR) {
+				bv2 = new BulletView(Types.GOLDEN_BULLET_INV);
+			} else if (b instanceof ClassicBirdR) {
+				bv2 = new BulletView(Types.CLASSIC_BULLET_INV);
+			} else if (b instanceof BlueBirdR) {
+				bv2 = new BulletView(Types.BLUE_BULLET_INV);
+			}
 		}
 
 	}
 
 	private void birdSkin(Bird b) {
 
-		if (b instanceof RedBird) {
-			birdView = new BirdView(Types.RED_BIRD);
-		} else if (b instanceof GreenBird) {
-			birdView = new BirdView(Types.GREEN_BIRD);
-		} else if (b instanceof ClassicBird) {
-			birdView = new BirdView(Types.CLASSIC_BIRD);
-		} else {
-			birdView = new BirdView(Types.BLUE_BIRD);
+		if (b instanceof BirdLeft) {
+			if (b instanceof RedBird) {
+				birdView = new BirdView(Types.RED_BIRD);
+			} else if (b instanceof GreenBird) {
+				birdView = new BirdView(Types.GREEN_BIRD);
+			} else if (b instanceof ClassicBird) {
+				birdView = new BirdView(Types.CLASSIC_BIRD);
+			} else {
+				birdView = new BirdView(Types.BLUE_BIRD);
+			}
 		}
 
-		if (b instanceof RedBirdR) {
-			bird2View = new BirdView(Types.RED_BIRD_INV);
-		} else if (b instanceof GreenBirdR) {
-			bird2View = new BirdView(Types.GREEN_BIRD_INV);
-		} else if (b instanceof ClassicBirdR) {
-			bird2View = new BirdView(Types.CLASSIC_BIRD_INV);
-		} else if (b instanceof BlueBirdR) {
-			bird2View = new BirdView(Types.BLUE_BIRD_INV);
+		if (b instanceof BirdRight) {
+			if (b instanceof RedBirdR) {
+				bird2View = new BirdView(Types.RED_BIRD_INV);
+			} else if (b instanceof GreenBirdR) {
+				bird2View = new BirdView(Types.GREEN_BIRD_INV);
+			} else if (b instanceof ClassicBirdR) {
+				bird2View = new BirdView(Types.CLASSIC_BIRD_INV);
+			} else if (b instanceof BlueBirdR) {
+				bird2View = new BirdView(Types.BLUE_BIRD_INV);
+			}
 		}
 
 	}
 
 	public void playShootSound() {
-		// Sound s = Gdx.audio.newSound(Gdx.files.internal("crash.mp3"));
 		Sound s = Gdx.audio.newSound(Gdx.files.internal(Types.SHOOT));
 		s.play(1f);
 	}
