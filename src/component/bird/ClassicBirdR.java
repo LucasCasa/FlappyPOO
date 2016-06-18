@@ -9,6 +9,7 @@ public class ClassicBirdR extends BirdRight {
 
 	public ClassicBirdR(int ID, int x, int y) {
 		super(ID, x, y);
+		System.out.println("creo de el clasico de la derecha");
 		bounds = new Rectangle(super.position.x, super.position.y, Bird.WIDTH, Bird.HEIGHT);
 	}
 

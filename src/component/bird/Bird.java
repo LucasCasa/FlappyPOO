@@ -303,23 +303,5 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	public void setLifeSecure(Boolean b) {
 		life.setSecure(b);
 	}
-	
-	/**
-	 * Gets the x value of Velocity vector
-	 *
-	 * @return x value
-	 */
-	public float getVelocityX(){
-		return velocity.x;
-	}
-	
-	/**
-	 * Gets the y value of Velocity vector
-	 *
-	 * @return y value
-	 */
-	public float getVelocityY(){
-		return velocity.y;
-	}
-	
+
 }

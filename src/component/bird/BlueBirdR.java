@@ -9,6 +9,8 @@ public class BlueBirdR extends BirdRight{
 	
 	public BlueBirdR(int ID, int x, int y) {
 		super(ID, x, y);
+		System.out.println("CREO DE LA DERECHA");
+
 		bounds = new Rectangle(super.position.x, super.position.y, Bird.WIDTH, Bird.HEIGHT);
 	}
 
