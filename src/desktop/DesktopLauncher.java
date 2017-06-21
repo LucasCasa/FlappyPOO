@@ -25,6 +25,5 @@ public class DesktopLauncher {
 		
 		m.fadeOut();
 
-		
 	}
 }

@@ -5,17 +5,13 @@ import com.badlogic.gdx.audio.Sound;
 
 public class Music {
 
-	public Sound s;
-	public long id;
-	public float volume;
+	private Sound s;
+	private long id;
+	private float volume;
 	private static float MAX_VOLUME = 0.5f;
 
 	public Music(String path) {
-		if (this.volume > MAX_VOLUME) {
-			this.volume = MAX_VOLUME;
-		}
-		s = Gdx.audio.newSound(Gdx.files.internal(path));
-		
+		s = Gdx.audio.newSound(Gdx.files.internal(path));	
 	}
 		
 	public void play(float volume){
