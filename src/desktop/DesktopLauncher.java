@@ -2,10 +2,8 @@ package desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-
 import component.worldComponent.Types;
 import world.music.Music;
-
 
 public class DesktopLauncher {
 	public static void main (String[] arg) {
@@ -14,6 +12,19 @@ public class DesktopLauncher {
 		config.height = Flappy.HEIGHT;
 		config.title = Flappy.TITLE;
 		new LwjglApplication(new Flappy(), config);
-		Music.playSound(Types.MAIN_THEME, 0.25f);
+		
+		Music m = new Music(Types.MAIN_THEME);
+		m.play(0.5f);
+		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		m.fadeOut();
+
+		
 	}
 }
