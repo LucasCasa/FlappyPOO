@@ -14,8 +14,8 @@ import world.WorldSettings;
  * Parte inferior del tubo (del tipo Tube) Ambos son SimpleFObject.
  * 
  */
-public class Tubes extends CompoundFObject {
-
+public abstract class Tubes extends CompoundFObject {
+	
 	/**
 	 * Random se utiliza a la hora de crear y setear las posiciones de las
 	 * aperturas de los tubos

@@ -35,6 +35,8 @@ public class Types {
 	public static final String GROUND = "ground2.png";
 	public static final String TOP_TUBE = "toptube.png";
 	public static final String BOTTOM_TUBE = "bottomtube.png";
+	public static final String METAL_TOP_TUBE = "metaltoptube.png";
+	public static final String METAL_BOTTOM_TUBE = "metalbottomtube.png";
 	public static final String GAME_OVER = "gameover.png";
 	
 	public static final int BLUE_BULLET_SPEED = 250;

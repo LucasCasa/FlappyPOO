@@ -22,6 +22,8 @@ import component.bomb.Bomb;
 import component.bullet.Bullet;
 import component.ground.Grounds;
 import component.life.Life;
+import component.tube.MetalTubes;
+import component.tube.NormalTubes;
 import component.tube.Tube;
 import component.tube.Tubes;
 import scoreFiles.Output;
@@ -72,8 +74,18 @@ public class WorldManager {
 
 		g = new Grounds(cam.position.x, cam.viewportWidth);
 
+		double rand;
 		for (int i = 1; i <= WorldSettings.getInstance().getTubeCount(); i++) {
-			tubes.add(new Tubes(i * (WorldSettings.getInstance().getTubeSpacing() + Tube.WIDTH)));
+			rand = Math.random() * 10;
+			int n = (int)rand % 2;
+			if(n == 0){
+				System.out.println("CREO UNO DE METAL");
+				tubes.add(new MetalTubes(i * (WorldSettings.getInstance().getTubeSpacing() + Tube.WIDTH)));
+			}else{
+				System.out.println("CREO UNO NORMAL");
+				tubes.add(new NormalTubes(i * (WorldSettings.getInstance().getTubeSpacing() + Tube.WIDTH)));
+			}
+						
 		}
 
 	}

@@ -3,14 +3,12 @@ package test;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
 import component.bird.Bird;
 import component.bird.RedBird;
 import component.bomb.Bomb;
 import component.bullet.BlueBulletR;
 import component.bullet.Bullet;
 import component.ground.Grounds;
-import component.tube.Tubes;
 
 public class LifeTest {
 
@@ -54,6 +52,7 @@ public class LifeTest {
 		Assert.assertEquals(3, a.getLife());
 	}
 	
+	/*
 	@Test
 	public void reduceLifeTube(){
 		Tubes t = new Tubes(100, 10, 10);
@@ -67,6 +66,7 @@ public class LifeTest {
 		a.crash(t.getBottom());
 		Assert.assertEquals(3, a.getLife());
 	}
+	*/
 	
 	@Test
 	public void reduceLifeGround(){

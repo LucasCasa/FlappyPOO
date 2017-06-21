@@ -24,6 +24,9 @@ import component.ground.GroundView;
 import component.life.Life;
 import component.life.LifeView;
 import component.tube.TubesView;
+import component.tube.MetalTubesView;
+import component.tube.NormalTubes;
+import component.tube.NormalTubesView;
 import component.tube.Tubes;
 import component.worldComponent.Types;
 import menu.TableView;
@@ -34,7 +37,10 @@ public class WorldManagerView {
 	private BirdView bird2View;
 	private Texture bg;
 	private GroundView gv;
-	private TubesView tubeView;
+	
+	private TubesView normalTubeView;
+	private TubesView metalTubeView;
+	
 	private BulletView bv1; // For player 1
 	private BulletView bv2; // For player 2
 	private LifeView lw;
@@ -51,8 +57,10 @@ public class WorldManagerView {
 		birdSkinSelector(world);
 
 		bg = new Texture(Types.BACKGROUND);
-		tubeView = new TubesView();
-
+		
+		normalTubeView = new NormalTubesView();
+		metalTubeView = new MetalTubesView();
+		
 		bulletSkinSelector(world);
 
 		gv = new GroundView();
@@ -71,7 +79,13 @@ public class WorldManagerView {
 		bird2View.draw(sb, w.getBRight());
 
 		for (Tubes tube : w.getTubes()) {
-			tubeView.draw(sb, tube);
+			
+			if(tube instanceof NormalTubes){
+				normalTubeView.draw(sb, tube);
+			}else{
+				metalTubeView.draw(sb, tube);
+			}
+			
 		}
 
 		for (Life l : w.getLifes()) {
@@ -107,7 +121,7 @@ public class WorldManagerView {
 		bw.dispose();
 		birdView.dispose();
 		bird2View.dispose();
-		tubeView.dispose();
+		normalTubeView.dispose();
 	}
 
 	private void bulletSkinSelector(WorldManager w) {

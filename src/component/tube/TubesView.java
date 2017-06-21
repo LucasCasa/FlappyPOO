@@ -5,15 +5,10 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import component.worldComponent.SimpleFObjectView;
 
-public class TubesView {
+public abstract class TubesView {
 	
 	SimpleFObjectView top, bottom;
 
-	public TubesView() {
-		top = new TopTubeView();
-		bottom = new BottomTubeView();
-	}
-	
 	public Texture getTopTexture() {
 		return top.getTexture();
 	}

@@ -3,7 +3,6 @@ package test;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
 import component.bird.Bird;
 import component.bird.RedBird;
 import component.bomb.Bomb;
@@ -11,7 +10,6 @@ import component.bullet.BlueBulletR;
 import component.bullet.Bullet;
 import component.ground.Grounds;
 import component.life.Life;
-import component.tube.Tubes;
 
 public class CollisionTest {
 
@@ -47,6 +45,7 @@ public class CollisionTest {
 		Assert.assertTrue(g.crash(a));
 	}
 	
+	/*
 	@Test
 	public void collisionTopTube(){
 		a.setPosition(100, 0);
@@ -60,6 +59,7 @@ public class CollisionTest {
 		Tubes t = new Tubes(100, 10, 10);
 		Assert.assertFalse(t.getBottom().crash(a));
 	}
+	*/
 
 
 }
