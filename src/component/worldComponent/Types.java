@@ -29,6 +29,8 @@ public class Types {
 	public static final String CRASH = "crash.mp3";
 	public static final String SHOOT = "jump2.wav";
 	
+	public static final String MAIN_THEME = "main.wav";
+	
 	public static final String LOGO = "logo.png";
 	public static final String BACKGROUND = "bg2.png";
 	public static final String PLAYBTN = "playbtn.png";
