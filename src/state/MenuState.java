@@ -7,6 +7,8 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import component.worldComponent.Types;
 import menu.MenuManager;
 import menu.MenuMangerView;
+import world.music.FadeOutManager;
+import world.music.MenuMusic;
 
 public class MenuState extends State {
 
@@ -81,6 +83,7 @@ public class MenuState extends State {
 		menu.update();
 		
 		if(menu.selectDone()) {
+			(new Thread(new FadeOutManager(MenuMusic.getInstance()))).start();
 			gsm.set(new PlayState(gsm, menu.getP1Name(), menu.getP2Name(), menu.getP1Bird(), menu.getP2Bird()));
 		}
 	}

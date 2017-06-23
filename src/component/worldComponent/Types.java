@@ -32,8 +32,8 @@ public class Types {
 	public static final String CRASH = "crash.mp3";
 	public static final String SHOOT = "jump2.wav";
 
-	public static final Sound typing1 =  Gdx.audio.newSound(Gdx.files.internal("typing1.mp3"));;
-	public static final Sound typing2 =  Gdx.audio.newSound(Gdx.files.internal("typing2.mp3"));;
+	public static final Sound typing1 =  Gdx.audio.newSound(Gdx.files.internal("typing1.mp3"));
+	public static final Sound typing2 =  Gdx.audio.newSound(Gdx.files.internal("typing2.mp3"));
 	
 	public static final String MAIN_THEME = "main.wav";
 	
