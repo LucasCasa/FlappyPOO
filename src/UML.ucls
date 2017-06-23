@@ -73,7 +73,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="component.bullet.BlueBulletL" project="FlappyBirdsPOO_FINAL" 
+  <class id="9" language="java" name="component.bullet.FireBulletL" project="FlappyBirdsPOO_FINAL"
     file="/FlappyBirdsPOO_FINAL/src/component/bullet/BlueBulletL.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="135" width="132" x="1125" y="3243"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -109,7 +109,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="component.bullet.BlueBulletR" project="FlappyBirdsPOO_FINAL" 
+  <class id="13" language="java" name="component.bullet.FireBulletR" project="FlappyBirdsPOO_FINAL"
     file="/FlappyBirdsPOO_FINAL/src/component/bullet/BlueBulletR.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="135" width="133" x="401" y="3243"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -118,7 +118,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="component.bird.ClassicBirdR" project="FlappyBirdsPOO_FINAL" 
+  <class id="14" language="java" name="component.bird.SilverBirdR" project="FlappyBirdsPOO_FINAL"
     file="/FlappyBirdsPOO_FINAL/src/component/bird/ClassicBirdR.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="99" width="134" x="2028" y="2410"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -262,7 +262,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="30" language="java" name="component.bullet.ClassicBulletR" project="FlappyBirdsPOO_FINAL" 
+  <class id="30" language="java" name="component.bullet.CannonBulletR" project="FlappyBirdsPOO_FINAL"
     file="/FlappyBirdsPOO_FINAL/src/component/bullet/ClassicBulletR.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="135" width="147" x="574" y="3243"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -298,7 +298,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="34" language="java" name="component.bullet.ClassicBulletL" project="FlappyBirdsPOO_FINAL" 
+  <class id="34" language="java" name="component.bullet.CannonBulletL" project="FlappyBirdsPOO_FINAL"
     file="/FlappyBirdsPOO_FINAL/src/component/bullet/ClassicBulletL.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="135" width="146" x="1297" y="3243"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -334,7 +334,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="38" language="java" name="component.bullet.GoldenBulletL" project="FlappyBirdsPOO_FINAL" 
+  <class id="38" language="java" name="component.bullet.LaserBulletL" project="FlappyBirdsPOO_FINAL"
     file="/FlappyBirdsPOO_FINAL/src/component/bullet/GoldenBulletL.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="135" width="145" x="1483" y="3243"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -398,7 +398,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="45" language="java" name="component.bullet.GoldenBulletR" project="FlappyBirdsPOO_FINAL" 
+  <class id="45" language="java" name="component.bullet.LaserBulletR" project="FlappyBirdsPOO_FINAL"
     file="/FlappyBirdsPOO_FINAL/src/component/bullet/GoldenBulletR.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="135" width="146" x="761" y="3243"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -479,7 +479,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="54" language="java" name="component.bullet.GoldenBullet" project="FlappyBirdsPOO_FINAL" 
+  <class id="54" language="java" name="component.bullet.LaserBullet" project="FlappyBirdsPOO_FINAL"
     file="/FlappyBirdsPOO_FINAL/src/component/bullet/GoldenBullet.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="135" width="139" x="320" y="2410"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -560,7 +560,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="63" language="java" name="component.bullet.BlueBullet" project="FlappyBirdsPOO_FINAL" 
+  <class id="63" language="java" name="component.bullet.FireBullet" project="FlappyBirdsPOO_FINAL"
     file="/FlappyBirdsPOO_FINAL/src/component/bullet/BlueBullet.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="135" width="126" x="499" y="2410"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -587,7 +587,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="66" language="java" name="component.bullet.ClassicBullet" project="FlappyBirdsPOO_FINAL" 
+  <class id="66" language="java" name="component.bullet.CannonBullet" project="FlappyBirdsPOO_FINAL"
     file="/FlappyBirdsPOO_FINAL/src/component/bullet/ClassicBullet.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="135" width="140" x="858" y="2410"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -632,7 +632,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="71" language="java" name="component.bird.ClassicBird" project="FlappyBirdsPOO_FINAL" 
+  <class id="71" language="java" name="component.bird.SilverBird" project="FlappyBirdsPOO_FINAL"
     file="/FlappyBirdsPOO_FINAL/src/component/bird/ClassicBird.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="99" width="127" x="1541" y="2410"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

@@ -18,7 +18,7 @@ public class MenuMangerView {
 	private Texture logo;
 	private Texture background;
 
-	private Texture birdRed, birdGreen, birdClassic, birdBlue;
+	private Texture birdRed, birdGreen, birdSilver, birdBlue;
 	
 	private Texture bullet1, bullet2, bullet3, bullet4;
 
@@ -36,13 +36,13 @@ public class MenuMangerView {
 		
 		birdRed = new Texture(Types.RED_BIRD);
 		birdGreen = new Texture(Types.GREEN_BIRD);
-		birdClassic = new Texture(Types.CLASSIC_BIRD);
+		birdSilver = new Texture(Types.SILVER_BIRD);
 		birdBlue = new Texture(Types.BLUE_BIRD);
-		
+
 		bullet1 = new Texture(Types.SILVER_BULLET);
-		bullet2 = new Texture(Types.GOLDEN_BULLET);
-		bullet3 = new Texture(Types.CLASSIC_BULLET);
-		bullet4 = new Texture(Types.BLUE_BULLET);
+		bullet2 = new Texture(Types.LASER_BULLET);
+		bullet3 = new Texture(Types.CANNON_BULLET);
+		bullet4 = new Texture(Types.FIRE_BULLET);
 		
 	}
 
@@ -93,7 +93,7 @@ public class MenuMangerView {
 		text.dispose();
 		birdGreen.dispose();
 		birdRed.dispose();
-		birdClassic.dispose();
+		birdSilver.dispose();
 		birdBlue.dispose();
 		bullet1.dispose();
 		bullet2.dispose();
@@ -164,29 +164,29 @@ public class MenuMangerView {
 			}
 			
 			//GOLD
-			text.draw(sb, "1 - GOLD   550", Flappy.WIDTH*1/8, Flappy.HEIGHT*21/25);
-			sb.draw(birdGreen, Flappy.WIDTH*1/8, Flappy.HEIGHT*18/25);
-			sb.draw(bullet2, Flappy.WIDTH*1/4, Flappy.HEIGHT*18/25);
-			sb.draw(bullet2, Flappy.WIDTH*1/3, Flappy.HEIGHT*18/25);
-			sb.draw(bullet2, Flappy.WIDTH*5/12, Flappy.HEIGHT*18/25);
+			text.draw(sb, "1 - SILVER   " + Types.SILVER_BULLET_SPEED, Flappy.WIDTH*1/8, Flappy.HEIGHT*21/25);
+			sb.draw(birdSilver, Flappy.WIDTH*1/8, Flappy.HEIGHT*18/25);
+			sb.draw(bullet1, Flappy.WIDTH*1/4, Flappy.HEIGHT*18/25);
+			sb.draw(bullet1, Flappy.WIDTH*1/3, Flappy.HEIGHT*18/25);
+			sb.draw(bullet1, Flappy.WIDTH*5/12, Flappy.HEIGHT*18/25);
 
 			//SILVER
-			text.draw(sb, "2 - SILVER   450", Flappy.WIDTH*1/8, Flappy.HEIGHT*249/400);
-			sb.draw(birdRed, Flappy.WIDTH*1/8, Flappy.HEIGHT*201/400);
-			sb.draw(bullet1, Flappy.WIDTH*1/4, Flappy.HEIGHT*201/400);
-			sb.draw(bullet1, Flappy.WIDTH*1/3, Flappy.HEIGHT*201/400);
-			sb.draw(bullet1, Flappy.WIDTH*5/12, Flappy.HEIGHT*201/400);
+			text.draw(sb, "2 - GREEN   "+ Types.LASER_BULLET_SPEED, Flappy.WIDTH*1/8, Flappy.HEIGHT*249/400);
+			sb.draw(birdGreen, Flappy.WIDTH*1/8, Flappy.HEIGHT*201/400);
+			sb.draw(bullet2, Flappy.WIDTH*1/4, Flappy.HEIGHT*201/400);
+			sb.draw(bullet2, Flappy.WIDTH*1/3, Flappy.HEIGHT*201/400);
+			sb.draw(bullet2, Flappy.WIDTH*5/12, Flappy.HEIGHT*201/400);
 
-			//CLASSIC
-			text.draw(sb, "3 - CLASSIC   400", Flappy.WIDTH*1/8, Flappy.HEIGHT*81/190);
-			sb.draw(birdClassic, Flappy.WIDTH*1/8, Flappy.HEIGHT*29/100);
+			//SILVER
+			text.draw(sb, "3 - BLUE   "+Types.CANNON_BULLET_SPEED, Flappy.WIDTH*1/8, Flappy.HEIGHT*81/190);
+			sb.draw(birdBlue, Flappy.WIDTH*1/8, Flappy.HEIGHT*29/100);
 			sb.draw(bullet3, Flappy.WIDTH*1/4, Flappy.HEIGHT*29/100);
 			sb.draw(bullet3, Flappy.WIDTH*1/3, Flappy.HEIGHT*29/100);
 			sb.draw(bullet3, Flappy.WIDTH*5/12, Flappy.HEIGHT*29/100);
 
 			//BLUE
-			text.draw(sb, "4 - BLUE   250", Flappy.WIDTH*1/8, Flappy.HEIGHT*77/400);
-			sb.draw(birdBlue, Flappy.WIDTH*1/8, Flappy.HEIGHT*29/400);
+			text.draw(sb, "4 - RED   " + Types.FIRE_BULLET_SPEED, Flappy.WIDTH*1/8, Flappy.HEIGHT*77/400);
+			sb.draw(birdRed, Flappy.WIDTH*1/8, Flappy.HEIGHT*29/400);
 			sb.draw(bullet4, Flappy.WIDTH*1/4, Flappy.HEIGHT*29/400);
 			sb.draw(bullet4, Flappy.WIDTH*1/3, Flappy.HEIGHT*29/400);
 			sb.draw(bullet4, Flappy.WIDTH*5/12, Flappy.HEIGHT*29/400);						

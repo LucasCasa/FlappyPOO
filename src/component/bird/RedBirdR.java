@@ -3,6 +3,7 @@ package component.bird;
 import com.badlogic.gdx.math.Rectangle;
 
 import component.bullet.Bullet;
+import component.bullet.FireBulletR;
 import component.bullet.SilverBulletR;
 
 public class RedBirdR extends BirdRight {
@@ -14,7 +15,7 @@ public class RedBirdR extends BirdRight {
 
 	@Override
 	public void shoot() {
-		Bullet b = new SilverBulletR(position.x, position.y);
+		Bullet b = new FireBulletR(position.x, position.y);
 		bullets.add(b);		
 	}
 

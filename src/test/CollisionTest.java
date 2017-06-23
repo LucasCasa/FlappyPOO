@@ -6,7 +6,7 @@ import org.junit.Test;
 import component.bird.Bird;
 import component.bird.RedBird;
 import component.bomb.Bomb;
-import component.bullet.BlueBulletR;
+import component.bullet.FireBulletR;
 import component.bullet.Bullet;
 import component.ground.Grounds;
 import component.life.Life;
@@ -22,7 +22,7 @@ public class CollisionTest {
 	
 	@Test
 	public void collisionBulletEnemy(){
-		Bullet b = new BlueBulletR(100, 200);
+		Bullet b = new FireBulletR(100, 200);
 		Assert.assertTrue(a.crash(b));
 	}
 	

@@ -6,18 +6,8 @@ import java.util.List;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.utils.Array;
 
-import component.bird.Bird;
-import component.bird.BirdLeft;
-import component.bird.BirdRight;
-import component.bird.BirdType;
-import component.bird.BlueBird;
-import component.bird.BlueBirdR;
-import component.bird.ClassicBird;
-import component.bird.ClassicBirdR;
-import component.bird.GreenBird;
-import component.bird.GreenBirdR;
-import component.bird.RedBird;
-import component.bird.RedBirdR;
+import component.bird.*;
+import component.bird.SilverBirdR;
 import component.bomb.Bomb;
 import component.bullet.Bullet;
 import component.ground.Grounds;
@@ -173,8 +163,8 @@ public class WorldManager {
 			bLeft = new GreenBird(0, 100, 200);
 			break;
 		}
-		case CLASSIC: {
-			bLeft = new ClassicBird(0, 100, 200);
+		case SILVER: {
+			bLeft = new SilverBird(0, 100, 200);
 			break;
 		}
 		case BLUE: {
@@ -192,8 +182,8 @@ public class WorldManager {
 			bRight = new GreenBirdR(1, 500, 200);
 			break;
 		}
-		case CLASSIC: {
-			bRight = new ClassicBirdR(1, 500, 200);
+		case SILVER: {
+			bRight = new SilverBirdR(1, 500, 200);
 			break;
 		}
 		case BLUE: {

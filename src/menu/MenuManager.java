@@ -10,7 +10,6 @@ import com.badlogic.gdx.Input.Keys;
 
 import component.bird.BirdType;
 import component.tube.Tubes;
-import component.worldComponent.Types;
 import state.Options;
 import world.WorldSettings;
 
@@ -201,11 +200,11 @@ public class MenuManager {
 		if (Gdx.input.isKeyPressed(Input.Keys.NUM_1)) {
 			writing = true;
 			if (currentPlayer == 1) {
-				p1Bird = BirdType.GREEN;
+				p1Bird = BirdType.SILVER;
 				currentPlayer = 2;
 			}
 			else  {
-				p2Bird = BirdType.GREEN;
+				p2Bird = BirdType.SILVER;
 				endSelect = true;
 			}
 		}
@@ -213,10 +212,10 @@ public class MenuManager {
 		if (Gdx.input.isKeyPressed(Input.Keys.NUM_2)) {
 			writing = true;
 			if (currentPlayer == 1) {
-				p1Bird = BirdType.RED;
+				p1Bird = BirdType.GREEN;
 				currentPlayer = 2;
 			} else  {
-				p2Bird = BirdType.RED;
+				p2Bird = BirdType.GREEN;
 				endSelect = true;
 			}
 		}
@@ -224,10 +223,10 @@ public class MenuManager {
 		if (Gdx.input.isKeyPressed(Input.Keys.NUM_3)) {
 			writing = true;
 			if (currentPlayer == 1) {
-				p1Bird = BirdType.CLASSIC;
+				p1Bird = BirdType.BLUE;
 				currentPlayer = 2;
 			} else  {
-				p2Bird = BirdType.CLASSIC;
+				p2Bird = BirdType.BLUE;
 				endSelect = true;
 			}
 		}
@@ -235,10 +234,10 @@ public class MenuManager {
 		if (Gdx.input.isKeyPressed(Input.Keys.NUM_4)) {
 			writing = true;
 			if (currentPlayer == 1) {
-				p1Bird = BirdType.BLUE;
+				p1Bird = BirdType.RED;
 				currentPlayer = 2;
 			} else {
-				p2Bird = BirdType.BLUE;
+				p2Bird = BirdType.RED;
 				endSelect = true;
 			}
 				

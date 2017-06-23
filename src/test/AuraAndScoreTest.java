@@ -1,5 +1,6 @@
 package test;
 
+import component.bullet.FireBulletR;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,7 +8,6 @@ import org.junit.Test;
 import component.bird.Bird;
 import component.bird.RedBird;
 import component.bomb.Bomb;
-import component.bullet.BlueBulletR;
 import component.bullet.Bullet;
 import component.ground.Grounds;
 
@@ -22,7 +22,7 @@ public class AuraAndScoreTest {
 	
 	@Test
 	public void reduceScoreBullet(){
-		Bullet b = new BlueBulletR(100, 200);
+		Bullet b = new FireBulletR(100, 200);
 		a.crash(b); 
 		Assert.assertEquals(0, a.getScore());
 		Assert.assertTrue(a.getAuraState());
@@ -30,7 +30,7 @@ public class AuraAndScoreTest {
 	
 	@Test
 	public void noSetAuraBullet(){
-		Bullet b = new BlueBulletR(200, 200);
+		Bullet b = new FireBulletR(200, 200);
 		a.crash(b);
 		Assert.assertFalse(a.getAuraState());
 	}

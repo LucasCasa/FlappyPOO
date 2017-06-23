@@ -5,18 +5,8 @@ import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import component.bird.Bird;
-import component.bird.BirdLeft;
-import component.bird.BirdRight;
-import component.bird.BirdView;
-import component.bird.BlueBirdR;
-import component.bird.ClassicBird;
-import component.bird.ClassicBirdR;
-import component.bird.GreenBird;
-import component.bird.GreenBirdR;
-import component.bird.RedBird;
-import component.bird.RedBirdR;
+import component.bird.*;
+import component.bird.SilverBirdR;
 import component.bomb.Bomb;
 import component.bomb.BombView;
 import component.bullet.Bullet;
@@ -148,25 +138,25 @@ public class WorldManagerView {
 
 		if (b instanceof BirdLeft) {
 			if (b instanceof RedBird) {
-				bv1 = new BulletView(Types.SILVER_BULLET);
+				bv1 = new BulletView(Types.FIRE_BULLET);
 			} else if (b instanceof GreenBird) {
-				bv1 = new BulletView(Types.GOLDEN_BULLET);
-			} else if (b instanceof ClassicBird) {
-				bv1 = new BulletView(Types.CLASSIC_BULLET);
+				bv1 = new BulletView(Types.LASER_BULLET);
+			} else if (b instanceof SilverBird) {
+				bv1 = new BulletView(Types.SILVER_BULLET);
 			} else {
-				bv1 = new BulletView(Types.BLUE_BULLET);
+				bv1 = new BulletView(Types.CANNON_BULLET);
 			}
 		}
 
 		if (b instanceof BirdRight) {
 			if (b instanceof RedBirdR) {
-				bv2 = new BulletView(Types.SILVER_BULLET_INV);
+				bv2 = new BulletView(Types.FIRE_BULLET_INV);
 			} else if (b instanceof GreenBirdR) {
-				bv2 = new BulletView(Types.GOLDEN_BULLET_INV);
-			} else if (b instanceof ClassicBirdR) {
-				bv2 = new BulletView(Types.CLASSIC_BULLET_INV);
+				bv2 = new BulletView(Types.LASER_BULLET_INV);
+			} else if (b instanceof SilverBirdR) {
+				bv2 = new BulletView(Types.SILVER_BULLET_INV);
 			} else if (b instanceof BlueBirdR) {
-				bv2 = new BulletView(Types.BLUE_BULLET_INV);
+				bv2 = new BulletView(Types.CANNON_BULLET_INV);
 			}
 		}
 
@@ -179,8 +169,8 @@ public class WorldManagerView {
 				birdView = new BirdView(Types.RED_BIRD);
 			} else if (b instanceof GreenBird) {
 				birdView = new BirdView(Types.GREEN_BIRD);
-			} else if (b instanceof ClassicBird) {
-				birdView = new BirdView(Types.CLASSIC_BIRD);
+			} else if (b instanceof SilverBird) {
+				birdView = new BirdView(Types.SILVER_BIRD);
 			} else {
 				birdView = new BirdView(Types.BLUE_BIRD);
 			}
@@ -191,8 +181,8 @@ public class WorldManagerView {
 				bird2View = new BirdView(Types.RED_BIRD_INV);
 			} else if (b instanceof GreenBirdR) {
 				bird2View = new BirdView(Types.GREEN_BIRD_INV);
-			} else if (b instanceof ClassicBirdR) {
-				bird2View = new BirdView(Types.CLASSIC_BIRD_INV);
+			} else if (b instanceof SilverBirdR) {
+				bird2View = new BirdView(Types.SILVER_BIRD_INV);
 			} else if (b instanceof BlueBirdR) {
 				bird2View = new BirdView(Types.BLUE_BIRD_INV);
 			}

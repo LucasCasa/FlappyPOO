@@ -4,13 +4,13 @@ import com.badlogic.gdx.math.Rectangle;
 
 import component.worldComponent.Types;
 
-public class GoldenBulletL extends BulletLeft {
+public class CannonBulletR extends BulletRight {
 
-	private static final int W = 50;
-	private static final int H = 8;
-	
-	public GoldenBulletL(float x, float y) {
-		super(x, y, Types.GOLDEN_BULLET_SPEED);
+	private static final int W = 32;
+	private static final int H = 21;
+
+	public CannonBulletR(float x, float y) {
+		super(x, y, Types.CANNON_BULLET_SPEED * -1);
 		bounds = new Rectangle(position.x, position.y, W, H);
 	}
 	
@@ -19,6 +19,5 @@ public class GoldenBulletL extends BulletLeft {
 		super.update(dt);
 		super.bounds.setPosition(position.x, position.y);
 	}
-
 
 }
