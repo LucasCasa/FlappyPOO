@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+import component.worldComponent.Types;
 import menu.MenuManager;
 import menu.MenuMangerView;
 
@@ -43,6 +44,11 @@ public class MenuState extends State {
 	}
 	
 	public void keyDown(int keycode) {
+		if(Math.random() > 0.5)
+			Types.typing1.play(0.5f);
+		else
+			Types.typing2.play(0.5f);
+
 		if (menu.currentSelect() == Options.SELECT_PLAYERS)
 			menu.keyDown(keycode);
 	}

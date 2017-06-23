@@ -5,6 +5,7 @@ import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import component.bird.Bird;
 import component.bird.BirdLeft;
 import component.bird.BirdRight;
@@ -47,6 +48,8 @@ public class WorldManagerView {
 	private BombView bw;
 	private TableView t1;
 
+	private int lastLevel = 1;
+
 	WorldManager w;
 
 	public WorldManagerView(WorldManager world) {
@@ -56,7 +59,7 @@ public class WorldManagerView {
 
 		birdSkinSelector(world);
 
-		bg = new Texture(Types.BACKGROUND);
+		bg = new Texture(Types.BACKGROUND[0]);
 		
 		normalTubeView = new NormalTubesView();
 		metalTubeView = new MetalTubesView();
@@ -72,7 +75,7 @@ public class WorldManagerView {
 	}
 
 	public void render(SpriteBatch sb, float pos, float width) {
-
+		checkChangeOnLevel();
 		sb.draw(bg, pos - (width / 2), 0);
 
 		birdView.draw(sb, w.getBLeft());
@@ -109,6 +112,13 @@ public class WorldManagerView {
 		t1.draw(sb, pos, w.getBLeft().getScore(), w.getBLeft().getLife(), -250);
 		t1.draw(sb, pos, w.getBRight().getScore(), w.getBRight().getLife(), 150);
 
+	}
+
+	private void checkChangeOnLevel() {
+		if(w.getLevel() != lastLevel){
+			lastLevel = w.getLevel();
+			bg = new Texture(Types.BACKGROUND[lastLevel-1]);
+		}
 	}
 
 	public void dispose() {

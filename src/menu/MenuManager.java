@@ -10,6 +10,7 @@ import com.badlogic.gdx.Input.Keys;
 
 import component.bird.BirdType;
 import component.tube.Tubes;
+import component.worldComponent.Types;
 import state.Options;
 import world.WorldSettings;
 

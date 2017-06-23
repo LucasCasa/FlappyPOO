@@ -30,11 +30,11 @@ import scoreFiles.Output;
 
 /*
  * WorldManager es la clase que se encargar de actualizar, chequear y modificar el 
- * estado de los pajaros durante el juego.Como es "la lógica central" del juego,
+ * estado de los pajaros durante el juego.Como es "la lï¿½gica central" del juego,
  * esta contiene los elementos escenciales, como los tubos, corazones, piso y jugadores.
- * Este juego esta diseñado especialmente para dos jugadores. Si incrementan el numero de 
- * jugadores, la jugabilidad del mismo sería casi imposible. 
- * Claramente el juego se puede escalar a mas jugadores, pero habría que hacer un minimo cambio
+ * Este juego esta diseï¿½ado especialmente para dos jugadores. Si incrementan el numero de 
+ * jugadores, la jugabilidad del mismo serï¿½a casi imposible. 
+ * Claramente el juego se puede escalar a mas jugadores, pero habrï¿½a que hacer un minimo cambio
  */
 
 public class WorldManager {
@@ -42,6 +42,7 @@ public class WorldManager {
 	private BirdLeft bLeft;
 	private BirdRight bRight;
 	private Grounds g;
+	private int level = 1;
 	
 	private Array<Tubes> tubes;
 	private List<Life> lifes;
@@ -114,8 +115,14 @@ public class WorldManager {
 		updateBirdOnGame(bRight, bLeft, dt);
 
 		if (bLeft.getLife() == 0 || bRight.getLife() == 0) {
-			Output.getInstance().write(getWinner(bLeft, bRight));
-			contPlay = false;
+			if(level == 3) {
+				Output.getInstance().write(getWinner(bLeft, bRight));
+				contPlay = false;
+			}else{
+				bLeft.addLife(Bird.STARTING_LIVES);
+				bRight.addLife(Bird.STARTING_LIVES);
+				level++;
+			}
 		}
 
 	}
@@ -249,4 +256,7 @@ public class WorldManager {
 			return l;
 	}
 
+	public int getLevel() {
+		return level;
+	}
 }

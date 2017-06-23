@@ -18,6 +18,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 
 	public static final int WIDTH = 34;
 	public static final int HEIGHT = 24;
+	public static final int STARTING_LIVES = 5;
 	private static final int PROM_POSITION = 300;
 	private static final int WEIGTH = -15;
 	private static final int MOVEMENT = 100;
@@ -26,7 +27,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	protected Vector2 velocity;
 	protected List<Bullet> bullets;
 
-	private int lifes = 3;
+	private int lives = STARTING_LIVES;
 	private int score = 0;
 	private float scoreTimeAux = 0;
 	private String name = "";
@@ -47,8 +48,8 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 
 	/**
 	 * Metodo que se llama para actualizar la posicion y otras cosas relativas
-	 * al pájaro, como la velocidad. La velocidad del salto y consecuentemente
-	 * de la caida del mismo, esta dada por una función matemática con Vectores
+	 * al pï¿½jaro, como la velocidad. La velocidad del salto y consecuentemente
+	 * de la caida del mismo, esta dada por una funciï¿½n matemï¿½tica con Vectores
 	 * (scale) y el dt.
 	 */
 	public void update(float dt) {
@@ -84,7 +85,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 
 	/**
 	 * Metodo para chocarse con un objeto simple dentro del mundo Todo lo que
-	 * choco reduce vida y resetea el score, a excepción de los corazones que
+	 * choco reduce vida y resetea el score, a excepciï¿½n de los corazones que
 	 * ganan
 	 */
 	@Override
@@ -128,7 +129,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 
 	/**
 	 * Reduce la vida en el caso que no tenga el aura activado. Si el aura
-	 * (proteccion al pájaro) esta desactivado, reduce la vida en uno y activa
+	 * (proteccion al pï¿½jaro) esta desactivado, reduce la vida en uno y activa
 	 * el aura hasta un cierto tiempo definido.
 	 */
 	public void lifeReducer() {
@@ -148,8 +149,8 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	}
 
 	/**
-	 * Agrega un punto al pájaro. Los puntos se calculan en base al tiempo que
-	 * el pájaro estuvo en el aire sin chocarse con ningun objeto, a excepción
+	 * Agrega un punto al pï¿½jaro. Los puntos se calculan en base al tiempo que
+	 * el pï¿½jaro estuvo en el aire sin chocarse con ningun objeto, a excepciï¿½n
 	 * de los corazones que ganan vidas. En el caso de chocarse con algo, el
 	 * score se reduce a 0 y vuelve a comenzar.
 	 */
@@ -185,7 +186,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 
 	/**
 	 * Representa el Bounds. Significa cuanto espacio ocupara en el mundo dicho
-	 * pájaro. Bounds se utiliza en los casos que un pájaro colisione con otra
+	 * pï¿½jaro. Bounds se utiliza en los casos que un pï¿½jaro colisione con otra
 	 * cosa que tenga un Bound en el mundo
 	 *
 	 * @return Rectangle
@@ -209,7 +210,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	 * Reduce life.
 	 */
 	private void reduceLife() {
-		lifes--;
+		lives--;
 		System.out.println("Se reduce la vida de " + getID() + " - VIDAS ACTUALES: " + getLife());
 	}
 
@@ -217,7 +218,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	 * Increase life.
 	 */
 	public void increaseLife() {
-		lifes++;
+		lives++;
 	}
 
 	/**
@@ -226,7 +227,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	 * @return the life
 	 */
 	public int getLife() {
-		return lifes;
+		return lives;
 	}
 
 	/**
@@ -304,4 +305,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 		life.setSecure(b);
 	}
 
+	public void addLife(int lives) {
+		this.lives+= lives;
+	}
 }

@@ -1,5 +1,8 @@
 package component.worldComponent;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
+
 public class Types {
 
 	public static final String BLUE_BIRD = "bird_blue.png";
@@ -28,11 +31,14 @@ public class Types {
 	public static final String BLACK_HEART = "black_heart.png";
 	public static final String CRASH = "crash.mp3";
 	public static final String SHOOT = "jump2.wav";
+
+	public static final Sound typing1 =  Gdx.audio.newSound(Gdx.files.internal("typing1.mp3"));;
+	public static final Sound typing2 =  Gdx.audio.newSound(Gdx.files.internal("typing2.mp3"));;
 	
 	public static final String MAIN_THEME = "main.wav";
 	
 	public static final String LOGO = "logo.png";
-	public static final String BACKGROUND = "bg2.png";
+	public static final String[] BACKGROUND = {"background_level1.png","background_level2.png","background_level1.png"};
 	public static final String PLAYBTN = "playbtn.png";
 	public static final String GROUND = "ground2.png";
 	public static final String TOP_TUBE = "toptube.png";

@@ -32,7 +32,7 @@ public class MenuMangerView {
 		text = new BitmapFont(Gdx.files.internal("arcade.fnt"));
 		
 		logo = new Texture(Types.LOGO);
-		background = new Texture(Types.BACKGROUND);
+		background = new Texture(Types.BACKGROUND[0]);
 		
 		birdRed = new Texture(Types.RED_BIRD);
 		birdGreen = new Texture(Types.GREEN_BIRD);

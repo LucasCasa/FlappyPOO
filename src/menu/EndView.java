@@ -24,7 +24,7 @@ public class EndView {
 		end.getCam().setToOrtho(false, Flappy.WIDTH / ZOOM_CAMARA , Flappy.HEIGHT / ZOOM_CAMARA);
 		FONT = new BitmapFont(Gdx.files.internal("arcade.fnt"));
 		gameOver = new Texture(Types.GAME_OVER);
-		background = new Texture(Types.BACKGROUND);
+		background = new Texture(Types.BACKGROUND[0]);
 	}
 	
 	public void render(SpriteBatch sb) {
