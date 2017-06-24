@@ -30,8 +30,10 @@ public class BirdView extends SimpleFObjectView{
 			Texture aura = new Texture("aura.png");
 			sb.draw(aura, b.getPosition().x - VISUAL_HEIGHT / 1.5f, b.getPosition().y - VISUAL_WIDTH / 2);
 			if (!hasSound) {
+				/*
 				Sound s = Gdx.audio.newSound(Gdx.files.internal(Types.CRASH));
 				s.play(1f);
+				*/
 				hasSound = true;
 			}
 

@@ -8,11 +8,14 @@ import com.badlogic.gdx.math.Vector2;
 
 import component.bomb.Bomb;
 import component.bullet.Bullet;
+import component.ground.Ground;
 import component.life.Life;
-import component.worldComponent.SimpleFObject;
-import component.worldComponent.Timer;
+import component.tube.Tube;
 import component.worldComponent.CompoundFObject;
 import component.worldComponent.Shootable;
+import component.worldComponent.SimpleFObject;
+import component.worldComponent.Timer;
+import component.worldComponent.Types;
 
 public abstract class Bird extends SimpleFObject implements Shootable {
 
@@ -32,7 +35,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	private float scoreTimeAux = 0;
 	private String name = "";
 	private boolean team = false;
-	private int jump = 250;
+	private int jump = 350;
 
 	Timer aura = new Timer(3000);
 	Timer life = new Timer(1000);
@@ -49,8 +52,8 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	/**
 	 * Metodo que se llama para actualizar la posicion y otras cosas relativas
 	 * al p�jaro, como la velocidad. La velocidad del salto y consecuentemente
-	 * de la caida del mismo, esta dada por una funci�n matem�tica con Vectores
-	 * (scale) y el dt.
+	 * de la caida del mismo, esta dada por una funci�n matem�tica con
+	 * Vectores (scale) y el dt.
 	 */
 	public void update(float dt) {
 		if (position.y > 0) {
@@ -94,23 +97,36 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 
 		if (obj instanceof Life) {
 			if (crashes && !life.getSecure()) {
-				Life l = (Life)obj;
+				Life l = (Life) obj;
 				l.touched();
 				System.out.println("***INCREMENTA LA VIDA DE " + this.ID + "***");
 				increaseLife();
 				life.setSecure(true);
 			}
-
 		} else {
-
 			if (crashes) {
-				lifeReducer();
 				if (obj instanceof Bomb) {
+					if (!aura.getSecure())
+						Types.BOMB_EXPLOSION_SOUND.play(0.5f);
 					Bomb b = (Bomb) obj;
 					b.exploit();
+				} else if (obj instanceof Bullet) {
+					if (!aura.getSecure())
+						Types.BIRD_SOUNDS[(int) (Math.random() * 3)].play(0.5f);
+				} else if (obj instanceof Tube && ((Tube) obj).metal) {
+					if (!aura.getSecure())
+						Types.CRASH_METAL_SOUND.play(0.5f);
+				} else if (obj instanceof Tube && !((Tube) obj).metal) {
+					if (!aura.getSecure())
+						Types.CRASH_WOOD_SOUND.play(0.5f);
+				} else if (obj instanceof Ground) {
+					if (!aura.getSecure())
+						Types.CRASH_GRASS_SOUND.play(0.5f);
 				}
+				//if (!aura.getSecure())
+					//Types.STRIKE.play(0.5f);
+				lifeReducer();
 			}
-
 		}
 		return crashes;
 	}
@@ -150,9 +166,9 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 
 	/**
 	 * Agrega un punto al p�jaro. Los puntos se calculan en base al tiempo que
-	 * el p�jaro estuvo en el aire sin chocarse con ningun objeto, a excepci�n
-	 * de los corazones que ganan vidas. En el caso de chocarse con algo, el
-	 * score se reduce a 0 y vuelve a comenzar.
+	 * el p�jaro estuvo en el aire sin chocarse con ningun objeto, a
+	 * excepci�n de los corazones que ganan vidas. En el caso de chocarse con
+	 * algo, el score se reduce a 0 y vuelve a comenzar.
 	 */
 	public void addScore(float dt) {
 		scoreTimeAux += dt;
@@ -186,8 +202,8 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 
 	/**
 	 * Representa el Bounds. Significa cuanto espacio ocupara en el mundo dicho
-	 * p�jaro. Bounds se utiliza en los casos que un p�jaro colisione con otra
-	 * cosa que tenga un Bound en el mundo
+	 * p�jaro. Bounds se utiliza en los casos que un p�jaro colisione con
+	 * otra cosa que tenga un Bound en el mundo
 	 *
 	 * @return Rectangle
 	 */
@@ -306,6 +322,6 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	}
 
 	public void addLife(int lives) {
-		this.lives+= lives;
+		this.lives += lives;
 	}
 }

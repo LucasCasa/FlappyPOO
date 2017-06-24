@@ -29,13 +29,32 @@ public class Types {
 	public static final String BOMB = "bomb.png";
 	public static final String HEART = "heart.png";
 	public static final String BLACK_HEART = "black_heart.png";
-	public static final String CRASH = "crash.mp3";
-	public static final String SHOOT = "jump2.wav";
+	public static final Sound STRIKE = Gdx.audio.newSound(Gdx.files.internal("strike.mp3"));
+	public static final Sound BOMB_EXPLOSION_SOUND = Gdx.audio.newSound(Gdx.files.internal("bomba.mp3"));
+	public static final Sound BULLET_SOUND = Gdx.audio.newSound(Gdx.files.internal("bala.mp3"));
+	public static final Sound CANNON_SOUND = Gdx.audio.newSound(Gdx.files.internal("cannon.mp3"));
+	public static final Sound FIRE_SOUND = Gdx.audio.newSound(Gdx.files.internal("fuego.mp3"));
+	public static final Sound LASER_SOUND = Gdx.audio.newSound(Gdx.files.internal("laser.mp3"));
+	public static final Sound CRASH_WOOD_SOUND = Gdx.audio.newSound(Gdx.files.internal("madera.mp3"));
+	public static final Sound CRASH_METAL_SOUND = Gdx.audio.newSound(Gdx.files.internal("metal.mp3"));
+	public static final Sound CRASH_GRASS_SOUND = Gdx.audio.newSound(Gdx.files.internal("grass.mp3"));
+	public static final Sound[] BIRD_SOUNDS = {Gdx.audio.newSound(Gdx.files.internal("ahah.mp3")),Gdx.audio.newSound(Gdx.files.internal("aia.mp3")),Gdx.audio.newSound(Gdx.files.internal("iii.mp3"))};
+	public static final Sound JUMP = Gdx.audio.newSound(Gdx.files.internal("salto.mp3"));
 
 	public static final Sound typing1 =  Gdx.audio.newSound(Gdx.files.internal("typing1.mp3"));
 	public static final Sound typing2 =  Gdx.audio.newSound(Gdx.files.internal("typing2.mp3"));
 	
 	public static final String MAIN_THEME = "main.wav";
+	public static final Sound LEVEL1_THEME = Gdx.audio.newSound(Gdx.files.internal("level1.mp3"));
+	public static final Sound LEVEL2_THEME = Gdx.audio.newSound(Gdx.files.internal("level2.mp3"));
+	public static final Sound LEVEL3_THEME = Gdx.audio.newSound(Gdx.files.internal("level1.mp3"));
+	
+	public static final Sound LEVEL1_VOICE = Gdx.audio.newSound(Gdx.files.internal("level1Voice.mp3"));
+	public static final Sound LEVEL2_VOICE = Gdx.audio.newSound(Gdx.files.internal("level2Voice.mp3"));
+	public static final Sound LEVEL3_VOICE = Gdx.audio.newSound(Gdx.files.internal("level3Voice.mp3"));
+	public static final Sound GAMEOVER_VOICE = Gdx.audio.newSound(Gdx.files.internal("gameOver.mp3"));
+	public static final Sound PLAYER1_VOICE = Gdx.audio.newSound(Gdx.files.internal("level1Voice.mp3"));
+	public static final Sound PLAYER2_THEME = Gdx.audio.newSound(Gdx.files.internal("level1Voice.mp3"));
 	
 	public static final String LOGO = "logo.png";
 	public static final String[] BACKGROUND = {"background_level1.png","background_level2.png","background_level1.png"};

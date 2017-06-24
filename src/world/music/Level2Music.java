@@ -2,37 +2,27 @@ package world.music;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Sound;
+
 import component.worldComponent.Types;
 
-public class MenuMusic implements Music{
-	private static MenuMusic instance = new MenuMusic();
+public class Level2Music implements Music {
+	
+	private static Level2Music instance = new Level2Music();
 	private Sound s;
-	private long id;
+	private long id = -1;
 	private float volume;
 	private static float MAX_VOLUME = 0.5f;
 
-	private MenuMusic() {
-		s = Gdx.audio.newSound(Gdx.files.internal(Types.MAIN_THEME));
+	private Level2Music(){
+		s = Types.LEVEL2_THEME;
 	}
-
-	public static MenuMusic getInstance() {
+	
+	public static Level2Music getInstance(){
 		return instance;
 	}
-
-	public void play(float volume){
-		id = s.loop(volume);
-		this.volume = volume;
-	}
-	
-	public void stop() {
-		s.stop();
-	}
-
-	public void reduceVolume(float volume){
-		s.setVolume(id, volume);
-	}
-	
+	@Override
 	public void fadeOut() {
+
 		float vol_fade = volume;
 		System.out.println(vol_fade);
 		for (float i = volume; i >= 0; i -= 0.01) {
@@ -45,8 +35,25 @@ public class MenuMusic implements Music{
 			}catch (Exception e){
 				e.printStackTrace();
 			}
-
 		}
+	}
+
+	@Override
+	public void reduceVolume(float v) {
+		s.setVolume(id, v);
+	}
+
+	@Override
+	public void play(float v) {
+		if(id == -1){
+			id = s.loop(v);
+			volume = v;
+		}
+	}
+
+	@Override
+	public void stop() {
+		s.stop();
 	}
 
 }

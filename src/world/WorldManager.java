@@ -16,7 +16,13 @@ import component.tube.MetalTubes;
 import component.tube.NormalTubes;
 import component.tube.Tube;
 import component.tube.Tubes;
+import component.worldComponent.Types;
 import scoreFiles.Output;
+import world.music.FadeOutManager;
+import world.music.Level1Music;
+import world.music.Level2Music;
+import world.music.Level3Music;
+import world.music.MenuMusic;
 
 /*
  * WorldManager es la clase que se encargar de actualizar, chequear y modificar el 
@@ -107,11 +113,24 @@ public class WorldManager {
 		if (bLeft.getLife() == 0 || bRight.getLife() == 0) {
 			if(level == 3) {
 				Output.getInstance().write(getWinner(bLeft, bRight));
+				Types.GAMEOVER_VOICE.play(3f);
 				contPlay = false;
 			}else{
 				bLeft.addLife(Bird.STARTING_LIVES);
 				bRight.addLife(Bird.STARTING_LIVES);
 				level++;
+				switch(level){
+				case 2:
+					(new Thread(new FadeOutManager(Level1Music.getInstance()))).start();
+					Level2Music.getInstance().play(0.5f);
+					Types.LEVEL2_VOICE.play(3f);
+					break;
+				case 3:
+					(new Thread(new FadeOutManager(Level2Music.getInstance()))).start();
+					Level3Music.getInstance().play(0.5f);
+					Types.LEVEL3_VOICE.play(3f);
+					break;
+				}
 			}
 		}
 

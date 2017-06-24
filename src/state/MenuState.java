@@ -8,6 +8,7 @@ import component.worldComponent.Types;
 import menu.MenuManager;
 import menu.MenuMangerView;
 import world.music.FadeOutManager;
+import world.music.Level1Music;
 import world.music.MenuMusic;
 
 public class MenuState extends State {
@@ -84,6 +85,8 @@ public class MenuState extends State {
 		
 		if(menu.selectDone()) {
 			(new Thread(new FadeOutManager(MenuMusic.getInstance()))).start();
+			Level1Music.getInstance().play(0.1f);
+			Types.LEVEL1_VOICE.play(3f);
 			gsm.set(new PlayState(gsm, menu.getP1Name(), menu.getP2Name(), menu.getP1Bird(), menu.getP2Bird()));
 		}
 	}

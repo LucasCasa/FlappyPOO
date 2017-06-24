@@ -5,6 +5,7 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import component.bird.BirdType;
+import component.worldComponent.Types;
 import desktop.Flappy;
 import world.WorldManager;
 import world.WorldManagerView;
@@ -14,6 +15,8 @@ public class PlayState extends State {
 
 	private static final int X_CAM_OFFSET = 250;
 	public static final float ZOOM_CAMARA = 1.2f;
+	private long leftId;
+	private long rightId;
 
 	private WorldManager world;
 	private WorldManagerView worldView;
@@ -30,21 +33,23 @@ public class PlayState extends State {
 
 	@Override
 	protected void handleInput() {
-		if (Gdx.input.isKeyPressed(Input.Keys.W)) {
+		if (Gdx.input.isKeyJustPressed(Input.Keys.W)) {
 			world.getBLeft().jump();
+			Types.JUMP.play(0.5f,1,-1);
 		}
 
-		if (Gdx.input.isKeyPressed(Input.Keys.UP)) {
+		if (Gdx.input.isKeyJustPressed(Input.Keys.UP)) {
 			world.getBRight().jump();
+			Types.JUMP.play(0.5f,1,1);
 		}
 
 		if (Gdx.input.isKeyJustPressed(Input.Keys.D)) {
-			worldView.playShootSound();
+			worldView.playShootSound(world.getBLeft(),true);
 			world.getBLeft().shoot();
 		}
 
 		if (Gdx.input.isKeyJustPressed(Input.Keys.LEFT)) {
-			worldView.playShootSound();
+			worldView.playShootSound(world.getBRight(),false);
 			world.getBRight().shoot();
 		}
 

@@ -190,9 +190,16 @@ public class WorldManagerView {
 
 	}
 
-	public void playShootSound() {
-		Sound s = Gdx.audio.newSound(Gdx.files.internal(Types.SHOOT));
-		s.play(1f);
+	public void playShootSound(Bird b,boolean left) {
+		if (b instanceof RedBird || b instanceof RedBirdR ) {
+			Types.FIRE_SOUND.play(0.5f, 1, (left)?-1:1);
+		} else if (b instanceof GreenBird || b instanceof GreenBirdR) {
+			Types.LASER_SOUND.play(0.5f, 1, (left)?-1:1);
+		} else if (b instanceof SilverBird || b instanceof SilverBirdR) {
+			Types.BULLET_SOUND.play(0.5f, 1, (left)?-1:1);
+		} else if (b instanceof BlueBird  || b instanceof BlueBirdR ) {
+			Types.CANNON_SOUND.play(0.5f, 1, (left)?-1:1);
+		}
 	}
 
 }

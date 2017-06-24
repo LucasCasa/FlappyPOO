@@ -8,11 +8,11 @@ package component.tube;
 public class NormalTubes extends Tubes {
 
 	public NormalTubes(float x) {
-		super(x);
+		super(x,false);
 	}
 	
 	public NormalTubes(float x, int gap, int opening){
-		super(x,gap,opening);
+		super(x,gap,opening,false);
 	}
 	
 }

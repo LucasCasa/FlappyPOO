@@ -30,19 +30,19 @@ public abstract class Tubes extends CompoundFObject {
 	 * @param x
 	 *            the x
 	 */
-	public Tubes(float x) {
+	public Tubes(float x,boolean metal) {
 		rand = new Random();
 		wp = WorldSettings.getInstance();
-		simple1 = new Tube(x, rand.nextInt() + wp.getGap() + WorldSettings.LOWEST_OPENING);
-		simple2 = new Tube(x, simple1.getPosition().y - wp.getGap() - Tube.HEIGHT);
+		simple1 = new Tube(x, rand.nextInt() + wp.getGap() + WorldSettings.LOWEST_OPENING,metal);
+		simple2 = new Tube(x, simple1.getPosition().y - wp.getGap() - Tube.HEIGHT,metal);
 		simple1.setBounds(new Rectangle(simple1.getPosition().x, simple1.getPosition().y, Tube.WIDTH, Tube.HEIGHT));
 		simple2.setBounds(new Rectangle(simple2.getPosition().x, simple2.getPosition().y, Tube.WIDTH, Tube.HEIGHT));
 
 	}
 
-	public Tubes(float x, int gap, int opening) {
-		simple1 = new Tube(x, gap + opening);
-		simple2 = new Tube(x, simple1.getPosition().y - gap - Tube.HEIGHT);
+	public Tubes(float x, int gap, int opening,boolean metal) {
+		simple1 = new Tube(x, gap + opening,metal);
+		simple2 = new Tube(x, simple1.getPosition().y - gap - Tube.HEIGHT,metal);
 
 		simple1.setBounds(new Rectangle(simple1.getPosition().x, simple1.getPosition().y, Tube.WIDTH, Tube.HEIGHT));
 		simple2.setBounds(new Rectangle(simple2.getPosition().x, simple2.getPosition().y, Tube.WIDTH, Tube.HEIGHT));
