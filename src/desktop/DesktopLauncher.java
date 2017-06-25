@@ -15,7 +15,7 @@ public class DesktopLauncher {
 		new LwjglApplication(new Flappy(), config);
 		
 		MenuMusic m = MenuMusic.getInstance();
-		m.play(0.5f);
+		m.play(Types.masterVolume);
 		
 		try {
 			Thread.sleep(2000);

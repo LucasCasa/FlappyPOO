@@ -11,6 +11,7 @@ public class Level1Music implements Music {
 	private Sound s;
 	private long id = -1;
 	private float volume;
+	private boolean playing = false;
 	private static float MAX_VOLUME = 0.5f;
 	
 	private Level1Music() {
@@ -29,6 +30,7 @@ public class Level1Music implements Music {
 
 		float vol_fade = volume;
 		System.out.println(vol_fade);
+		playing = false;
 		for (float i = volume; i >= 0; i -= 0.01) {
 			System.out.println(i);
 			reduceVolume(i);
@@ -44,6 +46,7 @@ public class Level1Music implements Music {
 
 	@Override
 	public void reduceVolume(float v) {
+		this.volume = v;
 		s.setVolume(id, v);
 	}
 
@@ -53,11 +56,16 @@ public class Level1Music implements Music {
 			id = s.loop(v);
 			volume = v;
 		}
+		playing = true;
 	}
 
 	@Override
 	public void stop() {
+		playing = false;
 		s.stop();
 	}
 
+    public boolean isPlaying() {
+        return playing;
+    }
 }

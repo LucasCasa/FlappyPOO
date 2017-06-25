@@ -9,6 +9,7 @@ public class MenuMusic implements Music{
 	private Sound s;
 	private long id;
 	private float volume;
+	boolean playing = false;
 	private static float MAX_VOLUME = 0.5f;
 
 	private MenuMusic() {
@@ -22,18 +23,22 @@ public class MenuMusic implements Music{
 	public void play(float volume){
 		id = s.loop(volume);
 		this.volume = volume;
+		playing = true;
 	}
 	
 	public void stop() {
 		s.stop();
+		playing = false;
 	}
 
 	public void reduceVolume(float volume){
 		s.setVolume(id, volume);
+		this.volume = volume;
 	}
 	
 	public void fadeOut() {
 		float vol_fade = volume;
+		playing = false;
 		System.out.println(vol_fade);
 		for (float i = volume; i >= 0; i -= 0.01) {
 			System.out.println(i);
@@ -49,4 +54,7 @@ public class MenuMusic implements Music{
 		}
 	}
 
+    public boolean isPlaying() {
+		return playing;
+    }
 }

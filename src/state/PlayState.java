@@ -35,12 +35,12 @@ public class PlayState extends State {
 	protected void handleInput() {
 		if (Gdx.input.isKeyJustPressed(Input.Keys.W)) {
 			world.getBLeft().jump();
-			Types.JUMP.play(0.5f,1,-1);
+			Types.JUMP.play(Types.masterVolume,1,-1);
 		}
 
 		if (Gdx.input.isKeyJustPressed(Input.Keys.UP)) {
 			world.getBRight().jump();
-			Types.JUMP.play(0.5f,1,1);
+			Types.JUMP.play(Types.masterVolume,1,1);
 		}
 
 		if (Gdx.input.isKeyJustPressed(Input.Keys.D)) {

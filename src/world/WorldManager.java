@@ -113,7 +113,7 @@ public class WorldManager {
 		if (bLeft.getLife() == 0 || bRight.getLife() == 0) {
 			if(level == 3) {
 				Output.getInstance().write(getWinner(bLeft, bRight));
-				Types.GAMEOVER_VOICE.play(3f);
+				Types.GAMEOVER_VOICE.play(Types.masterVolume);
 				contPlay = false;
 			}else{
 				bLeft.addLife(Bird.STARTING_LIVES);
@@ -122,13 +122,13 @@ public class WorldManager {
 				switch(level){
 				case 2:
 					(new Thread(new FadeOutManager(Level1Music.getInstance()))).start();
-					Level2Music.getInstance().play(0.5f);
-					Types.LEVEL2_VOICE.play(3f);
+					Level2Music.getInstance().play(Types.masterVolume);
+					Types.LEVEL2_VOICE.play(Types.masterVolume);
 					break;
 				case 3:
 					(new Thread(new FadeOutManager(Level2Music.getInstance()))).start();
-					Level3Music.getInstance().play(0.5f);
-					Types.LEVEL3_VOICE.play(3f);
+					Level3Music.getInstance().play(Types.masterVolume);
+					Types.LEVEL3_VOICE.play(Types.masterVolume);
 					break;
 				}
 			}

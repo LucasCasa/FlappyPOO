@@ -70,5 +70,6 @@ public class Types {
 	public static final int SILVER_BULLET_SPEED = 600;
 	public static final int LASER_BULLET_SPEED = 500;
 	public static final int CANNON_BULLET_SPEED = 300;
-	
+
+	public static float masterVolume = 1f;
 }

@@ -107,24 +107,22 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 			if (crashes) {
 				if (obj instanceof Bomb) {
 					if (!aura.getSecure())
-						Types.BOMB_EXPLOSION_SOUND.play(0.5f);
+						Types.BOMB_EXPLOSION_SOUND.play(Types.masterVolume);
 					Bomb b = (Bomb) obj;
 					b.exploit();
 				} else if (obj instanceof Bullet) {
 					if (!aura.getSecure())
-						Types.BIRD_SOUNDS[(int) (Math.random() * 3)].play(0.5f);
+						Types.BIRD_SOUNDS[(int) (Math.random() * 3)].play(Types.masterVolume);
 				} else if (obj instanceof Tube && ((Tube) obj).metal) {
 					if (!aura.getSecure())
-						Types.CRASH_METAL_SOUND.play(0.5f);
+						Types.CRASH_METAL_SOUND.play(Types.masterVolume);
 				} else if (obj instanceof Tube && !((Tube) obj).metal) {
 					if (!aura.getSecure())
-						Types.CRASH_WOOD_SOUND.play(0.5f);
+						Types.CRASH_WOOD_SOUND.play(Types.masterVolume);
 				} else if (obj instanceof Ground) {
 					if (!aura.getSecure())
-						Types.CRASH_GRASS_SOUND.play(0.5f);
+						Types.CRASH_GRASS_SOUND.play(Types.masterVolume);
 				}
-				//if (!aura.getSecure())
-					//Types.STRIKE.play(0.5f);
 				lifeReducer();
 			}
 		}

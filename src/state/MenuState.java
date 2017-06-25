@@ -48,9 +48,9 @@ public class MenuState extends State {
 	
 	public void keyDown(int keycode) {
 		if(Math.random() > 0.5)
-			Types.typing1.play(0.5f);
+			Types.typing1.play(Types.masterVolume);
 		else
-			Types.typing2.play(0.5f);
+			Types.typing2.play(Types.masterVolume);
 
 		if (menu.currentSelect() == Options.SELECT_PLAYERS)
 			menu.keyDown(keycode);
@@ -85,8 +85,8 @@ public class MenuState extends State {
 		
 		if(menu.selectDone()) {
 			(new Thread(new FadeOutManager(MenuMusic.getInstance()))).start();
-			Level1Music.getInstance().play(0.1f);
-			Types.LEVEL1_VOICE.play(3f);
+			Level1Music.getInstance().play(Types.masterVolume);
+			Types.LEVEL1_VOICE.play(Types.masterVolume);
 			gsm.set(new PlayState(gsm, menu.getP1Name(), menu.getP2Name(), menu.getP1Bird(), menu.getP2Bird()));
 		}
 	}
