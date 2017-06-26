@@ -41,12 +41,10 @@ public class Grounds extends CompoundFObject{
 	 */
 	public void update(float pos, float width) {
 		if(pos - width / 2 > simple1.getPosition().x + W){
-			System.out.println("REPOSICION 1");
 			simple1.getPosition().add(W * 2, 0);
 			simple1.setBounds(new Rectangle(simple1.getPosition().x, simple1.getPosition().y, W, H));
 		}
 		if(pos - width / 2 > simple2.getPosition().x + W){
-			System.out.println("Reposicion 2");
 			simple2.getPosition().add(W * 2, 0);
 			simple2.setBounds(new Rectangle(simple2.getPosition().x, simple2.getPosition().y, W, H));
 

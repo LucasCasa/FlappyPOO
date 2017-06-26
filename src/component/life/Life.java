@@ -63,9 +63,6 @@ public class Life extends SimpleFObject{
 		
 		if(crashes && !b.getLifeSecure()){
 			b.increaseLife();
-			System.out.println("******************");
-			System.out.println("TOUCHED LIFEEEEEEEE");
-			System.out.println("******************");
 			touched++;
 			b.setLifeSecure(true);
 		}

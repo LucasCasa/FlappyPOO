@@ -30,6 +30,7 @@ public class Types {
 	public static final String HEART = "heart.png";
 	public static final String BLACK_HEART = "black_heart.png";
 	public static final Sound STRIKE = Gdx.audio.newSound(Gdx.files.internal("strike.mp3"));
+	public static final Sound LIFE_SOUND = Gdx.audio.newSound(Gdx.files.internal("life.mp3"));
 	public static final Sound BOMB_EXPLOSION_SOUND = Gdx.audio.newSound(Gdx.files.internal("bomba.mp3"));
 	public static final Sound BULLET_SOUND = Gdx.audio.newSound(Gdx.files.internal("bala.mp3"));
 	public static final Sound CANNON_SOUND = Gdx.audio.newSound(Gdx.files.internal("cannon.mp3"));

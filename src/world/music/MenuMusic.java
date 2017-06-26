@@ -39,9 +39,7 @@ public class MenuMusic implements Music{
 	public void fadeOut() {
 		float vol_fade = volume;
 		playing = false;
-		System.out.println(vol_fade);
 		for (float i = volume; i >= 0; i -= 0.01) {
-			System.out.println(i);
 			reduceVolume(i);
 			if (i <= 0)
 				s.stop();

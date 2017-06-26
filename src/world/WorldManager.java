@@ -76,10 +76,8 @@ public class WorldManager {
 			rand = Math.random() * 10;
 			int n = (int)rand % 2;
 			if(n == 0){
-				System.out.println("CREO UNO DE METAL");
 				tubes.add(new MetalTubes(i * (WorldSettings.getInstance().getTubeSpacing() + Tube.WIDTH)));
 			}else{
-				System.out.println("CREO UNO NORMAL");
 				tubes.add(new NormalTubes(i * (WorldSettings.getInstance().getTubeSpacing() + Tube.WIDTH)));
 			}
 						

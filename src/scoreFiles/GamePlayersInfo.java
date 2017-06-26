@@ -5,8 +5,8 @@ import java.util.Date;
 
 
 /**
- * GamePlayersInfo: Clase para guardar y levantar la información de partidas 
- * anteriores. Usada únicamente por Input y Output.
+ * GamePlayersInfo: Clase para guardar y levantar la informaciï¿½n de partidas 
+ * anteriores. Usada ï¿½nicamente por Input y Output.
  * Implementa Comparable porque estos luegos se ordenaran en un Set por los scores
  *
  */
@@ -31,7 +31,6 @@ public class GamePlayersInfo implements Comparable<GamePlayersInfo>{
 	
 	@Override
 	public String toString() {
-		//return d + System.lineSeparator() + name + System.lineSeparator() + score;
 		return toScreen();
 	}
 	

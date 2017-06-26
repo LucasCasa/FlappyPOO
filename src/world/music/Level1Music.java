@@ -29,10 +29,8 @@ public class Level1Music implements Music {
 	public void fadeOut() {
 
 		float vol_fade = volume;
-		System.out.println(vol_fade);
 		playing = false;
 		for (float i = volume; i >= 0; i -= 0.01) {
-			System.out.println(i);
 			reduceVolume(i);
 			if (i <= 0)
 				s.stop();

@@ -25,9 +25,7 @@ public class Level3Music implements Music {
 	public void fadeOut() {
 		playing = false;
 		float vol_fade = volume;
-		System.out.println(vol_fade);
 		for (float i = volume; i >= 0; i -= 0.01) {
-			System.out.println(i);
 			reduceVolume(i);
 			if (i <= 0)
 				s.stop();

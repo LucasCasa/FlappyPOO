@@ -26,7 +26,7 @@ public class WorldSettings {
 	/**
 	 * GAP: representa el alto de apertura del tubo
 	 */
-	private int gap = 120;
+	private int gap = 220;
 	
 	/**
 	 * Cantidad de Corazones que puede agarrar en el juego

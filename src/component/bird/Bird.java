@@ -99,9 +99,13 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 			if (crashes && !life.getSecure()) {
 				Life l = (Life) obj;
 				l.touched();
-				System.out.println("***INCREMENTA LA VIDA DE " + this.ID + "***");
 				increaseLife();
 				life.setSecure(true);
+				if (this instanceof RedBird || this instanceof BlueBird || this instanceof SilverBird || this instanceof GreenBird) {
+					Types.LIFE_SOUND.play(Types.masterVolume,1,-1);
+				}else{
+					Types.LIFE_SOUND.play(Types.masterVolume,1,1);
+				}
 			}
 		} else {
 			if (crashes) {
@@ -196,7 +200,6 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	public void addScore(float dt) {
 		scoreTimeAux += dt;
 		if (scoreTimeAux >= 1) {
-			System.out.println("BIRD " + getID() + " SCORES: " + getScore());
 			score++;
 			scoreTimeAux = 0;
 		}
@@ -250,7 +253,6 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	 */
 	private void reduceLife() {
 		lives--;
-		System.out.println("Se reduce la vida de " + getID() + " - VIDAS ACTUALES: " + getLife());
 	}
 
 	/**

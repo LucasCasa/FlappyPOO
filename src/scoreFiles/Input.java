@@ -37,9 +37,7 @@ public class Input {
 				String name = data[1];
 				int score = Integer.parseInt(data[2]);
 				GamePlayersInfo g = new GamePlayersInfo(date, name, score);
-				System.out.println(g.toScreen());
 				set.add(g);
-				System.out.println(set.size());
 			}
 
 		} catch (IOException e) {
