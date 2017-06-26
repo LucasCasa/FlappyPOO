@@ -44,7 +44,7 @@ public class Types {
 	public static final Sound typing1 =  Gdx.audio.newSound(Gdx.files.internal("typing1.mp3"));
 	public static final Sound typing2 =  Gdx.audio.newSound(Gdx.files.internal("typing2.mp3"));
 	
-	public static final String MAIN_THEME = "main.wav";
+	public static final String MAIN_THEME = "main.mp3";
 	public static final Sound LEVEL1_THEME = Gdx.audio.newSound(Gdx.files.internal("level1.mp3"));
 	public static final Sound LEVEL2_THEME = Gdx.audio.newSound(Gdx.files.internal("level2.mp3"));
 	public static final Sound LEVEL3_THEME = Gdx.audio.newSound(Gdx.files.internal("level3.mp3"));
