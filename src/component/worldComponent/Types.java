@@ -53,8 +53,8 @@ public class Types {
 	public static final Sound LEVEL2_VOICE = Gdx.audio.newSound(Gdx.files.internal("level2Voice.mp3"));
 	public static final Sound LEVEL3_VOICE = Gdx.audio.newSound(Gdx.files.internal("level3Voice.mp3"));
 	public static final Sound GAMEOVER_VOICE = Gdx.audio.newSound(Gdx.files.internal("gameOver.mp3"));
-	public static final Sound PLAYER1_VOICE = Gdx.audio.newSound(Gdx.files.internal("level1Voice.mp3"));
-	public static final Sound PLAYER2_THEME = Gdx.audio.newSound(Gdx.files.internal("level1Voice.mp3"));
+	public static final Sound PLAYER1_VOICE = Gdx.audio.newSound(Gdx.files.internal("player1Wins.mp3"));
+	public static final Sound PLAYER2_VOICE = Gdx.audio.newSound(Gdx.files.internal("player2Wins.mp3"));
 	
 	public static final String LOGO = "logo.png";
 	public static final String[] BACKGROUND = {"background_level1.png","background_level2.png","background_level1.png"};

@@ -113,7 +113,12 @@ public class WorldManager {
 		if (bLeft.getLife() == 0 || bRight.getLife() == 0) {
 			if(level == 3) {
 				Output.getInstance().write(getWinner(bLeft, bRight));
-				Types.GAMEOVER_VOICE.play(Types.masterVolume);
+				if(bRight.getScore() <= 0){
+					Types.PLAYER1_VOICE.play(Types.masterVolume);
+				}else{
+					Types.PLAYER2_VOICE.play(Types.masterVolume);
+				}
+
 				contPlay = false;
 			}else{
 				bLeft.addLife(Bird.STARTING_LIVES);
