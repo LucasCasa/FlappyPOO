@@ -106,22 +106,47 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 		} else {
 			if (crashes) {
 				if (obj instanceof Bomb) {
-					if (!aura.getSecure())
-						Types.BOMB_EXPLOSION_SOUND.play(Types.masterVolume);
+					if (!aura.getSecure()) {
+						if (this instanceof RedBird || this instanceof BlueBird || this instanceof SilverBird || this instanceof GreenBird) {
+							Types.BOMB_EXPLOSION_SOUND.play(Types.masterVolume,1,-1);
+						}else{
+							Types.BOMB_EXPLOSION_SOUND.play(Types.masterVolume,1,1);
+						}
+					}
 					Bomb b = (Bomb) obj;
 					b.exploit();
 				} else if (obj instanceof Bullet) {
-					if (!aura.getSecure())
-						Types.BIRD_SOUNDS[(int) (Math.random() * 3)].play(Types.masterVolume);
+					if (!aura.getSecure()) {
+						if (this instanceof RedBird || this instanceof BlueBird || this instanceof SilverBird || this instanceof GreenBird) {
+							Types.BIRD_SOUNDS[(int) (Math.random() * 3)].play(Types.masterVolume, 1, -1);
+						} else {
+							Types.BIRD_SOUNDS[(int) (Math.random() * 3)].play(Types.masterVolume, 1, 1);
+						}
+					}
 				} else if (obj instanceof Tube && ((Tube) obj).metal) {
-					if (!aura.getSecure())
-						Types.CRASH_METAL_SOUND.play(Types.masterVolume);
+					if (!aura.getSecure()) {
+						if (this instanceof RedBird || this instanceof BlueBird || this instanceof SilverBird || this instanceof GreenBird) {
+							Types.CRASH_METAL_SOUND.play(Types.masterVolume, 1, -1);
+						} else {
+							Types.CRASH_METAL_SOUND.play(Types.masterVolume, 1, 1);
+						}
+					}
 				} else if (obj instanceof Tube && !((Tube) obj).metal) {
-					if (!aura.getSecure())
-						Types.CRASH_WOOD_SOUND.play(Types.masterVolume);
+					if (!aura.getSecure()) {
+						if (this instanceof RedBird || this instanceof BlueBird || this instanceof SilverBird || this instanceof GreenBird) {
+							Types.CRASH_WOOD_SOUND.play(Types.masterVolume, 1, -1);
+						} else {
+							Types.CRASH_WOOD_SOUND.play(Types.masterVolume, 1, 1);
+						}
+					}
 				} else if (obj instanceof Ground) {
-					if (!aura.getSecure())
-						Types.CRASH_GRASS_SOUND.play(Types.masterVolume);
+					if (!aura.getSecure()) {
+						if (this instanceof RedBird || this instanceof BlueBird || this instanceof SilverBird || this instanceof GreenBird) {
+							Types.CRASH_GRASS_SOUND.play(Types.masterVolume, 1, -1);
+						} else {
+							Types.CRASH_GRASS_SOUND.play(Types.masterVolume, 1, 1);
+						}
+					}
 				}
 				lifeReducer();
 			}
