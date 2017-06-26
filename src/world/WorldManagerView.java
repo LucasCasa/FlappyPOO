@@ -56,7 +56,7 @@ public class WorldManagerView {
 		
 		bulletSkinSelector(world);
 
-		gv = new GroundView();
+		gv = new GroundView(Types.GROUNDS[0]);
 		w = world;
 	}
 
@@ -108,6 +108,7 @@ public class WorldManagerView {
 		if(w.getLevel() != lastLevel){
 			lastLevel = w.getLevel();
 			bg = new Texture(Types.BACKGROUND[lastLevel-1]);
+			gv = new GroundView(Types.GROUNDS[lastLevel-1]);
 		}
 	}
 

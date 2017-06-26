@@ -3,12 +3,11 @@ package component.ground;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import component.worldComponent.SimpleFObjectView;
-import component.worldComponent.Types;
 
 public class GroundView extends SimpleFObjectView{
 
-	public GroundView() {
-		super(Types.GROUND);
+	public GroundView(String t) {
+		super(t);
 	}
 
 	public void draw(SpriteBatch sb, Grounds g) {
