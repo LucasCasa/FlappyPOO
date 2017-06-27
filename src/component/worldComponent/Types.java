@@ -61,8 +61,8 @@ public class Types {
 	public static final String[] BACKGROUND = {"background_level1.png","background_level2.png","background_level3.png"};
 	public static final String PLAYBTN = "playbtn.png";
 	public static final String[] GROUNDS = {"groundLevel1.png","groundLevel2.png","groundLevel3.png"};
-	public static final String TOP_TUBE = "toptube.png";
-	public static final String BOTTOM_TUBE = "bottomtube.png";
+	public static final String TOP_TUBE = "toptube2.png";
+	public static final String BOTTOM_TUBE = "bottomtube2.png";
 	public static final String METAL_TOP_TUBE = "metaltoptube.png";
 	public static final String METAL_BOTTOM_TUBE = "metalbottomtube.png";
 	public static final String GAME_OVER = "gameover.png";
