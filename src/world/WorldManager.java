@@ -3,6 +3,7 @@ package world;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.badlogic.gdx.graphics.FPSLogger;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.utils.Array;
 
@@ -39,11 +40,12 @@ public class WorldManager {
 	private BirdRight bRight;
 	private Grounds g;
 	private int level = 1;
-	
+	FPSLogger fps = new FPSLogger();
 	private Array<Tubes> tubes;
 	private List<Life> lifes;
 	private List<Bomb> bombs;
-
+	private int pLeftScore = 0;
+	private int pRightScore = 0;
 	private Boolean contPlay;
 	
 	/**
@@ -51,13 +53,16 @@ public class WorldManager {
 	 * Consulta a los settings del mundo cuantos corazones debe poner y cuantas bombas debe poner. 
 	 */
 	public WorldManager(OrthographicCamera cam, String p1Name, String p2Name, BirdType p1Bird, BirdType p2Bird) {
-
 		createBirds(p1Name, p2Name, p1Bird, p2Bird);
+		loadLevel();
+		g = new Grounds(cam.position.x, cam.viewportWidth);
+	}
 
+	private void loadLevel() {
 		contPlay = true;
 		lifes = new ArrayList<>();
 		bombs = new ArrayList<>();
-		
+
 
 		for (int i = 1; i <= WorldSettings.getInstance().getLife(); i++) {
 			lifes.add(new Life(randomX() * i, randomY()));
@@ -69,8 +74,6 @@ public class WorldManager {
 
 		tubes = new Array<Tubes>();
 
-		g = new Grounds(cam.position.x, cam.viewportWidth);
-
 		double rand;
 		for (int i = 1; i <= WorldSettings.getInstance().getTubeCount(); i++) {
 			rand = Math.random() * 10;
@@ -80,18 +83,18 @@ public class WorldManager {
 			}else{
 				tubes.add(new NormalTubes(i * (WorldSettings.getInstance().getTubeSpacing() + Tube.WIDTH)));
 			}
-						
+
 		}
 
 	}
-	
+
 	/**
 	 * Actualiza al mundo. Los tubos se reposicionan si quedan fuera de la vista del usuario. 
 	 * De esta manera, el usuario ve infinitos tubos, pero que en realidad solo hay muy pocos
 	 * Actualiza y consulta si el pajaro se choco con algo.
 	 */
 	public void update(float dt, float pos, float width) {
-
+		fps.log();
 		g.update(pos, width);
 
 		bLeft.update(dt);
@@ -109,19 +112,24 @@ public class WorldManager {
 		updateBirdOnGame(bRight, bLeft, dt);
 
 		if (bLeft.getLife() == 0 || bRight.getLife() == 0) {
-			if(level == 3) {
-				Output.getInstance().write(getWinner(bLeft, bRight));
-				if(bRight.getScore() <= 0){
-					Types.PLAYER1_VOICE.play(Types.masterVolume);
-				}else{
-					Types.PLAYER2_VOICE.play(Types.masterVolume);
-				}
-
-				contPlay = false;
-			}else{
-				bLeft.addLife(Bird.STARTING_LIVES);
-				bRight.addLife(Bird.STARTING_LIVES);
 				level++;
+				if(bRight.getScore() <= 0){
+					pLeftScore++;
+					if(pLeftScore == 2){
+						Output.getInstance().write(getWinner(bLeft, bRight));
+						Types.PLAYER1_VOICE.play(Types.masterVolume);
+						contPlay = false;
+						return;
+					}
+				}else{
+					pRightScore++;
+					if(pRightScore == 2){
+						Output.getInstance().write(getWinner(bLeft, bRight));
+						contPlay = false;
+						Types.PLAYER2_VOICE.play(Types.masterVolume);
+						return;
+					}
+				}
 				switch(level){
 				case 2:
 					(new Thread(new FadeOutManager(Level1Music.getInstance()))).start();
@@ -134,9 +142,10 @@ public class WorldManager {
 					Types.LEVEL3_VOICE.play(Types.masterVolume);
 					break;
 				}
-			}
+			loadLevel();
+			bRight.reset();
+			bLeft.reset();
 		}
-
 	}
 	
 	/**
@@ -270,5 +279,12 @@ public class WorldManager {
 
 	public int getLevel() {
 		return level;
+	}
+
+	public int getLeftScore() {
+		return pLeftScore;
+	}
+	public int getRightScore() {
+		return pRightScore;
 	}
 }

@@ -2,6 +2,7 @@ package component.worldComponent;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Sound;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 
 public class Types {
 
@@ -73,4 +74,7 @@ public class Types {
 	public static final int CANNON_BULLET_SPEED = 300;
 
 	public static float masterVolume = 1f;
+
+	//public static final BitmapFont FONT = new BitmapFont(Gdx.files.internal("arcade.fnt"));
+
 }

@@ -16,6 +16,8 @@ import component.worldComponent.Shootable;
 import component.worldComponent.SimpleFObject;
 import component.worldComponent.Timer;
 import component.worldComponent.Types;
+import desktop.Flappy;
+import world.WorldSettings;
 
 public abstract class Bird extends SimpleFObject implements Shootable {
 
@@ -45,10 +47,16 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 		if (x <= PROM_POSITION)
 			team = true;
 		velocity = new Vector2(0, 0);
-		bullets = new ArrayList<Bullet>();
+		bullets = new ArrayList<>();
 		this.ID = ID;
 	}
 
+	public void reset(){
+		velocity.set(0,0);
+		position.y = Flappy.HEIGHT/2;
+		bullets = new ArrayList<>();
+		lives = STARTING_LIVES;
+	}
 	/**
 	 * Metodo que se llama para actualizar la posicion y otras cosas relativas
 	 * al p�jaro, como la velocidad. La velocidad del salto y consecuentemente

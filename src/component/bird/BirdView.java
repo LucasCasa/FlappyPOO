@@ -12,7 +12,7 @@ public class BirdView extends SimpleFObjectView{
 	
 	public static final int VISUAL_WIDTH = 34;
 	public static final int VISUAL_HEIGHT = 24;
-
+	private String name;
 	private boolean hasSound = false;
 
 	/*
@@ -20,7 +20,7 @@ public class BirdView extends SimpleFObjectView{
 	 * bird.getHeight() porque bird no puede ser estático y sin embargo, el
 	 * width y el height si deben serlo porque siempre vale eso.
 	 */
-	public BirdView(String birdPath) {
+	public BirdView(String birdPath,String name) {
 		super(birdPath);
 	}
 

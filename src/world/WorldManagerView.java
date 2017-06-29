@@ -1,10 +1,11 @@
 package world;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import component.bird.*;
 import component.bird.SilverBirdR;
 import component.bomb.Bomb;
@@ -37,6 +38,7 @@ public class WorldManagerView {
 	private LifeView lw;
 	private BombView bw;
 	private TableView t1;
+	private final BitmapFont fontSmall = new BitmapFont(Gdx.files.internal("little.fnt"));
 
 	private int lastLevel = 1;
 
@@ -99,11 +101,11 @@ public class WorldManagerView {
 			bw.draw(sb, b);
 		}
 
-		t1.draw(sb, pos, w.getBLeft().getScore(), w.getBLeft().getLife(), -250);
-		t1.draw(sb, pos, w.getBRight().getScore(), w.getBRight().getLife(), 150);
+		t1.draw(sb, pos, w.getBLeft().getScore(), w.getBLeft().getLife(), -280);
+		t1.draw(sb, pos, w.getBRight().getScore(), w.getBRight().getLife(), 200);
+		t1.drawScore(sb,pos,w.getBLeft().getName(),w.getLeftScore(),w.getBRight().getName(),w.getRightScore());
 
 	}
-
 	private void checkChangeOnLevel() {
 		if(w.getLevel() != lastLevel){
 			lastLevel = w.getLevel();
@@ -167,25 +169,25 @@ public class WorldManagerView {
 
 		if (b instanceof BirdLeft) {
 			if (b instanceof RedBird) {
-				birdView = new BirdView(Types.RED_BIRD);
+				birdView = new BirdView(Types.RED_BIRD,b.getName());
 			} else if (b instanceof GreenBird) {
-				birdView = new BirdView(Types.GREEN_BIRD);
+				birdView = new BirdView(Types.GREEN_BIRD,b.getName());
 			} else if (b instanceof SilverBird) {
-				birdView = new BirdView(Types.SILVER_BIRD);
+				birdView = new BirdView(Types.SILVER_BIRD,b.getName());
 			} else {
-				birdView = new BirdView(Types.BLUE_BIRD);
+				birdView = new BirdView(Types.BLUE_BIRD,b.getName());
 			}
 		}
 
 		if (b instanceof BirdRight) {
 			if (b instanceof RedBirdR) {
-				bird2View = new BirdView(Types.RED_BIRD_INV);
+				bird2View = new BirdView(Types.RED_BIRD_INV,b.getName());
 			} else if (b instanceof GreenBirdR) {
-				bird2View = new BirdView(Types.GREEN_BIRD_INV);
+				bird2View = new BirdView(Types.GREEN_BIRD_INV,b.getName());
 			} else if (b instanceof SilverBirdR) {
-				bird2View = new BirdView(Types.SILVER_BIRD_INV);
+				bird2View = new BirdView(Types.SILVER_BIRD_INV,b.getName());
 			} else if (b instanceof BlueBirdR) {
-				bird2View = new BirdView(Types.BLUE_BIRD_INV);
+				bird2View = new BirdView(Types.BLUE_BIRD_INV,b.getName());
 			}
 		}
 
