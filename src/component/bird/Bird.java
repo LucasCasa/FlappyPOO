@@ -1,5 +1,6 @@
 package component.bird;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,12 +33,14 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	protected Vector2 velocity;
 	protected List<Bullet> bullets;
 
+	private long lastUpdate = System.currentTimeMillis();
 	private int lives = STARTING_LIVES;
 	private int score = 0;
 	private float scoreTimeAux = 0;
 	private String name = "";
 	private boolean team = false;
 	private int jump = 350;
+	public int ammo = 3000;
 
 	Timer aura = new Timer(3000);
 	Timer life = new Timer(1000);
@@ -64,11 +67,14 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	 * Vectores (scale) y el dt.
 	 */
 	public void update(float dt) {
-		if (position.y > 0) {
+		if(position.y > 480){
+			velocity.set(0,0);
+		}
+		if (position.y > 62) { // 112 - offset de ground
 			velocity.add(0, WEIGTH);
 		}
 		velocity.scl(dt);
-		position.add(MOVEMENT * dt, velocity.y);
+		position.add(MOVEMENT * dt, ((position.y > 480 && velocity.y > 0) || (position.y < 62 && velocity.y < 0))?0:velocity.y);
 
 		if (position.y < 0) {
 			position.y = 0;
@@ -197,6 +203,11 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	public void updateTimers() {
 		life.updateSecure();
 		aura.updateSecure();
+		ammo+= lastUpdate - System.currentTimeMillis();
+		if(ammo < 0){
+			ammo = 0;
+		}
+		lastUpdate = System.currentTimeMillis();
 	}
 
 	/**
@@ -210,6 +221,15 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 		if (scoreTimeAux >= 1) {
 			score++;
 			scoreTimeAux = 0;
+		}
+	}
+
+	public boolean canShoot(){
+		if(ammo > 2000){
+			return false;
+		}else{
+			ammo += 1000;
+			return true;
 		}
 	}
 
@@ -356,5 +376,9 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 
 	public void addLife(int lives) {
 		this.lives += lives;
+	}
+
+	public int getAmmo() {
+		return ammo;
 	}
 }

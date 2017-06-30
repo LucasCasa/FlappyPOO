@@ -14,8 +14,10 @@ public class GreenBird extends BirdLeft {
 
 	@Override
 	public void shoot() {
-		Bullet b = new LaserBulletL(position.x, position.y);
-		bullets.add(b);				
+		if(canShoot()) {
+			Bullet b = new LaserBulletL(position.x, position.y);
+			bullets.add(b);
+		}
 	}
 
 

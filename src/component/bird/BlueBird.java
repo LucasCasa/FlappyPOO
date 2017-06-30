@@ -15,8 +15,10 @@ public class BlueBird extends BirdLeft{
 
 	@Override
 	public void shoot() {
-		Bullet b = new CannonBulletL(position.x, position.y);
-		bullets.add(b);	
+		if(canShoot()) {
+			Bullet b = new CannonBulletL(position.x, position.y);
+			bullets.add(b);
+		}
 	}
 
 

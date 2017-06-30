@@ -72,7 +72,7 @@ public class WorldManager {
 			bombs.add(new Bomb(randomX() * i, randomY()));
 		}
 
-		tubes = new Array<Tubes>();
+		tubes = new Array<>();
 
 		double rand;
 		for (int i = 1; i <= WorldSettings.getInstance().getTubeCount(); i++) {

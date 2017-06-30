@@ -104,7 +104,7 @@ public class WorldManagerView {
 		t1.draw(sb, pos, w.getBLeft().getScore(), w.getBLeft().getLife(), -280);
 		t1.draw(sb, pos, w.getBRight().getScore(), w.getBRight().getLife(), 200);
 		t1.drawScore(sb,pos,w.getBLeft().getName(),w.getLeftScore(),w.getBRight().getName(),w.getRightScore());
-
+		t1.drawAmmo(sb,pos,w.getBLeft().getAmmo(),w.getBRight().getAmmo());
 	}
 	private void checkChangeOnLevel() {
 		if(w.getLevel() != lastLevel){

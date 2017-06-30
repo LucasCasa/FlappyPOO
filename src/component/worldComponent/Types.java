@@ -2,7 +2,7 @@ package component.worldComponent;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Sound;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.Texture;
 
 public class Types {
 
@@ -75,6 +75,8 @@ public class Types {
 
 	public static float masterVolume = 1f;
 
-	//public static final BitmapFont FONT = new BitmapFont(Gdx.files.internal("arcade.fnt"));
+
+	public static final Texture AMMO_BAR = new Texture("ammoBar.png");
+	public static final Texture AMMO_BACK = new Texture("ammoBack.png");
 
 }

@@ -22,7 +22,7 @@ public class DesktopLauncher {
 		config.addIcon("icon16.png", Files.FileType.Local);
 		new LwjglApplication(new Flappy(), config);
 		MenuMusic m = MenuMusic.getInstance();
-		m.play(Types.masterVolume);
+		m.play(1);
 		/*try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {

@@ -15,8 +15,10 @@ public class RedBird extends BirdLeft {
 
 	@Override
 	public void shoot() {
-		Bullet b = new FireBulletL(position.x, position.y);
-		bullets.add(b);		
+		if(canShoot()) {
+			Bullet b = new FireBulletL(position.x, position.y);
+			bullets.add(b);
+		}
 	}
 
 
