@@ -142,8 +142,8 @@ public class MenuMangerView {
 	
 	public void drawMainMenu(SpriteBatch sb) {
 		sb.draw(logo, (Flappy.WIDTH / 2) - (logo.getWidth() / 2), (Flappy.HEIGHT) - (logo.getWidth() / 2));
-		text.draw(sb, "1 - Play FlappyPOO", Flappy.WIDTH*1/4, Flappy.HEIGHT*2/3);
-		text.draw(sb, "2 - View Highscores", Flappy.WIDTH*1/4, Flappy.HEIGHT*4/7);
+		text.draw(sb, "1 - Play Classic", Flappy.WIDTH*1/4, Flappy.HEIGHT*2/3);
+		text.draw(sb, "2 - Play Countdown", Flappy.WIDTH*1/4, Flappy.HEIGHT*4/7);
 		text.draw(sb, "3 - Set Dificulty", Flappy.WIDTH*1/4, Flappy.HEIGHT*10/21);
 		text.draw(sb, "Volume : " + (int)(Types.masterVolume*100) +" (+/- to change it)", 0,0 + text.getLineHeight());
 	}

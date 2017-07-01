@@ -4,17 +4,19 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+import component.worldComponent.GameMode;
 import component.worldComponent.Types;
 import menu.MenuManager;
 import menu.MenuMangerView;
-import world.music.FadeOutManager;
-import world.music.Level1Music;
-import world.music.MenuMusic;
+import music.FadeOutManager;
+import music.Level1Music;
+import music.MenuMusic;
 
 public class MenuState extends State {
 
 	private MenuManager menu;
 	private MenuMangerView menuView;
+	private GameMode gameMode;
 
 	public MenuState(GameStateManager gsm) {
 		super(gsm);
@@ -33,17 +35,18 @@ public class MenuState extends State {
 
 	@Override
 	public void handleInput() {
-		if (Gdx.input.isKeyPressed(Input.Keys.NUM_1))
-				menu.Select(Options.SELECT_PLAYERS);
-		
-		if (Gdx.input.isKeyPressed(Input.Keys.NUM_2))
-			menu.Select(Options.HIGHSCORES);
-		
-		if (Gdx.input.isKeyPressed(Input.Keys.NUM_3))
+		if (Gdx.input.isKeyPressed(Input.Keys.NUM_1)){
+			menu.Select(Options.SELECT_PLAYERS);
+			gameMode = GameMode.CLASSIC;
+		}else if (Gdx.input.isKeyPressed(Input.Keys.NUM_2)) {
+			menu.Select(Options.SELECT_PLAYERS);
+			gameMode = GameMode.COUNTDOWN;
+		}else if (Gdx.input.isKeyPressed(Input.Keys.NUM_3)) {
 			menu.Select(Options.SELECT_DIFICULTY);
-		
-		if (Gdx.input.isKeyJustPressed(Input.Keys.ESCAPE))
+		}else if (Gdx.input.isKeyJustPressed(Input.Keys.ESCAPE)){
 			Gdx.app.exit();
+		}
+
 	}
 	
 	public void keyDown(int keycode) {
@@ -87,7 +90,7 @@ public class MenuState extends State {
 			(new Thread(new FadeOutManager(MenuMusic.getInstance()))).start();
 			Level1Music.getInstance().play(Types.masterVolume);
 			Types.LEVEL1_VOICE.play(Types.masterVolume);
-			gsm.set(new PlayState(gsm, menu.getP1Name(), menu.getP2Name(), menu.getP1Bird(), menu.getP2Bird()));
+			gsm.set(new PlayState(gsm, menu.getP1Name(), menu.getP2Name(), menu.getP1Bird(), menu.getP2Bird(),gameMode));
 		}
 	}
 

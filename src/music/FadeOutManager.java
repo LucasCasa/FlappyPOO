@@ -1,4 +1,4 @@
-package world.music;
+package music;
 
 /**
  * Created by Lucas on 23/06/2017.

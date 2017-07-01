@@ -17,13 +17,6 @@ import component.tube.MetalTubes;
 import component.tube.NormalTubes;
 import component.tube.Tube;
 import component.tube.Tubes;
-import component.worldComponent.Types;
-import scoreFiles.Output;
-import world.music.FadeOutManager;
-import world.music.Level1Music;
-import world.music.Level2Music;
-import world.music.Level3Music;
-import world.music.MenuMusic;
 
 /*
  * WorldManager es la clase que se encargar de actualizar, chequear y modificar el 
@@ -34,19 +27,19 @@ import world.music.MenuMusic;
  * Claramente el juego se puede escalar a mas jugadores, pero habr�a que hacer un minimo cambio
  */
 
-public class WorldManager {
+public abstract class WorldManager {
 
-	private BirdLeft bLeft;
-	private BirdRight bRight;
-	private Grounds g;
-	private int level = 1;
+	protected BirdLeft bLeft;
+	protected BirdRight bRight;
+	protected Grounds g;
+	protected int level = 1;
 	FPSLogger fps = new FPSLogger();
-	private Array<Tubes> tubes;
-	private List<Life> lifes;
-	private List<Bomb> bombs;
-	private int pLeftScore = 0;
-	private int pRightScore = 0;
-	private Boolean contPlay;
+	protected Array<Tubes> tubes;
+	protected List<Life> lives;
+	protected List<Bomb> bombs;
+	protected int pLeftScore = 0;
+	protected int pRightScore = 0;
+	protected Boolean contPlay;
 	
 	/**
 	 * Crea al mundo y sus componentes. Crea de forma aleatoria las posiciones de los corazones.
@@ -56,24 +49,16 @@ public class WorldManager {
 		createBirds(p1Name, p2Name, p1Bird, p2Bird);
 		loadLevel();
 		g = new Grounds(cam.position.x, cam.viewportWidth);
+		tubes = new Array<>();
+		lives = new ArrayList<>();
+		bombs = new ArrayList<>();
 	}
 
-	private void loadLevel() {
+	protected void loadLevel() {
 		contPlay = true;
-		lifes = new ArrayList<>();
-		bombs = new ArrayList<>();
-
-
-		for (int i = 1; i <= WorldSettings.getInstance().getLife(); i++) {
-			lifes.add(new Life(randomX() * i, randomY()));
-		}
-
-		for (int i = 1; i < WorldSettings.getInstance().getBombs(); i++) {
-			bombs.add(new Bomb(randomX() * i, randomY()));
-		}
-
-		tubes = new Array<>();
-
+	}
+	
+	protected void loadTubes(){
 		double rand;
 		for (int i = 1; i <= WorldSettings.getInstance().getTubeCount(); i++) {
 			rand = Math.random() * 10;
@@ -85,7 +70,19 @@ public class WorldManager {
 			}
 
 		}
+	}
+	
+	protected void loadLives(){
+		for (int i = 1; i <= WorldSettings.getInstance().getLife(); i++) {
+			lives.add(new Life(randomX() * i, randomY()));
+		}
 
+	}
+	
+	protected void loadBombs(){
+		for (int i = 1; i < WorldSettings.getInstance().getBombs(); i++) {
+			bombs.add(new Bomb(randomX() * i, randomY()));
+		}
 	}
 
 	/**
@@ -100,6 +97,15 @@ public class WorldManager {
 		bLeft.update(dt);
 		bRight.update(dt);
 
+		updateBirdOnGame(bLeft, bRight, dt);
+		updateBirdOnGame(bRight, bLeft, dt);
+
+		if(hasEnded()){
+			endGame();
+		}
+
+	}
+	protected void updateTubes(float pos, float width){
 		for (int i = 0; i < tubes.size; i++) {
 			Tubes tube = tubes.get(i);
 
@@ -107,47 +113,12 @@ public class WorldManager {
 				tube.repositionByInterface();
 
 		}
-		
-		updateBirdOnGame(bLeft, bRight, dt);
-		updateBirdOnGame(bRight, bLeft, dt);
-
-		if (bLeft.getLife() == 0 || bRight.getLife() == 0) {
-				level++;
-				if(bRight.getScore() <= 0){
-					pLeftScore++;
-					if(pLeftScore == 2){
-						Output.getInstance().write(getWinner(bLeft, bRight));
-						Types.PLAYER1_VOICE.play(Types.masterVolume);
-						contPlay = false;
-						return;
-					}
-				}else{
-					pRightScore++;
-					if(pRightScore == 2){
-						Output.getInstance().write(getWinner(bLeft, bRight));
-						contPlay = false;
-						Types.PLAYER2_VOICE.play(Types.masterVolume);
-						return;
-					}
-				}
-				switch(level){
-				case 2:
-					(new Thread(new FadeOutManager(Level1Music.getInstance()))).start();
-					Level2Music.getInstance().play(Types.masterVolume);
-					Types.LEVEL2_VOICE.play(Types.masterVolume);
-					break;
-				case 3:
-					(new Thread(new FadeOutManager(Level2Music.getInstance()))).start();
-					Level3Music.getInstance().play(Types.masterVolume);
-					Types.LEVEL3_VOICE.play(Types.masterVolume);
-					break;
-				}
-			loadLevel();
-			bRight.reset();
-			bLeft.reset();
-		}
 	}
-	
+
+	protected abstract boolean hasEnded();
+
+	protected abstract void endGame();
+
 	/**
 	 * Actualiza al pajaro y todas sus acciones. Consulta si se choco con algun objeto que 
 	 * exista en el mundo
@@ -164,7 +135,7 @@ public class WorldManager {
 			me.crash(tube);
 		}
 
-		for (Life l : lifes){
+		for (Life l : lives){
 			me.crash(l);
 		}
 			
@@ -252,8 +223,8 @@ public class WorldManager {
 		this.contPlay = continues;
 	}
 
-	public List<Life> getLifes() {
-		return lifes;
+	public List<Life> getLives() {
+		return lives;
 	}
 
 	public List<Bomb> getBombs() {
@@ -270,7 +241,7 @@ public class WorldManager {
 				+ (WorldSettings.MAX_RAN_Y + 1));
 	}
 
-	private Bird getWinner(Bird l, Bird r) {
+	protected Bird getWinner(Bird l, Bird r) {
 		if (r.getScore() != 0)
 			return r;
 		else

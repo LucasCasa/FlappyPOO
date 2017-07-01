@@ -5,7 +5,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import component.bird.*;
 import component.bird.SilverBirdR;
 import component.bomb.Bomb;
@@ -23,7 +22,7 @@ import component.tube.Tubes;
 import component.worldComponent.Types;
 import menu.TableView;
 
-public class WorldManagerView {
+public abstract class WorldManagerView {
 
 	private BirdView birdView;
 	private BirdView bird2View;
@@ -37,7 +36,7 @@ public class WorldManagerView {
 	private BulletView bv2; // For player 2
 	private LifeView lw;
 	private BombView bw;
-	private TableView t1;
+	protected TableView t1;
 	private final BitmapFont fontSmall = new BitmapFont(Gdx.files.internal("little.fnt"));
 
 	private int lastLevel = 1;
@@ -69,21 +68,18 @@ public class WorldManagerView {
 	public void render(SpriteBatch sb, float pos, float width) {
 		checkChangeOnLevel();
 		sb.draw(bg, pos - (width / 2), 0);
-
 		birdView.draw(sb, w.getBLeft());
 		bird2View.draw(sb, w.getBRight());
 
 		for (Tubes tube : w.getTubes()) {
-			
 			if(tube instanceof NormalTubes){
 				normalTubeView.draw(sb, tube);
 			}else{
 				metalTubeView.draw(sb, tube);
 			}
-			
 		}
 
-		for (Life l : w.getLifes()) {
+		for (Life l : w.getLives()) {
 			lw.draw(sb, l);
 		}
 
@@ -100,12 +96,9 @@ public class WorldManagerView {
 		for (Bomb b : w.getBombs()) {
 			bw.draw(sb, b);
 		}
-
-		t1.draw(sb, pos, w.getBLeft().getScore(), w.getBLeft().getLife(), -280);
-		t1.draw(sb, pos, w.getBRight().getScore(), w.getBRight().getLife(), 200);
-		t1.drawScore(sb,pos,w.getBLeft().getName(),w.getLeftScore(),w.getBRight().getName(),w.getRightScore());
 		t1.drawAmmo(sb,pos,w.getBLeft().getAmmo(),w.getBRight().getAmmo());
 	}
+
 	private void checkChangeOnLevel() {
 		if(w.getLevel() != lastLevel){
 			lastLevel = w.getLevel();

@@ -1,6 +1,5 @@
-package world.music;
+package music;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Sound;
 
 import component.worldComponent.Types;

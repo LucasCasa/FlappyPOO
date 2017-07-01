@@ -1,19 +1,14 @@
 package menu;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
 
-import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import component.worldComponent.Types;
-import javafx.scene.input.KeyCode;
 import state.GameStateManager;
-import world.music.Level1Music;
-import world.music.Level2Music;
-import world.music.Level3Music;
-import world.music.MenuMusic;
-
-import java.awt.*;
+import music.Level1Music;
+import music.Level2Music;
+import music.Level3Music;
+import music.MenuMusic;
 
 public class KeyboardManager implements InputProcessor {
 	private static int keycodeBuff;

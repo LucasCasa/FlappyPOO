@@ -94,7 +94,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	 */
 	public void setName(String name) {
 		if (name.equals("") || name.equals(" ")) {
-			this.name = "ANONIMO";
+			this.name = "NN";
 		} else {
 			this.name = name;
 		}

@@ -5,11 +5,10 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import component.bird.BirdType;
+import component.worldComponent.GameMode;
 import component.worldComponent.Types;
 import desktop.Flappy;
-import world.WorldManager;
-import world.WorldManagerView;
-import world.WorldSettings;
+import world.*;
 
 public class PlayState extends State {
 
@@ -21,11 +20,20 @@ public class PlayState extends State {
 	private WorldManager world;
 	private WorldManagerView worldView;
 
-	public PlayState(GameStateManager gsm, String p1Name, String p2Name, BirdType birdType, BirdType birdType2) {
+	public PlayState(GameStateManager gsm, String p1Name, String p2Name, BirdType birdType, BirdType birdType2, GameMode gm) {
 		super(gsm);
 		cam.setToOrtho(false, Flappy.WIDTH / ZOOM_CAMARA, Flappy.HEIGHT / ZOOM_CAMARA);
-		this.world = new WorldManager(cam, p1Name, p2Name, birdType, birdType2);
-		this.worldView = new WorldManagerView(world);
+		switch (gm){
+			case CLASSIC:
+				this.world = new ClassicWorldManager(cam, p1Name, p2Name, birdType, birdType2);
+				this.worldView = new ClassicWorldManagerView(world);
+				break;
+			case COUNTDOWN:
+				this.world = new CountdownWorldManager(cam, p1Name, p2Name, birdType, birdType2);
+				this.worldView = new CountdownWorldManagerView(world);
+				break;
+		}
+
 
 	}
 
