@@ -22,7 +22,7 @@ public class MenuMangerView {
 	
 	private Texture bullet1, bullet2, bullet3, bullet4;
 
-	public BitmapFont text;
+	private BitmapFont text;
 	
 	private MenuManager menu;
 	
@@ -81,11 +81,11 @@ public class MenuMangerView {
 
 	private void drawHighscore(SpriteBatch sb) {
 
-		text.draw(sb, Input.getInstance().getTopHighscore(0), Flappy.WIDTH*1/4, Flappy.HEIGHT*2/3);
-		text.draw(sb,Input.getInstance().getTopHighscore(1), Flappy.WIDTH*1/4, Flappy.HEIGHT*4/7);
-		text.draw(sb, Input.getInstance().getTopHighscore(2), Flappy.WIDTH*1/4, Flappy.HEIGHT*10/21);
-		text.draw(sb, Input.getInstance().getTopHighscore(3), Flappy.WIDTH*1/4, Flappy.HEIGHT*10/26);
-		text.draw(sb, Input.getInstance().getTopHighscore(4), Flappy.WIDTH*1/4, Flappy.HEIGHT*10/33);
+		text.draw(sb, Input.getInstance().getTopHighscore(0), Flappy.WIDTH /4, Flappy.HEIGHT*2/3);
+		text.draw(sb,Input.getInstance().getTopHighscore(1), Flappy.WIDTH /4, Flappy.HEIGHT*4/7);
+		text.draw(sb, Input.getInstance().getTopHighscore(2), Flappy.WIDTH /4, Flappy.HEIGHT*10/21);
+		text.draw(sb, Input.getInstance().getTopHighscore(3), Flappy.WIDTH /4, Flappy.HEIGHT*10/26);
+		text.draw(sb, Input.getInstance().getTopHighscore(4), Flappy.WIDTH /4, Flappy.HEIGHT*10/33);
 	}
 
 	public void dispose() {
@@ -101,95 +101,95 @@ public class MenuMangerView {
 		bullet4.dispose();
 	}
 	
-	public void drawSettings(SpriteBatch sb) {
-		text.draw(sb, "Settings", Flappy.WIDTH*1/4, Flappy.HEIGHT*9/10);
+	private void drawSettings(SpriteBatch sb) {
+		text.draw(sb, Types.MESSAGES.getString("settings"), Flappy.WIDTH /4, Flappy.HEIGHT*9/10);
 		WorldSettings ws = WorldSettings.getInstance();
 		
 		text.getData().setScale(0.7f);
 		switch (menu.getSettingPos()) {
 			case 1: {
-				text.draw(sb, ">", Flappy.WIDTH*1/13, Flappy.HEIGHT*9/12);
+				text.draw(sb, ">", Flappy.WIDTH /13, Flappy.HEIGHT*9/12);
 				break;
 			}
 			case 2: {
-				text.draw(sb, ">", Flappy.WIDTH*1/13, Flappy.HEIGHT*10/15);				
+				text.draw(sb, ">", Flappy.WIDTH /13, Flappy.HEIGHT*10/15);
 				break;
 			}
 			case 3: {
-				text.draw(sb, ">", Flappy.WIDTH*1/13, Flappy.HEIGHT*9/16);
+				text.draw(sb, ">", Flappy.WIDTH /13, Flappy.HEIGHT*9/16);
 				break;
 			}
 			case 4: {
-				text.draw(sb, ">", Flappy.WIDTH*1/13, Flappy.HEIGHT*9/19);
+				text.draw(sb, ">", Flappy.WIDTH /13, Flappy.HEIGHT*9/19);
 				break;
 			}
 			case 5: {
-				text.draw(sb, ">", Flappy.WIDTH*1/13, Flappy.HEIGHT*1/8);
+				text.draw(sb, ">", Flappy.WIDTH /13, Flappy.HEIGHT /8);
 				break;
 			}
 
 		}
-		text.draw(sb, "TUBES GAP: " + ws.getGap(), Flappy.WIDTH*1/10, Flappy.HEIGHT*9/12);
-		text.draw(sb, "TUBES HOLE FLUCTIATION: " + ws.getFluctuation(), Flappy.WIDTH*1/10, Flappy.HEIGHT*10/15);
-		text.draw(sb, "MAX REACHABLE LIVES: " + ws.getLife(), Flappy.WIDTH*1/10, Flappy.HEIGHT*9/16);
-		text.draw(sb, "MAX REACHABLE BOMBS: "+ ws.getBombs(), Flappy.WIDTH*1/10, Flappy.HEIGHT*9/19);
+		text.draw(sb, Types.MESSAGES.getString("tubeGap") + ws.getGap(), Flappy.WIDTH /10, Flappy.HEIGHT*9/12);
+		text.draw(sb, Types.MESSAGES.getString("tubeHole")+ ws.getFluctuation(), Flappy.WIDTH /10, Flappy.HEIGHT*10/15);
+		text.draw(sb, Types.MESSAGES.getString("maxLives")+ ws.getLife(), Flappy.WIDTH /10, Flappy.HEIGHT*9/16);
+		text.draw(sb, Types.MESSAGES.getString("maxBombs")+ ws.getBombs(), Flappy.WIDTH /10, Flappy.HEIGHT*9/19);
 		text.getData().setScale(1);
 		
-		text.draw(sb, "SET DEFAULT SETTINGS", Flappy.WIDTH*1/10, Flappy.HEIGHT*1/8);
+		text.draw(sb, Types.MESSAGES.getString("defaultSettings"), Flappy.WIDTH /10, Flappy.HEIGHT /8);
 		
 		
 	}
 	
-	public void drawMainMenu(SpriteBatch sb) {
+	private void drawMainMenu(SpriteBatch sb) {
 		sb.draw(logo, (Flappy.WIDTH / 2) - (logo.getWidth() / 2), (Flappy.HEIGHT) - (logo.getWidth() / 2));
-		text.draw(sb, "1 - Play Classic", Flappy.WIDTH*1/4, Flappy.HEIGHT*2/3);
-		text.draw(sb, "2 - Play Countdown", Flappy.WIDTH*1/4, Flappy.HEIGHT*4/7);
-		text.draw(sb, "3 - Set Dificulty", Flappy.WIDTH*1/4, Flappy.HEIGHT*10/21);
-		text.draw(sb, "Volume : " + (int)(Types.masterVolume*100) +" (+/- to change it)", 0,0 + text.getLineHeight());
+		text.draw(sb, "1 - " + Types.MESSAGES.getString("playClassic"), Flappy.WIDTH/4, Flappy.HEIGHT*2/3);
+		text.draw(sb, "2 - " + Types.MESSAGES.getString("playCountdown") , Flappy.WIDTH/4, Flappy.HEIGHT*4/7);
+		text.draw(sb, "3 - " + Types.MESSAGES.getString("settings"), Flappy.WIDTH/4, Flappy.HEIGHT*10/21);
+		text.draw(sb, Types.MESSAGES.getString("volume").replaceFirst("0",String.valueOf((int)(Types.masterVolume*100))), 0,0 + text.getLineHeight());
 	}
 	
-	public void drawPlayerSelect(SpriteBatch sb, int player) {
+	private void drawPlayerSelect(SpriteBatch sb, int player) {
 		if (menu.writingNames()) {
 			if (player == 1) {
-				text.draw(sb, "Choose a name for Player 1", Flappy.WIDTH*1/9, Flappy.HEIGHT*15/16);
+				text.draw(sb, Types.MESSAGES.getString("chooseName1"), Flappy.WIDTH/9, Flappy.HEIGHT*15/16);
 			}
 			else {
-				text.draw(sb, "Choose a name for Player 2", Flappy.WIDTH*1/9, Flappy.HEIGHT*15/16);
+				text.draw(sb, Types.MESSAGES.getString("chooseName2"), Flappy.WIDTH/9, Flappy.HEIGHT*15/16);
 			}
-			text.draw(sb, menu.getName(), Flappy.WIDTH*1/8, Flappy.HEIGHT*15/18);
+			text.draw(sb, menu.getName(), Flappy.WIDTH/8, Flappy.HEIGHT*15/18);
 		} else {
 			if (player == 1) {
-				text.draw(sb, "Select a bird for Player 1", Flappy.WIDTH*1/9, Flappy.HEIGHT*15/16);
+				text.draw(sb, Types.MESSAGES.getString("chooseBird1"), Flappy.WIDTH/9, Flappy.HEIGHT*15/16);
 			} else {
-				text.draw(sb, "Select a bird for Player 2", Flappy.WIDTH*1/9, Flappy.HEIGHT*15/16);				
+				text.draw(sb, Types.MESSAGES.getString("chooseBird2"), Flappy.WIDTH/9, Flappy.HEIGHT*15/16);
 			}
 			
 			//GOLD
-			text.draw(sb, "1 - SILVER   " + Types.SILVER_BULLET_SPEED, Flappy.WIDTH*1/8, Flappy.HEIGHT*21/25);
-			sb.draw(birdSilver, Flappy.WIDTH*1/8, Flappy.HEIGHT*18/25);
-			sb.draw(bullet1, Flappy.WIDTH*1/4, Flappy.HEIGHT*18/25);
-			sb.draw(bullet1, Flappy.WIDTH*1/3, Flappy.HEIGHT*18/25);
+			text.draw(sb, "1 - "+ Types.MESSAGES.getString("silver")+"  " + Types.SILVER_BULLET_SPEED, Flappy.WIDTH/8, Flappy.HEIGHT*21/25);
+			sb.draw(birdSilver, Flappy.WIDTH /8, Flappy.HEIGHT*18/25);
+			sb.draw(bullet1, Flappy.WIDTH /4, Flappy.HEIGHT*18/25);
+			sb.draw(bullet1, Flappy.WIDTH /3, Flappy.HEIGHT*18/25);
 			sb.draw(bullet1, Flappy.WIDTH*5/12, Flappy.HEIGHT*18/25);
 
 			//SILVER
-			text.draw(sb, "2 - GREEN   "+ Types.LASER_BULLET_SPEED, Flappy.WIDTH*1/8, Flappy.HEIGHT*249/400);
-			sb.draw(birdGreen, Flappy.WIDTH*1/8, Flappy.HEIGHT*201/400);
-			sb.draw(bullet2, Flappy.WIDTH*1/4, Flappy.HEIGHT*201/400);
-			sb.draw(bullet2, Flappy.WIDTH*1/3, Flappy.HEIGHT*201/400);
+			text.draw(sb, "2 - "+ Types.MESSAGES.getString("green")+"   "+ Types.LASER_BULLET_SPEED, Flappy.WIDTH /8, Flappy.HEIGHT*249/400);
+			sb.draw(birdGreen, Flappy.WIDTH /8, Flappy.HEIGHT*201/400);
+			sb.draw(bullet2, Flappy.WIDTH /4, Flappy.HEIGHT*201/400);
+			sb.draw(bullet2, Flappy.WIDTH /3, Flappy.HEIGHT*201/400);
 			sb.draw(bullet2, Flappy.WIDTH*5/12, Flappy.HEIGHT*201/400);
 
 			//SILVER
-			text.draw(sb, "3 - BLUE   "+Types.CANNON_BULLET_SPEED, Flappy.WIDTH*1/8, Flappy.HEIGHT*81/190);
-			sb.draw(birdBlue, Flappy.WIDTH*1/8, Flappy.HEIGHT*29/100);
-			sb.draw(bullet3, Flappy.WIDTH*1/4, Flappy.HEIGHT*29/100);
-			sb.draw(bullet3, Flappy.WIDTH*1/3, Flappy.HEIGHT*29/100);
+			text.draw(sb, "3 - "+ Types.MESSAGES.getString("blue")+"    "+Types.CANNON_BULLET_SPEED, Flappy.WIDTH /8, Flappy.HEIGHT*81/190);
+			sb.draw(birdBlue, Flappy.WIDTH /8, Flappy.HEIGHT*29/100);
+			sb.draw(bullet3, Flappy.WIDTH /4, Flappy.HEIGHT*29/100);
+			sb.draw(bullet3, Flappy.WIDTH /3, Flappy.HEIGHT*29/100);
 			sb.draw(bullet3, Flappy.WIDTH*5/12, Flappy.HEIGHT*29/100);
 
 			//BLUE
-			text.draw(sb, "4 - RED   " + Types.FIRE_BULLET_SPEED, Flappy.WIDTH*1/8, Flappy.HEIGHT*77/400);
-			sb.draw(birdRed, Flappy.WIDTH*1/8, Flappy.HEIGHT*29/400);
-			sb.draw(bullet4, Flappy.WIDTH*1/4, Flappy.HEIGHT*29/400);
-			sb.draw(bullet4, Flappy.WIDTH*1/3, Flappy.HEIGHT*29/400);
+			text.draw(sb, "4 - "+ Types.MESSAGES.getString("red")+"     " + Types.FIRE_BULLET_SPEED, Flappy.WIDTH /8, Flappy.HEIGHT*77/400);
+			sb.draw(birdRed, Flappy.WIDTH /8, Flappy.HEIGHT*29/400);
+			sb.draw(bullet4, Flappy.WIDTH /4, Flappy.HEIGHT*29/400);
+			sb.draw(bullet4, Flappy.WIDTH /3, Flappy.HEIGHT*29/400);
 			sb.draw(bullet4, Flappy.WIDTH*5/12, Flappy.HEIGHT*29/400);						
 		}
 	}

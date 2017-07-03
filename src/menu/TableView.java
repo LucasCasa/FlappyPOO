@@ -55,8 +55,8 @@ public class TableView {
 		sb.draw(Types.AMMO_BACK,pos + 140,10);
 		sb.draw(Types.AMMO_BAR,pos - 300 +5, 10 +5,(int)((ammo/3000.0)*Types.AMMO_BAR.getWidth()),Types.AMMO_BAR.getHeight());
 		sb.draw(Types.AMMO_BAR,pos + 140 +5, 10 +5,(int)((ammo1/3000.0)*Types.AMMO_BAR.getWidth()),Types.AMMO_BAR.getHeight());
-		textSmall.draw(sb,"Ammo",pos - 240,10 + 38);
-		textSmall.draw(sb,"Ammo",pos + 200,10 + 38);
+		textSmall.draw(sb,Types.MESSAGES.getString("ammo"),pos - 240,10 + 38);
+		textSmall.draw(sb,Types.MESSAGES.getString("ammo"),pos + 200,10 + 38);
     }
 
 	public void drawTime(SpriteBatch sb, float pos, int time) {

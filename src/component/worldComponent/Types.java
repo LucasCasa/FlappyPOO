@@ -4,6 +4,9 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 
+import java.util.Locale;
+import java.util.ResourceBundle;
+
 public class Types {
 
 	public static final String BLUE_BIRD = "bird_blue.png";
@@ -78,5 +81,6 @@ public class Types {
 
 	public static final Texture AMMO_BAR = new Texture("ammoBar.png");
 	public static final Texture AMMO_BACK = new Texture("ammoBack.png");
+    public static final ResourceBundle MESSAGES = ResourceBundle.getBundle("text", Locale.forLanguageTag("ES"));
 
 }
