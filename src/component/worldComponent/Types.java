@@ -76,10 +76,12 @@ public class Types {
 	public static final int LASER_BULLET_SPEED = 500;
 	public static final int CANNON_BULLET_SPEED = 300;
 
-	public static float masterVolume = 1f;
+    public static float masterVolume = 1f;
 
 
 	public static final Texture AMMO_BAR = new Texture("ammoBar.png");
+	public static final Texture SHIELD = new Texture("shield.png");
+	public static final Texture FREEZE = new Texture("freeze.png");
 	public static final Texture AMMO_BACK = new Texture("ammoBack.png");
     public static final ResourceBundle MESSAGES = ResourceBundle.getBundle("text", Locale.forLanguageTag("ES"));
 

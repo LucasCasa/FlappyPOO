@@ -43,6 +43,17 @@ public class BirdView extends SimpleFObjectView{
 			hasSound = false;
 		}
 		sb.draw(super.getTexture(), b.getPosition().x, b.getPosition().y,b.getWidth(),b.getHeight());
+		if(b.shield){
+			float xdif = (Types.SHIELD.getWidth() - b.getWidth()) / 2;
+			float ydif = (Types.SHIELD.getHeight() - b.getHeight()) / 2;
+			sb.draw(Types.SHIELD, b.getPosition().x - xdif, b.getPosition().y - ydif);
+		}
+
+		if(b.isFrozen()){
+			float xdif = (Types.FREEZE.getWidth() - b.getWidth()) / 2;
+			float ydif = (Types.FREEZE.getHeight() - b.getHeight()) / 2;
+			sb.draw(Types.FREEZE, b.getPosition().x - xdif, b.getPosition().y - ydif);
+		}
 
 	}
 
