@@ -43,7 +43,9 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	Timer aura = new Timer(3000);
 	Timer life = new Timer(1000);
 	Timer frozenTime = new Timer(4000);
+
 	protected Bird rival;
+	protected boolean shield = false;
 
 	protected float width = Bird.WIDTH;
 	protected float height = Bird.HEIGHT;
@@ -136,7 +138,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 		} else {
 			if (crashes) {
 				if (obj instanceof Bomb) {
-					if (!aura.isCounting()) {
+					if (!aura.isCounting() && !shield) {
 						if (this instanceof RedBird || this instanceof BlueBird || this instanceof SilverBird || this instanceof GreenBird) {
 							Types.BOMB_EXPLOSION_SOUND.play(Types.masterVolume,1,-1);
 						}else{
@@ -146,7 +148,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 					Bomb b = (Bomb) obj;
 					b.exploit();
 				} else if (obj instanceof Bullet) {
-					if (!aura.isCounting()) {
+					if (!aura.isCounting() && !shield) {
 						if (this instanceof RedBird || this instanceof BlueBird || this instanceof SilverBird || this instanceof GreenBird) {
 							Types.BIRD_SOUNDS[(int) (Math.random() * 3)].play(Types.masterVolume, 1, -1);
 						} else {
@@ -154,7 +156,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 						}
 					}
 				} else if (obj instanceof Tube && ((Tube) obj).metal) {
-					if (!aura.isCounting()) {
+					if (!aura.isCounting() && !shield) {
 						if (this instanceof RedBird || this instanceof BlueBird || this instanceof SilverBird || this instanceof GreenBird) {
 							Types.CRASH_METAL_SOUND.play(Types.masterVolume, 1, -1);
 						} else {
@@ -162,7 +164,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 						}
 					}
 				} else if (obj instanceof Tube && !((Tube) obj).metal) {
-					if (!aura.isCounting()) {
+					if (!aura.isCounting() && !shield) {
 						if (this instanceof RedBird || this instanceof BlueBird || this instanceof SilverBird || this instanceof GreenBird) {
 							Types.CRASH_WOOD_SOUND.play(Types.masterVolume, 1, -1);
 						} else {
@@ -170,7 +172,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 						}
 					}
 				} else if (obj instanceof Ground) {
-					if (!aura.isCounting()) {
+					if (!aura.isCounting() && !shield) {
 						if (this instanceof RedBird || this instanceof BlueBird || this instanceof SilverBird || this instanceof GreenBird) {
 							Types.CRASH_GRASS_SOUND.play(Types.masterVolume, 1, -1);
 						} else {
@@ -202,7 +204,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	 * el aura hasta un cierto tiempo definido.
 	 */
 	public void lifeReducer() {
-		if (!aura.isCounting()) {
+		if (!aura.isCounting() && !shield) {
 			reduceLife();
 			aura.reset();
 			resetScore();
