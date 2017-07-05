@@ -28,7 +28,9 @@ public class BirdView extends SimpleFObjectView{
 
 		if (b.getAuraState()) {
 			Texture aura = new Texture("aura.png");
-			sb.draw(aura, b.getPosition().x - VISUAL_HEIGHT / 1.5f, b.getPosition().y - VISUAL_WIDTH / 2);
+			float xdif = (aura.getWidth() - b.getWidth()) / 2;
+			float ydif = (aura.getHeight() - b.getHeight()) / 2;
+			sb.draw(aura, b.getPosition().x - xdif, b.getPosition().y - ydif);
 			if (!hasSound) {
 				/*
 				Sound s = Gdx.audio.newSound(Gdx.files.internal(Types.CRASH));
@@ -40,7 +42,7 @@ public class BirdView extends SimpleFObjectView{
 		} else {
 			hasSound = false;
 		}
-		sb.draw(super.getTexture(), b.getPosition().x, b.getPosition().y);
+		sb.draw(super.getTexture(), b.getPosition().x, b.getPosition().y,b.getWidth(),b.getHeight());
 
 	}
 

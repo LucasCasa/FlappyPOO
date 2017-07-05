@@ -14,6 +14,11 @@ public class RedBirdR extends BirdRight {
 	}
 
 	@Override
+	public void usePower() {
+
+	}
+
+	@Override
 	public void shoot() {
 		if(canShoot()) {
 			Bullet b = new FireBulletR(position.x, position.y);

@@ -2,7 +2,7 @@ package component.worldComponent;
 
 public class Timer {
 
-	private boolean secure = false;
+	private boolean counting = false;
 	private long timerCount = 0;
 	private int maxTime = 3000; // 3 segundos
 
@@ -13,23 +13,32 @@ public class Timer {
 		this.maxTime = maxTime;
 	}
 
-	public void updateSecure() {
-		if (secure) {
+	public void update() {
+		if (counting) {
 			if (System.currentTimeMillis() - timerCount >= maxTime) {
-				setSecure(false);
+				counting = false;
 			}
 		}
 	}
 
-	public void setSecure(boolean state) {
-		secure = state;
+	public void set(int time) {
+		maxTime = time;
+		counting = true;
 		timerCount = 0;
-		if (state)
-			timerCount = System.currentTimeMillis();
+		timerCount = System.currentTimeMillis();
 	}
 	
-	public boolean getSecure(){
-		return secure;
+	public boolean isCounting(){
+		return counting;
 	}
 
+	public long getYimeLeft(){
+		return System.currentTimeMillis() - timerCount;
+	}
+
+	public void reset() {
+		counting = true;
+		timerCount = 0;
+		timerCount = System.currentTimeMillis();
+	}
 }

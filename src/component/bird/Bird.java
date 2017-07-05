@@ -1,6 +1,5 @@
 package component.bird;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +17,6 @@ import component.worldComponent.SimpleFObject;
 import component.worldComponent.Timer;
 import component.worldComponent.Types;
 import desktop.Flappy;
-import world.WorldSettings;
 
 public abstract class Bird extends SimpleFObject implements Shootable {
 
@@ -35,16 +33,20 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 
 	private long lastUpdate = System.currentTimeMillis();
 	private int lives = STARTING_LIVES;
-	private int score = 0;
+	protected int score = 0;
 	private float scoreTimeAux = 0;
 	private String name = "";
 	private boolean team = false;
 	private int jump = 350;
 	public int ammo = 3000;
-
+	boolean frozen = false;
 	Timer aura = new Timer(3000);
 	Timer life = new Timer(1000);
+	Timer frozenTime = new Timer(4000);
+	protected Bird rival;
 
+	protected float width = Bird.WIDTH;
+	protected float height = Bird.HEIGHT;
 	public Bird(int ID, int x, int y) {
 		super(x, y);
 		if (x <= PROM_POSITION)
@@ -67,23 +69,33 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	 * Vectores (scale) y el dt.
 	 */
 	public void update(float dt) {
-		if(position.y > 480){
-			velocity.set(0,0);
-		}
-		if (position.y > 62) { // 112 - offset de ground
-			velocity.add(0, WEIGTH);
-		}
-		velocity.scl(dt);
-		position.add(MOVEMENT * dt, ((position.y > 480 && velocity.y > 0) || (position.y < 62 && velocity.y < 0))?0:velocity.y);
+		if(isFrozen()) {
+			position.add(MOVEMENT*dt,0);
+			addScore(dt);
+			bounds.setPosition(position.x, position.y);
+			frozenTime.update();
+			if(!frozenTime.isCounting()){
+				frozen = false;
+			}
+		}else {
+			if (position.y > 480) {
+				velocity.set(0, 0);
+			}
+			if (position.y > 62) { // 112 - offset de ground
+				velocity.add(0, WEIGTH);
+			}
+			velocity.scl(dt);
+			position.add(MOVEMENT * dt, ((position.y > 480 && velocity.y > 0) || (position.y < 62 && velocity.y < 0)) ? 0 : velocity.y);
 
-		if (position.y < 0) {
-			position.y = 0;
+			if (position.y < 0) {
+				position.y = 0;
+			}
+
+			addScore(dt);
+
+			velocity.scl(1 / dt);
+			bounds.setPosition(position.x, position.y);
 		}
-
-		addScore(dt);
-
-		velocity.scl(1 / dt);
-		bounds.setPosition(position.x, position.y);
 	}
 
 	/**
@@ -110,11 +122,11 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 		boolean crashes = super.crash(obj);
 
 		if (obj instanceof Life) {
-			if (crashes && !life.getSecure()) {
+			if (crashes && !life.isCounting()) {
 				Life l = (Life) obj;
 				l.touched();
 				increaseLife();
-				life.setSecure(true);
+				life.reset();
 				if (this instanceof RedBird || this instanceof BlueBird || this instanceof SilverBird || this instanceof GreenBird) {
 					Types.LIFE_SOUND.play(Types.masterVolume,1,-1);
 				}else{
@@ -124,7 +136,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 		} else {
 			if (crashes) {
 				if (obj instanceof Bomb) {
-					if (!aura.getSecure()) {
+					if (!aura.isCounting()) {
 						if (this instanceof RedBird || this instanceof BlueBird || this instanceof SilverBird || this instanceof GreenBird) {
 							Types.BOMB_EXPLOSION_SOUND.play(Types.masterVolume,1,-1);
 						}else{
@@ -134,7 +146,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 					Bomb b = (Bomb) obj;
 					b.exploit();
 				} else if (obj instanceof Bullet) {
-					if (!aura.getSecure()) {
+					if (!aura.isCounting()) {
 						if (this instanceof RedBird || this instanceof BlueBird || this instanceof SilverBird || this instanceof GreenBird) {
 							Types.BIRD_SOUNDS[(int) (Math.random() * 3)].play(Types.masterVolume, 1, -1);
 						} else {
@@ -142,7 +154,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 						}
 					}
 				} else if (obj instanceof Tube && ((Tube) obj).metal) {
-					if (!aura.getSecure()) {
+					if (!aura.isCounting()) {
 						if (this instanceof RedBird || this instanceof BlueBird || this instanceof SilverBird || this instanceof GreenBird) {
 							Types.CRASH_METAL_SOUND.play(Types.masterVolume, 1, -1);
 						} else {
@@ -150,7 +162,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 						}
 					}
 				} else if (obj instanceof Tube && !((Tube) obj).metal) {
-					if (!aura.getSecure()) {
+					if (!aura.isCounting()) {
 						if (this instanceof RedBird || this instanceof BlueBird || this instanceof SilverBird || this instanceof GreenBird) {
 							Types.CRASH_WOOD_SOUND.play(Types.masterVolume, 1, -1);
 						} else {
@@ -158,7 +170,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 						}
 					}
 				} else if (obj instanceof Ground) {
-					if (!aura.getSecure()) {
+					if (!aura.isCounting()) {
 						if (this instanceof RedBird || this instanceof BlueBird || this instanceof SilverBird || this instanceof GreenBird) {
 							Types.CRASH_GRASS_SOUND.play(Types.masterVolume, 1, -1);
 						} else {
@@ -190,9 +202,9 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	 * el aura hasta un cierto tiempo definido.
 	 */
 	public void lifeReducer() {
-		if (!aura.getSecure()) {
+		if (!aura.isCounting()) {
 			reduceLife();
-			aura.setSecure(true);
+			aura.reset();
 			resetScore();
 		}
 	}
@@ -201,8 +213,8 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	 * Update timers.
 	 */
 	public void updateTimers() {
-		life.updateSecure();
-		aura.updateSecure();
+		life.update();
+		aura.update();
 		ammo+= lastUpdate - System.currentTimeMillis();
 		if(ammo < 0){
 			ammo = 0;
@@ -233,6 +245,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 		}
 	}
 
+	public abstract void usePower();
 	/**
 	 * El pajaro salta con la velocidad default o con la velocidad que uno setea
 	 * cuando hace un setJump
@@ -314,7 +327,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	 * @return the life secure
 	 */
 	public boolean getLifeSecure() {
-		return life.getSecure();
+		return life.isCounting();
 	}
 
 	/**
@@ -323,7 +336,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	 * @return the aura state
 	 */
 	public boolean getAuraState() {
-		return aura.getSecure();
+		return aura.isCounting();
 	}
 
 	/**
@@ -371,7 +384,8 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	}
 
 	public void setLifeSecure(Boolean b) {
-		life.setSecure(b);
+		if(b)
+			life.reset();
 	}
 
 	public void addLife(int lives) {
@@ -380,5 +394,24 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 
 	public int getAmmo() {
 		return ammo;
+	}
+	public void setRival(Bird b){
+		rival = b;
+	}
+	public void freeze(){
+		frozen = true;
+		frozenTime.reset();
+	}
+
+    public float getHeight() {
+        return height;
+    }
+
+	public float getWidth() {
+		return width;
+	}
+
+	public boolean isFrozen() {
+		return frozen;
 	}
 }

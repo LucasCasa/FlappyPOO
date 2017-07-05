@@ -14,6 +14,14 @@ public class BlueBird extends BirdLeft{
 	}
 
 	@Override
+	public void usePower() {
+		if(score >= 5) {
+			rival.freeze();
+			score-=5;
+		}
+	}
+
+	@Override
 	public void shoot() {
 		if(canShoot()) {
 			Bullet b = new CannonBulletL(position.x, position.y);

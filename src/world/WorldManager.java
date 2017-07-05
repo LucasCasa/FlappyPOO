@@ -176,26 +176,24 @@ public abstract class WorldManager {
 		}
 
 		switch (p2Bird) {
-		case RED: {
+		case RED:
 			bRight = new RedBirdR(1, 500, 200);
 			break;
-		}
-		case GREEN: {
+		case GREEN:
 			bRight = new GreenBirdR(1, 500, 200);
 			break;
-		}
-		case SILVER: {
+		case SILVER:
 			bRight = new SilverBirdR(1, 500, 200);
 			break;
-		}
-		case BLUE: {
+		case BLUE:
 			bRight = new BlueBirdR(1, 500, 200);
 			break;
-		}
 		}
 
 		bLeft.setName(p1Name);
 		bRight.setName(p2Name);
+		bLeft.setRival(bRight);
+		bRight.setRival(bLeft);
 	}
 
 	public Bird getBLeft() {
