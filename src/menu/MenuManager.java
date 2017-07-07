@@ -42,25 +42,11 @@ public class MenuManager {
 	
 	public void update() {
 		switch(option) {
-			case MAIN: {
-				break;
-			}
-									
-			case SELECT_PLAYERS: {
-				if (!writing) {
+			case SELECT_PLAYERS:
+				if (!writing)
 					setPlayerBird();
-				}
-					
 				break;
-			}
-			
-			case HIGHSCORES: {
-				
-			}
-			
-			case SELECT_DIFICULTY: {
-				gameSettings();
-			}
+			case SELECT_DIFICULTY: gameSettings(); break;
 		default:
 			break;						
 		}

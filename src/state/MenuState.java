@@ -35,14 +35,24 @@ public class MenuState extends State {
 
 	@Override
 	public void handleInput() {
-		if (Gdx.input.isKeyPressed(Input.Keys.NUM_1)){
+		if (Gdx.input.isKeyPressed(Input.Keys.NUM_1) || Gdx.input.isKeyJustPressed(Input.Keys.NUMPAD_1)){
 			menu.Select(Options.SELECT_PLAYERS);
 			gameMode = GameMode.CLASSIC;
-		}else if (Gdx.input.isKeyPressed(Input.Keys.NUM_2)) {
+		}else if (Gdx.input.isKeyPressed(Input.Keys.NUM_2) || Gdx.input.isKeyJustPressed(Input.Keys.NUMPAD_2)) {
 			menu.Select(Options.SELECT_PLAYERS);
 			gameMode = GameMode.COUNTDOWN;
-		}else if (Gdx.input.isKeyPressed(Input.Keys.NUM_3)) {
+		}else if (Gdx.input.isKeyPressed(Input.Keys.NUM_3) || Gdx.input.isKeyJustPressed(Input.Keys.NUMPAD_3)) {
+
+		}else if(Gdx.input.isKeyJustPressed(Input.Keys.NUM_4) || Gdx.input.isKeyJustPressed(Input.Keys.NUMPAD_4)) {
 			menu.Select(Options.SELECT_DIFICULTY);
+		}else if(Gdx.input.isKeyJustPressed(Input.Keys.NUM_5) || Gdx.input.isKeyJustPressed(Input.Keys.NUMPAD_5)) {
+			menu.Select(Options.HELP1);
+		}else if(Gdx.input.isKeyJustPressed(Input.Keys.TAB)){
+			switch (menu.currentSelect()){
+				case HELP1: menu.Select(Options.HELP2); break;
+				case HELP2: menu.Select(Options.HELP3); break;
+				case HELP3: menu.Select(Options.MAIN); break;
+			}
 		}else if (Gdx.input.isKeyJustPressed(Input.Keys.ESCAPE)){
 			Gdx.app.exit();
 		}
@@ -61,29 +71,25 @@ public class MenuState extends State {
 	
 	@Override
 	public void update(float dt) {
-		if (menu.currentSelect() == Options.MAIN) {
-			handleInput();
-		}
-		
-		if (menu.currentSelect() == Options.SELECT_DIFICULTY) {
-			if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE))
-				menu.Select(Options.MAIN);
-		}
+		switch (menu.currentSelect()){
+			case HELP1:
+			case HELP2:
+			case HELP3:
+			case MAIN:
+				handleInput();
+				break;
+			case SELECT_PLAYERS:
+				if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE))
+					menu.resetPlayers();
+			case SELECT_DIFICULTY:
+			case HIGHSCORES:
+				if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE))
+					menu.Select(Options.MAIN);
+				break;
+			default:
+				break;
 
-		if (menu.currentSelect() == Options.SELECT_PLAYERS) {
-			if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {
-				menu.resetPlayers();
-				menu.Select(Options.MAIN);
-			}
 		}
-
-		if (menu.currentSelect() == Options.HIGHSCORES) {
-			if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {
-				menu.Select(Options.MAIN);
-			}
-		}
-
-		
 		menu.update();
 		
 		if(menu.selectDone()) {

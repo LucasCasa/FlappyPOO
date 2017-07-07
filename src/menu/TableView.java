@@ -14,7 +14,7 @@ public class TableView {
 	private Texture tLifes;
 	private Texture tMana;
 	public TableView() {
-		text = new BitmapFont(Gdx.files.internal("arcade.fnt"));
+		text = new BitmapFont(Gdx.files.internal("shadow.fnt"));
 		textSmall = new BitmapFont(Gdx.files.internal("little.fnt"));
 		tCoinds = new Texture("coins.png");
 		tLifes = new Texture("heart.png");
@@ -55,8 +55,8 @@ public class TableView {
 		sb.draw(Types.AMMO_BACK,pos + 140,10);
 		sb.draw(Types.AMMO_BAR,pos - 300 +5, 10 +5,(int)((ammo/3000.0)*Types.AMMO_BAR.getWidth()),Types.AMMO_BAR.getHeight());
 		sb.draw(Types.AMMO_BAR,pos + 140 +5, 10 +5,(int)((ammo1/3000.0)*Types.AMMO_BAR.getWidth()),Types.AMMO_BAR.getHeight());
-		textSmall.draw(sb,Types.MESSAGES.getString("ammo"),pos - 240,10 + 38);
-		textSmall.draw(sb,Types.MESSAGES.getString("ammo"),pos + 200,10 + 38);
+		textSmall.draw(sb,Types.MESSAGES.getString("ammo"),pos - 305,10 + 38);
+		textSmall.draw(sb,Types.MESSAGES.getString("ammo"),pos + 145,10 + 38);
     }
 
 	public void drawTime(SpriteBatch sb, float pos, int time) {

@@ -25,14 +25,14 @@ public class MenuMangerView {
 	private BitmapFont text;
 	
 	private MenuManager menu;
-	
+	private Texture[][] help = new Texture[2][];
 	public MenuMangerView(MenuManager menu) {
 		this.menu = menu;
 		
-		text = new BitmapFont(Gdx.files.internal("arcade.fnt"));
+		text = new BitmapFont(Gdx.files.internal("shadow.fnt"));
 		
 		logo = new Texture(Types.LOGO);
-		background = new Texture(Types.BACKGROUND[0]);
+		background = new Texture("bgMenu.png");
 		
 		birdRed = new Texture(Types.RED_BIRD);
 		birdGreen = new Texture(Types.GREEN_BIRD);
@@ -43,7 +43,8 @@ public class MenuMangerView {
 		bullet2 = new Texture(Types.LASER_BULLET);
 		bullet3 = new Texture(Types.CANNON_BULLET);
 		bullet4 = new Texture(Types.FIRE_BULLET);
-		
+		help[0] = new Texture[]{new Texture("help1en.png"),new Texture("help2en.png"),new Texture("help3en.png")};
+		help[1] = new Texture[]{new Texture("help1es.png"),new Texture("help2es.png"),new Texture("help3es.png")};
 	}
 
 	public void render(SpriteBatch sb) {
@@ -51,31 +52,21 @@ public class MenuMangerView {
 		sb.draw(background, 0, 0, Flappy.WIDTH, Flappy.HEIGHT);
 
 		switch(menu.currentSelect()) {
-			case MAIN: {
-				drawMainMenu(sb);
-				break;
-			}							
-			case SELECT_PLAYERS: {
-				if(menu.getCurrentPlayerSelect() == 1) {
+			case MAIN:	drawMainMenu(sb);break;
+			case SELECT_PLAYERS:
+				if(menu.getCurrentPlayerSelect() == 1)
 					drawPlayerSelect(sb, 1);
-				}	else {
+				else
 					drawPlayerSelect(sb, 2);
-				}
 				break;
-			}		
-			case HIGHSCORES: {
-				drawHighscore(sb);
+			case HIGHSCORES: 		drawHighscore(sb);		break;
+			case SELECT_DIFICULTY: 	drawSettings(sb);		break;
+			case HELP1: 			drawHelp(sb,0);		break;
+			case HELP2: 			drawHelp(sb,1);		break;
+			case HELP3: 			drawHelp(sb,2);		break;
+			default:
 				break;
-			}			
-			case SELECT_DIFICULTY: {
-					drawSettings(sb);
-				break;
-			}
-		default:
-			break;
-								
 		}
-
 		sb.end();
 	}
 
@@ -142,9 +133,11 @@ public class MenuMangerView {
 	
 	private void drawMainMenu(SpriteBatch sb) {
 		sb.draw(logo, (Flappy.WIDTH / 2) - (logo.getWidth() / 2), (Flappy.HEIGHT) - (logo.getWidth() / 2));
-		text.draw(sb, "1 - " + Types.MESSAGES.getString("playClassic"), Flappy.WIDTH/4, Flappy.HEIGHT*2/3);
-		text.draw(sb, "2 - " + Types.MESSAGES.getString("playCountdown") , Flappy.WIDTH/4, Flappy.HEIGHT*4/7);
-		text.draw(sb, "3 - " + Types.MESSAGES.getString("settings"), Flappy.WIDTH/4, Flappy.HEIGHT*10/21);
+		text.draw(sb, "1 - " + Types.MESSAGES.getString("playClassic"), Flappy.WIDTH/4, Flappy.HEIGHT*13/20);
+		text.draw(sb, "2 - " + Types.MESSAGES.getString("playCountdown") , Flappy.WIDTH/4, Flappy.HEIGHT*11/20);
+		text.draw(sb, "3 - " + Types.MESSAGES.getString("playNest") , Flappy.WIDTH/4, Flappy.HEIGHT*9/20);
+		text.draw(sb, "4 - " + Types.MESSAGES.getString("settings"), Flappy.WIDTH/4, Flappy.HEIGHT*7/20);
+		text.draw(sb, "5 - " + Types.MESSAGES.getString("help"), Flappy.WIDTH/4, Flappy.HEIGHT*5/20);
 		text.draw(sb, Types.MESSAGES.getString("volume").replaceFirst("0",String.valueOf((int)(Types.masterVolume*100))), 0,0 + text.getLineHeight());
 	}
 	
@@ -192,6 +185,9 @@ public class MenuMangerView {
 			sb.draw(bullet4, Flappy.WIDTH /3, Flappy.HEIGHT*29/400);
 			sb.draw(bullet4, Flappy.WIDTH*5/12, Flappy.HEIGHT*29/400);						
 		}
+	}
+	private void drawHelp(SpriteBatch sb, int i){
+		sb.draw(help[Integer.parseInt(Types.MESSAGES.getString("id"))][i],0,0);
 	}
 
 }
