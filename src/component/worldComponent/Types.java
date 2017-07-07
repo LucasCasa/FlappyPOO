@@ -47,11 +47,10 @@ public class Types {
 	public static final Sound JUMP = Gdx.audio.newSound(Gdx.files.internal("salto.mp3"));
 
 	public static final Sound SHRINK_SOUND = Gdx.audio.newSound(Gdx.files.internal("power1.mp3"));
-	/*
-	public static final Sound POWERUP2 = Gdx.audio.newSound(Gdx.files.internal("power2.mp3"));
-	public static final Sound POWERUP3 = Gdx.audio.newSound(Gdx.files.internal("power3.mp3"));
-	public static final Sound POWERUP4 = Gdx.audio.newSound(Gdx.files.internal("power4.mp3"));
-	*/
+	public static final Sound POWERUP_BIRD1 = Gdx.audio.newSound(Gdx.files.internal("balas.mp3"));
+	public static final Sound POWERUP_BIRD3 = Gdx.audio.newSound(Gdx.files.internal("congela.mp3"));
+	public static final Sound POWERUP_BIRD4 = Gdx.audio.newSound(Gdx.files.internal("escudo.mp3"));
+
 
 	public static final Sound[] COUNTDOWN = {Gdx.audio.newSound(Gdx.files.internal("countdown_en.mp3")),Gdx.audio.newSound(Gdx.files.internal("countdown_es.mp3"))};
 	public static final Sound[] START = {Gdx.audio.newSound(Gdx.files.internal("start_en.mp3")),Gdx.audio.newSound(Gdx.files.internal("start_es.mp3"))};
