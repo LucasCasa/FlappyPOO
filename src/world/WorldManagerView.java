@@ -199,13 +199,13 @@ public abstract class WorldManagerView {
 	}
 	public void playPowerSound(Bird b,boolean left){
 		if (b instanceof RedBird || b instanceof RedBirdR ) {
-			//
+			Types.SHIELD_SOUND.play(Types.masterVolume, 1, (left)?-1:1);
 		} else if (b instanceof GreenBird || b instanceof GreenBirdR) {
 			Types.SHRINK_SOUND.play(Types.masterVolume, 1, (left)?-1:1);
 		} else if (b instanceof SilverBird || b instanceof SilverBirdR) {
 			//
 		} else if (b instanceof BlueBird  || b instanceof BlueBirdR ) {
-			//
+			Types.FREEZE_SOUND.play(Types.masterVolume, 1, (left)?-1:1);
 		}
 	}
 }

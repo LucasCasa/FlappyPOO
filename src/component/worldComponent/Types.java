@@ -47,9 +47,8 @@ public class Types {
 	public static final Sound JUMP = Gdx.audio.newSound(Gdx.files.internal("salto.mp3"));
 
 	public static final Sound SHRINK_SOUND = Gdx.audio.newSound(Gdx.files.internal("power1.mp3"));
-	public static final Sound POWERUP_BIRD1 = Gdx.audio.newSound(Gdx.files.internal("balas.mp3"));
-	public static final Sound POWERUP_BIRD3 = Gdx.audio.newSound(Gdx.files.internal("congela.mp3"));
-	public static final Sound POWERUP_BIRD4 = Gdx.audio.newSound(Gdx.files.internal("escudo.mp3"));
+	public static final Sound FREEZE_SOUND = Gdx.audio.newSound(Gdx.files.internal("congela.mp3"));
+	public static final Sound SHIELD_SOUND = Gdx.audio.newSound(Gdx.files.internal("escudo.mp3"));
 
 
 	public static final Sound[] COUNTDOWN = {Gdx.audio.newSound(Gdx.files.internal("countdown_en.mp3")),Gdx.audio.newSound(Gdx.files.internal("countdown_es.mp3"))};
