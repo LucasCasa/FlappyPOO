@@ -46,15 +46,13 @@ public class Types {
 	public static final Sound[] BIRD_SOUNDS = {Gdx.audio.newSound(Gdx.files.internal("ahah.mp3")),Gdx.audio.newSound(Gdx.files.internal("aia.mp3")),Gdx.audio.newSound(Gdx.files.internal("iii.mp3"))};
 	public static final Sound JUMP = Gdx.audio.newSound(Gdx.files.internal("salto.mp3"));
 
-	public static final Sound POWERUP1 = Gdx.audio.newSound(Gdx.files.internal("power1.mp3"));
-	public static final Sound POWERUP2 = Gdx.audio.newSound(Gdx.files.internal("power2.mp3"));
+	public static final Sound SHRINK_SOUND = Gdx.audio.newSound(Gdx.files.internal("power1.mp3"));
+	/*public static final Sound POWERUP2 = Gdx.audio.newSound(Gdx.files.internal("power2.mp3"));
 	public static final Sound POWERUP3 = Gdx.audio.newSound(Gdx.files.internal("power3.mp3"));
-	public static final Sound POWERUP4 = Gdx.audio.newSound(Gdx.files.internal("power4.mp3"));
+	public static final Sound POWERUP4 = Gdx.audio.newSound(Gdx.files.internal("power4.mp3"));*/
 
-	public static final Sound COUNTDOWN_ES = Gdx.audio.newSound(Gdx.files.internal("countdown_es_2.mp3"));
-	public static final Sound COUNTDOWN_EN = Gdx.audio.newSound(Gdx.files.internal("countdown_en_2.mp3"));
-	public static final Sound START_ES = Gdx.audio.newSound(Gdx.files.internal("start_es.mp3"));
-	public static final Sound START_EN = Gdx.audio.newSound(Gdx.files.internal("start_en.mp3"));
+	public static final Sound[] COUNTDOWN = {Gdx.audio.newSound(Gdx.files.internal("countdown_en.mp3")),Gdx.audio.newSound(Gdx.files.internal("countdown_es.mp3"))};
+	public static final Sound[] START = {Gdx.audio.newSound(Gdx.files.internal("start_en.mp3")),Gdx.audio.newSound(Gdx.files.internal("start_es.mp3"))};
 
 	
 	public static final Sound typing1 =  Gdx.audio.newSound(Gdx.files.internal("typing1.mp3"));

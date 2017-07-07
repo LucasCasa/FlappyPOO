@@ -59,11 +59,11 @@ public class PlayState extends State {
 			world.getBRight().shoot();
 		}
 		if (Gdx.input.isKeyJustPressed(Input.Keys.DOWN)) {
-			worldView.playShootSound(world.getBRight(),false);
+			worldView.playPowerSound(world.getBRight(),false);
 			world.getBRight().usePower();
 		}
 		if (Gdx.input.isKeyJustPressed(Input.Keys.S)) {
-			worldView.playShootSound(world.getBLeft(),true);
+			worldView.playPowerSound(world.getBLeft(),true);
 			world.getBLeft().usePower();
 		}
 		if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {

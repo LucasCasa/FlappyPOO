@@ -50,7 +50,8 @@ public class CountdownWorldManager extends WorldManager {
             Types.PLAYER1_VOICE.play(Types.masterVolume);
             contPlay = false;
         }else {
-            //TIE
+            //Types.DRAW.play(Types.masterVolume);
+            contPlay = false;
         }
     }
 

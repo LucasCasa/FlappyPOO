@@ -95,7 +95,12 @@ public class MenuState extends State {
 		if(menu.selectDone()) {
 			(new Thread(new FadeOutManager(MenuMusic.getInstance()))).start();
 			Level1Music.getInstance().play(Types.masterVolume);
-			Types.LEVEL1_VOICE.play(Types.masterVolume);
+			if(gameMode == GameMode.CLASSIC){
+				Types.LEVEL1_VOICE.play(Types.masterVolume);
+			}else if(gameMode == GameMode.COUNTDOWN){
+				Types.START[Integer.parseInt(Types.MESSAGES.getString("id"))].play(Types.masterVolume);
+			}
+
 			gsm.set(new PlayState(gsm, menu.getP1Name(), menu.getP2Name(), menu.getP1Bird(), menu.getP2Bird(),gameMode));
 		}
 	}
