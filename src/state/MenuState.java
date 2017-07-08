@@ -42,7 +42,8 @@ public class MenuState extends State {
 			menu.Select(Options.SELECT_PLAYERS);
 			gameMode = GameMode.COUNTDOWN;
 		}else if (Gdx.input.isKeyPressed(Input.Keys.NUM_3) || Gdx.input.isKeyJustPressed(Input.Keys.NUMPAD_3)) {
-
+			menu.Select(Options.SELECT_PLAYERS);
+			gameMode = GameMode.COOPERATIVE;
 		}else if(Gdx.input.isKeyJustPressed(Input.Keys.NUM_4) || Gdx.input.isKeyJustPressed(Input.Keys.NUMPAD_4)) {
 			menu.Select(Options.SELECT_DIFICULTY);
 		}else if(Gdx.input.isKeyJustPressed(Input.Keys.NUM_5) || Gdx.input.isKeyJustPressed(Input.Keys.NUMPAD_5)) {
@@ -98,6 +99,8 @@ public class MenuState extends State {
 			if(gameMode == GameMode.CLASSIC){
 				Types.LEVEL1_VOICE.play(Types.masterVolume);
 			}else if(gameMode == GameMode.COUNTDOWN){
+				Types.START[Integer.parseInt(Types.MESSAGES.getString("id"))].play(Types.masterVolume);
+			}else if(gameMode == GameMode.COOPERATIVE){
 				Types.START[Integer.parseInt(Types.MESSAGES.getString("id"))].play(Types.masterVolume);
 			}
 

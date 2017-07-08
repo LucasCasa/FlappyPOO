@@ -32,6 +32,10 @@ public class PlayState extends State {
 				this.world = new CountdownWorldManager(cam, p1Name, p2Name, birdType, birdType2);
 				this.worldView = new CountdownWorldManagerView(world);
 				break;
+			case COOPERATIVE:
+				this.world = new NestWorldManager(cam, p1Name, p2Name, birdType, birdType2);
+				this.worldView = new NestWorldManagerView(world);
+				break;
 		}
 
 
@@ -54,10 +58,11 @@ public class PlayState extends State {
 			world.getBLeft().shoot();
 		}
 
-		if (Gdx.input.isKeyJustPressed(Input.Keys.LEFT)) {
+		if (Gdx.input.isKeyJustPressed(Input.Keys.LEFT) || (Gdx.input.isKeyJustPressed(Input.Keys.RIGHT) && world instanceof NestWorldManager)) {
 			worldView.playShootSound(world.getBRight(),false);
 			world.getBRight().shoot();
 		}
+
 		if (Gdx.input.isKeyJustPressed(Input.Keys.DOWN)) {
 			worldView.playPowerSound(world.getBRight(),false);
 			world.getBRight().usePower();

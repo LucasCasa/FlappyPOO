@@ -22,13 +22,13 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 
 	public static final int WIDTH = 34;
 	public static final int HEIGHT = 24;
-	public static final int STARTING_LIVES = 5;
+	private static final int STARTING_LIVES = 5;
 	private static final int PROM_POSITION = 300;
 	private static final int WEIGTH = -15;
 	private static final int MOVEMENT = 100;
 	protected int ID = 0;
 
-	protected Vector2 velocity;
+	private Vector2 velocity;
 	protected List<Bullet> bullets;
 
 	private long lastUpdate = System.currentTimeMillis();
@@ -38,14 +38,14 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	private String name = "";
 	private boolean team = false;
 	private int jump = 350;
-	public int ammo = 3000;
-	boolean frozen = false;
-	Timer aura = new Timer(3000);
-	Timer life = new Timer(1000);
-	Timer frozenTime = new Timer(4000);
+	private int ammo = 3000;
+	private boolean frozen = false;
+	private Timer aura = new Timer(3000);
+	private Timer life = new Timer(1000);
+	private Timer frozenTime = new Timer(4000);
 
-	protected Bird rival;
-	protected boolean shield = false;
+	Bird rival;
+	boolean shield = false;
 
 	protected float width = Bird.WIDTH;
 	protected float height = Bird.HEIGHT;
@@ -230,7 +230,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	 * excepci�n de los corazones que ganan vidas. En el caso de chocarse con
 	 * algo, el score se reduce a 0 y vuelve a comenzar.
 	 */
-	public void addScore(float dt) {
+	private void addScore(float dt) {
 		scoreTimeAux += dt;
 		if (scoreTimeAux >= 1) {
 			score++;
@@ -238,7 +238,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 		}
 	}
 
-	public boolean canShoot(){
+	boolean canShoot(){
 		if(ammo > 2000){
 			return false;
 		}else{
@@ -258,15 +258,6 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 
 	public Vector2 getPosition() {
 		return position;
-	}
-
-	/**
-	 * Es el salto que pega el pajaro. Pasandole un jump muy alto, el pajaro
-	 * salta mucho mas alto
-	 * 
-	 */
-	public void setJump(int jump) {
-		this.jump = jump;
 	}
 
 	/**
@@ -353,27 +344,8 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	/**
 	 * Reset score.
 	 */
-	public void resetScore() {
+	private void resetScore() {
 		score = 0;
-	}
-
-	/**
-	 * Gets the jump.
-	 *
-	 * @return the jump
-	 */
-	public int getJump() {
-		return jump;
-	}
-
-	/**
-	 * Gets the team .
-	 *
-	 * @return true if the bird belongs to the LeftTeam, or false to the
-	 *         RightTeam
-	 */
-	public boolean getTeam() {
-		return team;
 	}
 
 	/**
@@ -385,13 +357,9 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 		return this.name;
 	}
 
-	public void setLifeSecure(Boolean b) {
+	public void setLifeSecure(boolean b) {
 		if(b)
 			life.reset();
-	}
-
-	public void addLife(int lives) {
-		this.lives += lives;
 	}
 
 	public int getAmmo() {
@@ -400,7 +368,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	public void setRival(Bird b){
 		rival = b;
 	}
-	public void freeze(){
+	void freeze(){
 		frozen = true;
 		frozenTime.reset();
 	}
@@ -413,7 +381,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 		return width;
 	}
 
-	public boolean isFrozen() {
+	boolean isFrozen() {
 		return frozen;
 	}
 }

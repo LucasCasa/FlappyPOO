@@ -18,7 +18,7 @@ import component.tube.NormalTubes;
 import component.tube.Tube;
 import component.tube.Tubes;
 
-/*
+/**
  * WorldManager es la clase que se encargar de actualizar, chequear y modificar el 
  * estado de los pajaros durante el juego.Como es "la l�gica central" del juego,
  * esta contiene los elementos escenciales, como los tubos, corazones, piso y jugadores.
@@ -49,6 +49,13 @@ public abstract class WorldManager {
 		createBirds(p1Name, p2Name, p1Bird, p2Bird);
 		loadLevel();
 		g = new Grounds(cam.position.x, cam.viewportWidth);
+		tubes = new Array<>();
+		lives = new ArrayList<>();
+		bombs = new ArrayList<>();
+	}
+	public WorldManager(OrthographicCamera cam){
+		g = new Grounds(cam.position.x, cam.viewportWidth);
+		loadLevel();
 		tubes = new Array<>();
 		lives = new ArrayList<>();
 		bombs = new ArrayList<>();
@@ -195,7 +202,38 @@ public abstract class WorldManager {
 		bLeft.setRival(bRight);
 		bRight.setRival(bLeft);
 	}
-
+	public Bird createBird(String name,BirdType bt,boolean left){
+		int x,y,id;
+		if(left){
+			id = 0;
+			x = 100;
+			y = 200;
+		}else{
+			id = 1;
+			x = 500;
+			y = 200;
+		}
+		Bird b = null;
+		switch (bt){
+			case RED:
+				b = new RedBird(id,x,y);
+				b.setName(name);
+				break;
+			case BLUE:
+				b = new BlueBird(id,x,y);
+				b.setName(name);
+				break;
+			case GREEN:
+				b = new GreenBird(id,x,y);
+				b.setName(name);
+				break;
+			case SILVER:
+				b = new SilverBird(id,x,y);
+				b.setName(name);
+				break;
+		}
+		return b;
+	}
 	public Bird getBLeft() {
 		return bLeft;
 	}

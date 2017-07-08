@@ -24,16 +24,16 @@ import menu.TableView;
 
 public abstract class WorldManagerView {
 
-	private BirdView birdView;
-	private BirdView bird2View;
+	BirdView birdView;
+	BirdView bird2View;
 	private Texture bg;
 	private GroundView gv;
 	
 	private TubesView normalTubeView;
 	private TubesView metalTubeView;
 	
-	private BulletView bv1; // For player 1
-	private BulletView bv2; // For player 2
+	BulletView bv1; // For player 1
+	BulletView bv2; // For player 2
 	private LifeView lw;
 	private BombView bw;
 	protected TableView t1;

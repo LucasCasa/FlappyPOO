@@ -49,6 +49,9 @@ public abstract class Bullet extends SimpleFObject{
 		return crashes;
 	}
 
+	public boolean crash(Bullet b){
+		return b.getBounds().overlaps(this.bounds);
+	}
 	public Vector2 getPosition() {
 		return position;
 	}
