@@ -17,7 +17,7 @@ public class SilverBird extends BirdLeft {
 
 	@Override
 	public void usePower() {
-		if(score <=5) {
+		if(score >=5) {
 			Bullet b = new SilverBulletL(position.x, position.y);
 			bullets.add(b);
 			bulletTime.reset();
