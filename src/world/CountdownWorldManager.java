@@ -35,10 +35,10 @@ public class CountdownWorldManager extends WorldManager {
         int rScore = bRight.getScore();
         int lScore = bLeft.getScore();
         if(rScore > lScore){
-            Types.PLAYER2_VOICE.play(Types.masterVolume);
+            Types.PLAYER2_VOICE[Integer.parseInt(Types.MESSAGES.getString("id"))].play(Types.masterVolume);
             contPlay = false;
         }else if(lScore > rScore){
-            Types.PLAYER1_VOICE.play(Types.masterVolume);
+            Types.PLAYER1_VOICE[Integer.parseInt(Types.MESSAGES.getString("id"))].play(Types.masterVolume);
             contPlay = false;
         }else {
             Types.DRAW[Integer.parseInt(Types.MESSAGES.getString("id"))].play(Types.masterVolume);

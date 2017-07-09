@@ -48,7 +48,7 @@ public class ClassicWorldManager extends WorldManager{
             pLeftScore++;
             if(pLeftScore == 2){
                 Output.getInstance().write(getWinner(bLeft, bRight));
-                Types.PLAYER1_VOICE.play(Types.masterVolume);
+                Types.PLAYER1_VOICE[Integer.parseInt(Types.MESSAGES.getString("id"))].play(Types.masterVolume);
                 Level2Music.getInstance().stop();
                 Level3Music.getInstance().stop();
                 MenuMusic.getInstance().play(Types.masterVolume);
@@ -63,7 +63,7 @@ public class ClassicWorldManager extends WorldManager{
                 Level3Music.getInstance().stop();
                 MenuMusic.getInstance().play(Types.masterVolume);
                 contPlay = false;
-                Types.PLAYER2_VOICE.play(Types.masterVolume);
+                Types.PLAYER2_VOICE[Integer.parseInt(Types.MESSAGES.getString("id"))].play(Types.masterVolume);
                 return;
             }
         }
@@ -71,12 +71,12 @@ public class ClassicWorldManager extends WorldManager{
             case 2:
                 (new Thread(new FadeOutManager(Level1Music.getInstance()))).start();
                 Level2Music.getInstance().play(Types.masterVolume);
-                Types.LEVEL2_VOICE.play(Types.masterVolume);
+                Types.LEVEL2_VOICE[Integer.parseInt(Types.MESSAGES.getString("id"))].play(Types.masterVolume);
                 break;
             case 3:
                 (new Thread(new FadeOutManager(Level2Music.getInstance()))).start();
                 Level3Music.getInstance().play(Types.masterVolume);
-                Types.LEVEL3_VOICE.play(Types.masterVolume);
+                Types.LEVEL3_VOICE[Integer.parseInt(Types.MESSAGES.getString("id"))].play(Types.masterVolume);
                 break;
         }
         loadLevel();

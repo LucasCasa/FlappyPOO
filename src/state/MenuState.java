@@ -10,6 +10,9 @@ import menu.MenuManager;
 import menu.MenuMangerView;
 import music.*;
 
+import java.util.Locale;
+import java.util.ResourceBundle;
+
 public class MenuState extends State {
 
 	private MenuManager menu;
@@ -46,6 +49,10 @@ public class MenuState extends State {
 			menu.Select(Options.SELECT_DIFICULTY);
 		}else if(Gdx.input.isKeyJustPressed(Input.Keys.NUM_5) || Gdx.input.isKeyJustPressed(Input.Keys.NUMPAD_5)) {
 			menu.Select(Options.HELP1);
+		}else if(Gdx.input.isKeyJustPressed(Input.Keys.NUM_6) || Gdx.input.isKeyJustPressed(Input.Keys.NUMPAD_6)) {
+			Types.MESSAGES = ResourceBundle.getBundle("text", Locale.ENGLISH);
+		}else if(Gdx.input.isKeyJustPressed(Input.Keys.NUM_7) || Gdx.input.isKeyJustPressed(Input.Keys.NUMPAD_7)) {
+			Types.MESSAGES = ResourceBundle.getBundle("text", Locale.forLanguageTag("ES"));
 		}else if(Gdx.input.isKeyJustPressed(Input.Keys.TAB)){
 			switch (menu.currentSelect()){
 				case HELP1: menu.Select(Options.HELP2); break;
@@ -95,7 +102,7 @@ public class MenuState extends State {
 			(new Thread(new FadeOutManager(MenuMusic.getInstance()))).start();
 			System.out.println("PONGO PLAY LVL1");
 			if(gameMode == GameMode.CLASSIC){
-				Types.LEVEL1_VOICE.play(Types.masterVolume);
+				Types.LEVEL1_VOICE[Integer.parseInt(Types.MESSAGES.getString("id"))].play(Types.masterVolume);
 				Level1Music.getInstance().play(Types.masterVolume);
 			}else if(gameMode == GameMode.COUNTDOWN){
 				Types.START[Integer.parseInt(Types.MESSAGES.getString("id"))].play(Types.masterVolume);

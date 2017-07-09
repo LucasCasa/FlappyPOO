@@ -60,7 +60,8 @@ public class Types {
 	public static final Sound[] COUNTDOWN = {Gdx.audio.newSound(Gdx.files.internal("countdown_en.mp3")),Gdx.audio.newSound(Gdx.files.internal("countdown_es.mp3"))};
 	public static final Sound[] START = {Gdx.audio.newSound(Gdx.files.internal("start_en.mp3")),Gdx.audio.newSound(Gdx.files.internal("start_es.mp3"))};
 	public static final Sound[] DRAW = {Gdx.audio.newSound(Gdx.files.internal("draw_en.mp3")),Gdx.audio.newSound(Gdx.files.internal("draw_es.mp3"))};
-
+	public static final Sound[] PLAYER1_VOICE = {Gdx.audio.newSound(Gdx.files.internal("player1Wins.mp3")),Gdx.audio.newSound(Gdx.files.internal("fin_jug1_es.mp3"))};
+	public static final Sound[] PLAYER2_VOICE = {Gdx.audio.newSound(Gdx.files.internal("player2Wins.mp3")),Gdx.audio.newSound(Gdx.files.internal("fin_jug2_es.mp3"))};
 	
 	public static final Sound typing1 =  Gdx.audio.newSound(Gdx.files.internal("typing1.mp3"));
 	public static final Sound typing2 =  Gdx.audio.newSound(Gdx.files.internal("typing2.mp3"));
@@ -71,12 +72,11 @@ public class Types {
 	public static final Sound LEVEL3_THEME = Gdx.audio.newSound(Gdx.files.internal("level3.mp3"));
 	public static final Sound MODE_2_THEME = Gdx.audio.newSound(Gdx.files.internal("musicaacelerada.mp3"));
 	public static final Sound MODE_3_THEME = Gdx.audio.newSound(Gdx.files.internal("musicamodo3.mp3"));
-	public static final Sound LEVEL1_VOICE = Gdx.audio.newSound(Gdx.files.internal("level1Voice.mp3"));
-	public static final Sound LEVEL2_VOICE = Gdx.audio.newSound(Gdx.files.internal("level2Voice.mp3"));
-	public static final Sound LEVEL3_VOICE = Gdx.audio.newSound(Gdx.files.internal("level3Voice.mp3"));
+	public static final Sound LEVEL1_VOICE[] = {Gdx.audio.newSound(Gdx.files.internal("level1Voice.mp3")),Gdx.audio.newSound(Gdx.files.internal("level1_es.mp3"))};
+	public static final Sound LEVEL2_VOICE[] = {Gdx.audio.newSound(Gdx.files.internal("level2Voice.mp3")),Gdx.audio.newSound(Gdx.files.internal("level2_es.mp3"))};
+	public static final Sound LEVEL3_VOICE[] = {Gdx.audio.newSound(Gdx.files.internal("level3Voice.mp3")),Gdx.audio.newSound(Gdx.files.internal("level3_es.mp3"))};
 	//public static final Sound GAMEOVER_VOICE = Gdx.audio.newSound(Gdx.files.internal("gameOver.mp3"));
-	public static final Sound PLAYER1_VOICE = Gdx.audio.newSound(Gdx.files.internal("player1Wins.mp3"));
-	public static final Sound PLAYER2_VOICE = Gdx.audio.newSound(Gdx.files.internal("player2Wins.mp3"));
+
 	
 	public static final String LOGO = "logo.png";
 	public static final String[] BACKGROUND = {"background_level1.png","background_level2.png","background_level3.png"};
@@ -100,6 +100,6 @@ public class Types {
 	public static final Texture SHIELD = new Texture("shield.png");
 	public static final Texture FREEZE = new Texture("freeze.png");
 	public static final Texture AMMO_BACK = new Texture("ammoBack.png");
-    public static final ResourceBundle MESSAGES = ResourceBundle.getBundle("text", Locale.forLanguageTag("ES"));
+    public static ResourceBundle MESSAGES = ResourceBundle.getBundle("text", Locale.forLanguageTag("ES"));
 
 }
