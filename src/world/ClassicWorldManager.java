@@ -3,11 +3,8 @@ package world;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import component.bird.BirdType;
 import component.worldComponent.Types;
+import music.*;
 import scoreFiles.Output;
-import music.FadeOutManager;
-import music.Level1Music;
-import music.Level2Music;
-import music.Level3Music;
 
 /**
  * Created by Lucas on 01/07/2017.
@@ -52,6 +49,9 @@ public class ClassicWorldManager extends WorldManager{
             if(pLeftScore == 2){
                 Output.getInstance().write(getWinner(bLeft, bRight));
                 Types.PLAYER1_VOICE.play(Types.masterVolume);
+                Level2Music.getInstance().stop();
+                Level3Music.getInstance().stop();
+                MenuMusic.getInstance().play(Types.masterVolume);
                 contPlay = false;
                 return;
             }
@@ -59,6 +59,9 @@ public class ClassicWorldManager extends WorldManager{
             pRightScore++;
             if(pRightScore == 2){
                 Output.getInstance().write(getWinner(bLeft, bRight));
+                Level2Music.getInstance().stop();
+                Level3Music.getInstance().stop();
+                MenuMusic.getInstance().play(Types.masterVolume);
                 contPlay = false;
                 Types.PLAYER2_VOICE.play(Types.masterVolume);
                 return;

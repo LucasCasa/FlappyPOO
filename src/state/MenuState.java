@@ -95,6 +95,7 @@ public class MenuState extends State {
 		
 		if(menu.selectDone()) {
 			(new Thread(new FadeOutManager(MenuMusic.getInstance()))).start();
+			System.out.println("PONGO PLAY LVL1");
 			Level1Music.getInstance().play(Types.masterVolume);
 			if(gameMode == GameMode.CLASSIC){
 				Types.LEVEL1_VOICE.play(Types.masterVolume);

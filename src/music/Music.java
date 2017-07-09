@@ -9,4 +9,5 @@ public interface Music {
     void reduceVolume(float v);
     void play(float v);
     void stop();
+    void setPitch(float p);
 }

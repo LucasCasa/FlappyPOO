@@ -31,14 +31,17 @@ public class Level1Music implements Music {
 		playing = false;
 		for (float i = volume; i >= 0; i -= 0.01) {
 			reduceVolume(i);
-			if (i <= 0)
+			if (i <= 0) {
 				s.stop();
+
+			}
 			try {
 				Thread.sleep(30);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
+		id = -1;
 	}
 
 	@Override
@@ -49,9 +52,13 @@ public class Level1Music implements Music {
 
 	@Override
 	public void play(float v) {
+		System.out.println("PLAY");
 		if (id == -1) {
+			System.out.println("HICE PLAY");
 			id = s.loop(v);
 			volume = v;
+		}else {
+			System.out.println("YA TENIA PLAY");
 		}
 		playing = true;
 	}
@@ -60,9 +67,14 @@ public class Level1Music implements Music {
 	public void stop() {
 		playing = false;
 		s.stop();
+		id=-1;
 	}
 
     public boolean isPlaying() {
         return playing;
     }
+
+    public void setPitch(float p){
+		s.setPitch(id,p);
+	}
 }

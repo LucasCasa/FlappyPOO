@@ -8,6 +8,7 @@ import component.bird.BirdType;
 import component.bullet.Bullet;
 import component.bullet.BulletRight;
 import component.bullet.EnemyBullet;
+import music.Level1Music;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -86,6 +87,7 @@ public class NestWorldManager extends WorldManager{
                 b.update(dt);
                 if(b.getPosition().x < pos- width/2){
                     lives--;
+                    Level1Music.getInstance().setPitch(1 + (1 - lives/50));
                     itr.remove();
                 }
             }

@@ -26,8 +26,10 @@ public class Level2Music implements Music {
 		float vol_fade = volume;
 		for (float i = volume; i >= 0; i -= 0.01) {
 			reduceVolume(i);
-			if (i <= 0)
+			if (i <= 0) {
 				s.stop();
+				id = -1;
+			}
 			try {
 				Thread.sleep(30);
 			}catch (Exception e){
@@ -55,9 +57,15 @@ public class Level2Music implements Music {
 	public void stop() {
 		playing = false;
 		s.stop();
+		id=-1;
 	}
 
     public boolean isPlaying() {
         return playing;
     }
+
+
+	public void setPitch(float p){
+		s.setPitch(id,p);
+	}
 }

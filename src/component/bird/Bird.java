@@ -42,7 +42,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 	private boolean frozen = false;
 	private Timer aura = new Timer(3000);
 	private Timer life = new Timer(1000);
-	private Timer frozenTime = new Timer(4000);
+	private Timer frozenTime = new Timer(3000);
 
 	Bird rival;
 	boolean shield = false;
