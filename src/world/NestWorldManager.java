@@ -8,7 +8,9 @@ import component.bird.BirdType;
 import component.bullet.Bullet;
 import component.bullet.BulletRight;
 import component.bullet.EnemyBullet;
+import component.worldComponent.Types;
 import music.Level1Music;
+import music.Mode3Music;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -40,6 +42,7 @@ public class NestWorldManager extends WorldManager{
 
     @Override
     protected void endGame() {
+        Mode3Music.getInstance().stop();
         contPlay = false;
     }
 
@@ -64,6 +67,7 @@ public class NestWorldManager extends WorldManager{
         Iterator<Bullet> itr = bullets.iterator();
         boolean removed = false;
         while(itr.hasNext()){
+            removed = false;
             Bullet b = itr.next();
             Iterator<Bullet> itr2 = b1.getBullets().iterator();
             while(itr2.hasNext() && !removed){
@@ -72,6 +76,7 @@ public class NestWorldManager extends WorldManager{
                     itr2.remove();
                     removed = true;
                     itr.remove();
+
                 }
             }
             itr2 = b2.getBullets().iterator();
@@ -87,9 +92,12 @@ public class NestWorldManager extends WorldManager{
                 b.update(dt);
                 if(b.getPosition().x < pos- width/2){
                     lives--;
-                    Level1Music.getInstance().setPitch(1 + (1 - lives/50));
+                    Types.STRIKE.play(Types.masterVolume);
                     itr.remove();
                 }
+            }else{
+                Types.ENEMY_HIT[(int)(Math.random()*3)].play(Types.masterVolume);
+                System.out.println("HIT");
             }
         }
 

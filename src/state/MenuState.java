@@ -8,9 +8,7 @@ import component.worldComponent.GameMode;
 import component.worldComponent.Types;
 import menu.MenuManager;
 import menu.MenuMangerView;
-import music.FadeOutManager;
-import music.Level1Music;
-import music.MenuMusic;
+import music.*;
 
 public class MenuState extends State {
 
@@ -96,15 +94,16 @@ public class MenuState extends State {
 		if(menu.selectDone()) {
 			(new Thread(new FadeOutManager(MenuMusic.getInstance()))).start();
 			System.out.println("PONGO PLAY LVL1");
-			Level1Music.getInstance().play(Types.masterVolume);
 			if(gameMode == GameMode.CLASSIC){
 				Types.LEVEL1_VOICE.play(Types.masterVolume);
+				Level1Music.getInstance().play(Types.masterVolume);
 			}else if(gameMode == GameMode.COUNTDOWN){
 				Types.START[Integer.parseInt(Types.MESSAGES.getString("id"))].play(Types.masterVolume);
+				Mode2Music.getInstance().play(Types.masterVolume);
 			}else if(gameMode == GameMode.COOPERATIVE){
 				Types.START[Integer.parseInt(Types.MESSAGES.getString("id"))].play(Types.masterVolume);
+				Mode3Music.getInstance().play(Types.masterVolume);
 			}
-
 			gsm.set(new PlayState(gsm, menu.getP1Name(), menu.getP2Name(), menu.getP1Bird(), menu.getP2Bird(),gameMode));
 		}
 	}

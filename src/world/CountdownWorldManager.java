@@ -3,6 +3,7 @@ package world;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import component.bird.BirdType;
 import component.worldComponent.Types;
+import music.Mode2Music;
 
 /**
  * Created by Lucas on 01/07/2017.
@@ -43,6 +44,7 @@ public class CountdownWorldManager extends WorldManager {
             Types.DRAW[Integer.parseInt(Types.MESSAGES.getString("id"))].play(Types.masterVolume);
             contPlay = false;
         }
+        Mode2Music.getInstance().stop();
     }
 
     float getTime() {

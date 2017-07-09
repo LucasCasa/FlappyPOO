@@ -35,7 +35,7 @@ public class Types {
 	public static final String BOMB = "bomb.png";
 	public static final String HEART = "heart.png";
 	public static final String BLACK_HEART = "black_heart.png";
-	//public static final Sound STRIKE = Gdx.audio.newSound(Gdx.files.internal("strike.mp3"));
+	public static final Sound STRIKE = Gdx.audio.newSound(Gdx.files.internal("strike.mp3"));
 	public static final Sound LIFE_SOUND = Gdx.audio.newSound(Gdx.files.internal("life.mp3"));
 	public static final Sound BOMB_EXPLOSION_SOUND = Gdx.audio.newSound(Gdx.files.internal("bomba.mp3"));
 	public static final Sound BULLET_SOUND = Gdx.audio.newSound(Gdx.files.internal("bala.mp3"));
@@ -55,6 +55,7 @@ public class Types {
 	public static final Sound CANT_SHOOT_SOUND = Gdx.audio.newSound(Gdx.files.internal("nobala.mp3"));
 	public static final Sound CANT_POWER_SOUND = Gdx.audio.newSound(Gdx.files.internal("sinpower.mp3"));
 
+	public static final Sound[] ENEMY_HIT = {Gdx.audio.newSound(Gdx.files.internal("pedo1.mp3")),Gdx.audio.newSound(Gdx.files.internal("pedo2.mp3")),Gdx.audio.newSound(Gdx.files.internal("pedo3.mp3"))};
 
 	public static final Sound[] COUNTDOWN = {Gdx.audio.newSound(Gdx.files.internal("countdown_en.mp3")),Gdx.audio.newSound(Gdx.files.internal("countdown_es.mp3"))};
 	public static final Sound[] START = {Gdx.audio.newSound(Gdx.files.internal("start_en.mp3")),Gdx.audio.newSound(Gdx.files.internal("start_es.mp3"))};
