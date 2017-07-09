@@ -1,14 +1,15 @@
 package component.bullet;
 
 import com.badlogic.gdx.math.Rectangle;
+import component.worldComponent.Types;
 
 public class LaserBullet extends Bullet {
 
-	private static final int W = 50;
-	private static final int H = 8;
+	private static final int W = 26;
+	private static final int H = 17;
 	
 	public LaserBullet(float x, float y) {
-		super(x, y, 450f);
+		super(x, y, Types.LASER_BULLET_SPEED);
 		bounds = new Rectangle(position.x, position.y, W, H);
 	}
 	

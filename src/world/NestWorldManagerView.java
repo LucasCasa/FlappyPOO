@@ -56,6 +56,9 @@ public class NestWorldManagerView extends WorldManagerView {
         for(Bullet b : ((NestWorldManager)w).bullets){
             bv.draw(sb,b);
         }
-        t1.drawLife(sb,pos,((NestWorldManager)w).lives,-100);
+        t1.drawLife(sb,pos,((NestWorldManager)w).lives,-200);
+        t1.drawTime(sb,pos,(int)((NestWorldManager)w).time);
+        //t1.drawKills(sb,pos,((NestWorldManager)w).p1Kills,-300);
+        //t1.drawKills(sb,pos,((NestWorldManager)w).p2Kills,200);
     }
 }

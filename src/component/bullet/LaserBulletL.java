@@ -6,8 +6,8 @@ import component.worldComponent.Types;
 
 public class LaserBulletL extends BulletLeft {
 
-	private static final int W = 50;
-	private static final int H = 8;
+	private static final int W = 26;
+	private static final int H = 17;
 	
 	public LaserBulletL(float x, float y) {
 		super(x, y, Types.LASER_BULLET_SPEED);

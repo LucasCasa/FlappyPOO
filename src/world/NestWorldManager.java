@@ -24,6 +24,8 @@ public class NestWorldManager extends WorldManager{
     Bird b1;
     Bird b2;
     float timeSinceLastBullet = 0;
+    int p1Kills = 0;
+    int p2Kills = 0;
     public NestWorldManager(OrthographicCamera cam, String p1Name, String p2Name, BirdType p1Bird, BirdType p2Bird){
         super(cam);
         bullets = new ArrayList<>();
@@ -65,6 +67,7 @@ public class NestWorldManager extends WorldManager{
             Iterator<Bullet> itr2 = b1.getBullets().iterator();
             while(itr2.hasNext() && !removed){
                 if(b.crash(itr2.next())){
+                    p1Kills++;
                     itr2.remove();
                     removed = true;
                     itr.remove();
@@ -73,6 +76,7 @@ public class NestWorldManager extends WorldManager{
             itr2 = b2.getBullets().iterator();
             while(itr2.hasNext() && !removed){
                 if(b.crash(itr2.next())){
+                    p2Kills++;
                     itr2.remove();
                     removed = true;
                     itr.remove();
@@ -92,13 +96,14 @@ public class NestWorldManager extends WorldManager{
             endGame();
         }
 
+        time+=dt;
     }
 
     private void generateBullets(float dt,float pos) {
         timeSinceLastBullet+= dt;
 
         if(Math.random()*10 < timeSinceLastBullet){
-            bullets.add(new EnemyBullet(700 + pos,(int)(Math.random()*400 + 100),-100));
+            bullets.add(new EnemyBullet(700 + pos,(int)(Math.random()*350 + 100),-100));
             timeSinceLastBullet = 0;
         }
     }

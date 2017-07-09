@@ -1,6 +1,7 @@
 package component.bullet;
 
 import com.badlogic.gdx.math.Rectangle;
+import component.worldComponent.Types;
 
 public class SilverBullet extends Bullet {
 
@@ -8,7 +9,7 @@ public class SilverBullet extends Bullet {
 	private static final int H = 9;
 
 	public SilverBullet(float x, float y) {
-		super(x, y, 550f);
+		super(x, y, Types.SILVER_BULLET_SPEED);
 		bounds = new Rectangle(position.x, position.y, W, H);
 	}
 	
