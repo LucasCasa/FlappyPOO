@@ -63,11 +63,11 @@ public class PlayState extends State {
 			world.getBRight().shoot();
 		}
 
-		if (Gdx.input.isKeyJustPressed(Input.Keys.DOWN)) {
+		if (Gdx.input.isKeyJustPressed(Input.Keys.DOWN) && !(world instanceof NestWorldManager)) {
 			worldView.playPowerSound(world.getBRight(),false);
 			world.getBRight().usePower();
 		}
-		if (Gdx.input.isKeyJustPressed(Input.Keys.S)) {
+		if (Gdx.input.isKeyJustPressed(Input.Keys.S) && !(world instanceof NestWorldManager)) {
 			worldView.playPowerSound(world.getBLeft(),true);
 			world.getBLeft().usePower();
 		}
