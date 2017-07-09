@@ -7,6 +7,6 @@ public abstract class BirdRight extends Bird {
 	}
 
 	@Override
-	public abstract void shoot();
+	public abstract boolean shoot();
 
 }

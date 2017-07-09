@@ -22,11 +22,13 @@ public class BlueBird extends BirdLeft{
 	}
 
 	@Override
-	public void shoot() {
+	public boolean shoot() {
 		if(canShoot()) {
 			Bullet b = new CannonBulletL(position.x, position.y);
 			bullets.add(b);
+			return true;
 		}
+		return false;
 	}
 
 

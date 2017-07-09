@@ -238,7 +238,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 		}
 	}
 
-	boolean canShoot(){
+	public boolean canShoot(){
 		if(ammo > 2000){
 			return false;
 		}else{
@@ -271,7 +271,7 @@ public abstract class Bird extends SimpleFObject implements Shootable {
 		return bounds;
 	}
 
-	public abstract void shoot();
+	public abstract boolean shoot();
 
 	/**
 	 * Gets the bullets shot by this Bird.

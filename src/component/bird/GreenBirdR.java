@@ -39,11 +39,13 @@ public class GreenBirdR extends BirdRight {
 	}
 
 	@Override
-	public void shoot() {
+	public boolean shoot() {
 		if(canShoot()) {
 			Bullet b = new LaserBulletR(position.x, position.y);
 			bullets.add(b);
+			return true;
 		}
+		return false;
 	}
 
 

@@ -54,21 +54,36 @@ public class PlayState extends State {
 		}
 
 		if (Gdx.input.isKeyJustPressed(Input.Keys.D)) {
-			worldView.playShootSound(world.getBLeft(),true);
-			world.getBLeft().shoot();
+			if(world.getBLeft().shoot()) {
+				worldView.playShootSound(world.getBLeft(), true);
+			}else{
+				worldView.playCantShootSound(true);
+			}
 		}
 
 		if (Gdx.input.isKeyJustPressed(Input.Keys.LEFT) || (Gdx.input.isKeyJustPressed(Input.Keys.RIGHT) && world instanceof NestWorldManager)) {
-			worldView.playShootSound(world.getBRight(),false);
-			world.getBRight().shoot();
+			if(world.getBRight().shoot()) {
+				worldView.playShootSound(world.getBRight(), false);
+			}else{
+				worldView.playCantShootSound(false);
+			}
+
 		}
 
 		if (Gdx.input.isKeyJustPressed(Input.Keys.DOWN) && !(world instanceof NestWorldManager)) {
-			worldView.playPowerSound(world.getBRight(),false);
+			if(world.getBRight().getScore() >= 5) {
+				worldView.playPowerSound(world.getBRight(), false);
+			}else{
+				worldView.playCantPowerSound(false);
+			}
 			world.getBRight().usePower();
 		}
 		if (Gdx.input.isKeyJustPressed(Input.Keys.S) && !(world instanceof NestWorldManager)) {
-			worldView.playPowerSound(world.getBLeft(),true);
+			if(world.getBLeft().getScore() >= 5) {
+				worldView.playPowerSound(world.getBLeft(), true);
+			}else{
+				worldView.playCantPowerSound(true);
+			}
 			world.getBLeft().usePower();
 		}
 		if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {

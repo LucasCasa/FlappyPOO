@@ -4,7 +4,6 @@ import com.badlogic.gdx.math.Rectangle;
 
 import component.bullet.Bullet;
 import component.bullet.FireBulletL;
-import component.bullet.SilverBulletL;
 import component.worldComponent.Timer;
 
 public class RedBird extends BirdLeft {
@@ -35,11 +34,13 @@ public class RedBird extends BirdLeft {
 		}
 	}
 	@Override
-	public void shoot() {
+	public boolean shoot() {
 		if(canShoot()) {
 			Bullet b = new FireBulletL(position.x, position.y);
 			bullets.add(b);
+			return true;
 		}
+		return false;
 	}
 
 

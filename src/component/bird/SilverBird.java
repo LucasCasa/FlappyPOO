@@ -41,11 +41,13 @@ public class SilverBird extends BirdLeft {
 		}
 	}
 	@Override
-	public void shoot() {
+	public boolean shoot() {
 		if(canShoot()) {
 			Bullet b = new SilverBulletL(position.x, position.y);
 			bullets.add(b);
+			return true;
 		}
+		return false;
 	}
 
 }

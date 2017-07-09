@@ -208,4 +208,12 @@ public abstract class WorldManagerView {
 			Types.FREEZE_SOUND.play(Types.masterVolume, 1, (left)?-1:1);
 		}
 	}
+
+	public void playCantPowerSound(boolean left) {
+		Types.CANT_POWER_SOUND.play(Types.masterVolume,1,(left)?-1:1);
+	}
+
+	public void playCantShootSound(boolean left) {
+		Types.CANT_SHOOT_SOUND.play(Types.masterVolume,1,(left)?-1:1);
+	}
 }
