@@ -26,7 +26,7 @@ public abstract class WorldManagerView {
 
 	BirdView birdView;
 	BirdView bird2View;
-	private Texture bg;
+	protected Texture bg;
 	private GroundView gv;
 	
 	private TubesView normalTubeView;

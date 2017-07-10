@@ -1,5 +1,6 @@
 package world;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import component.bird.*;
 import component.bullet.Bullet;
@@ -18,6 +19,7 @@ public class NestWorldManagerView extends WorldManagerView {
         birdView = selectBirdSkin(w.getBLeft());
         bv1 = bulletSkin(w.getBLeft());
         bv2 = bulletSkin(w.getBRight());
+        bg = new Texture(Types.BACKGROUND_MODE3);
     }
 
     private BirdView selectBirdSkin(Bird b) {

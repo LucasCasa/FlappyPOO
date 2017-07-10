@@ -75,11 +75,12 @@ public class Types {
 	public static final Sound LEVEL1_VOICE[] = {Gdx.audio.newSound(Gdx.files.internal("level1Voice.mp3")),Gdx.audio.newSound(Gdx.files.internal("level1_es.mp3"))};
 	public static final Sound LEVEL2_VOICE[] = {Gdx.audio.newSound(Gdx.files.internal("level2Voice.mp3")),Gdx.audio.newSound(Gdx.files.internal("level2_es.mp3"))};
 	public static final Sound LEVEL3_VOICE[] = {Gdx.audio.newSound(Gdx.files.internal("level3Voice.mp3")),Gdx.audio.newSound(Gdx.files.internal("level3_es.mp3"))};
-	//public static final Sound GAMEOVER_VOICE = Gdx.audio.newSound(Gdx.files.internal("gameOver.mp3"));
+	public static final Sound GAMEOVER_VOICE[] = {Gdx.audio.newSound(Gdx.files.internal("gameOver.mp3")),Gdx.audio.newSound(Gdx.files.internal("gameOver_es.mp3"))};
 
 	
 	public static final String LOGO = "logo.png";
 	public static final String[] BACKGROUND = {"background_level1.png","background_level2.png","background_level3.png"};
+	public static final String BACKGROUND_MODE3 = "v2.png";
 	public static final String[] GROUNDS = {"groundLevel1.png","groundLevel2.png","groundLevel3.png"};
 	public static final String TOP_TUBE = "toptube2.png";
 	public static final String BOTTOM_TUBE = "bottomtube2.png";
@@ -93,7 +94,7 @@ public class Types {
 	public static final int CANNON_BULLET_SPEED = 300;
 
 
-    public static float masterVolume = 1f;
+	public static float masterVolume = 1f;
 
 
 	public static final Texture AMMO_BAR = new Texture("ammoBar.png");

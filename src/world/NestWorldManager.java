@@ -43,6 +43,7 @@ public class NestWorldManager extends WorldManager{
     @Override
     protected void endGame() {
         Mode3Music.getInstance().stop();
+        Types.GAMEOVER_VOICE[Integer.parseInt(Types.MESSAGES.getString("id"))].play();
         contPlay = false;
     }
 
