@@ -7,6 +7,7 @@ import component.bullet.CannonBulletR;
 import component.bullet.SilverBulletL;
 import component.bullet.SilverBulletR;
 import component.worldComponent.Timer;
+import component.worldComponent.Types;
 
 public class SilverBirdR extends BirdRight {
 	Timer bulletTime = new Timer(200);
@@ -20,6 +21,7 @@ public class SilverBirdR extends BirdRight {
 	public void usePower() {
 		if(score>=5) {
 			Bullet b = new SilverBulletR(position.x, position.y);
+			Types.BULLET_SOUND.play(Types.masterVolume,1,1);
 			bullets.add(b);
 			bulletTime.reset();
 			bulletCount = 1;
@@ -34,6 +36,7 @@ public class SilverBirdR extends BirdRight {
 			if(!bulletTime.isCounting()){
 				if(bulletCount < 3){
 					Bullet b = new SilverBulletR(position.x, position.y);
+					Types.BULLET_SOUND.play(Types.masterVolume,1,1);
 					bullets.add(b);
 					bulletTime.reset();
 					bulletCount++;

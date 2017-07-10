@@ -141,11 +141,7 @@ public class MenuMangerView {
 		text.draw(sb, "4 - " + Types.MESSAGES.getString("settings"), Flappy.WIDTH/4, Flappy.HEIGHT*14/30);
 		text.draw(sb, "5 - " + Types.MESSAGES.getString("help"), Flappy.WIDTH/4, Flappy.HEIGHT*12/30);
 		text.draw(sb, "6 - English", Flappy.WIDTH/4, Flappy.HEIGHT*10/30);
-		try {
-			text.draw(sb, new String(("7 - Español").getBytes("ISO-8859-1"),"UTF-8"), Flappy.WIDTH/4, Flappy.HEIGHT*8/30);
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-		}
+			text.draw(sb,"7 - Español", Flappy.WIDTH/4, Flappy.HEIGHT*8/30);
 		text.draw(sb, Types.MESSAGES.getString("volume").replaceFirst("0",String.valueOf((int)(Types.masterVolume*100))), 0,0 + text.getLineHeight());
 	}
 	
