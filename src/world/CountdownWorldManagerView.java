@@ -1,5 +1,6 @@
 package world;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import component.worldComponent.Types;
 
@@ -10,6 +11,7 @@ public class CountdownWorldManagerView extends WorldManagerView{
     boolean play = false;
     public CountdownWorldManagerView(WorldManager world) {
         super(world);
+        bg = new Texture(Types.BACKGROUND_MODE2);
     }
 
     @Override

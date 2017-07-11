@@ -81,6 +81,7 @@ public class Types {
 	public static final String LOGO = "logo.png";
 	public static final String[] BACKGROUND = {"background_level1.png","background_level2.png","background_level3.png"};
 	public static final String BACKGROUND_MODE3 = "v2.png";
+	public static final String BACKGROUND_MODE2 = "bgMode2.jpg";
 	public static final String[] GROUNDS = {"groundLevel1.png","groundLevel2.png","groundLevel3.png"};
 	public static final String TOP_TUBE = "toptube2.png";
 	public static final String BOTTOM_TUBE = "bottomtube2.png";
