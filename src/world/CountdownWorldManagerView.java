@@ -11,7 +11,9 @@ public class CountdownWorldManagerView extends WorldManagerView{
     boolean play = false;
     public CountdownWorldManagerView(WorldManager world) {
         super(world);
-        bg = new Texture(Types.BACKGROUND_MODE2);
+        bg = Types.BACKGROUND_MODE2;
+        gv.setTexture(Types.GROUND_MODE2);
+
     }
 
     @Override

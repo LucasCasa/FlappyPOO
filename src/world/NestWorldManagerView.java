@@ -19,7 +19,8 @@ public class NestWorldManagerView extends WorldManagerView {
         birdView = selectBirdSkin(w.getBLeft());
         bv1 = bulletSkin(w.getBLeft());
         bv2 = bulletSkin(w.getBRight());
-        bg = new Texture(Types.BACKGROUND_MODE3);
+        bg = Types.BACKGROUND_MODE3;
+        gv.setTexture(Types.GROUND_MODE3);
     }
 
     private BirdView selectBirdSkin(Bird b) {

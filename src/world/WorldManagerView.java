@@ -26,8 +26,8 @@ public abstract class WorldManagerView {
 
 	BirdView birdView;
 	BirdView bird2View;
-	protected Texture bg;
-	private GroundView gv;
+	Texture bg;
+	GroundView gv;
 	
 	private TubesView normalTubeView;
 	private TubesView metalTubeView;
@@ -50,7 +50,7 @@ public abstract class WorldManagerView {
 
 		birdSkinSelector(world);
 
-		bg = new Texture(Types.BACKGROUND[0]);
+		bg = Types.BACKGROUND[0];
 		
 		normalTubeView = new NormalTubesView();
 		metalTubeView = new MetalTubesView();
@@ -102,7 +102,7 @@ public abstract class WorldManagerView {
 	private void checkChangeOnLevel() {
 		if(w.getLevel() != lastLevel){
 			lastLevel = w.getLevel();
-			bg = new Texture(Types.BACKGROUND[lastLevel-1]);
+			bg = Types.BACKGROUND[lastLevel-1];
 			gv = new GroundView(Types.GROUNDS[lastLevel-1]);
 		}
 	}

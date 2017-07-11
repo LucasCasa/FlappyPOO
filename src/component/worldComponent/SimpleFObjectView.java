@@ -11,8 +11,12 @@ public abstract class SimpleFObjectView implements Drawable{
 	public SimpleFObjectView(String path) {
 		t = new Texture(path);
 	}
-	
-	public Texture getTexture() {
+
+    public SimpleFObjectView(Texture ground) {
+		t = ground;
+    }
+
+    public Texture getTexture() {
 		return t;
 	}
 	
